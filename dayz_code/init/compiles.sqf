@@ -19,7 +19,9 @@ if (!isDedicated) then {
 	player_temp_calculation	=	compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fn_temperatur.sqf";		//Temperatur System	//TeeChange
 	player_weaponFiredNear =	compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_weaponFiredNear.sqf";
 	player_animalCheck =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_animalCheck.sqf";
-	player_spawnCheck =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_spawnCheck.sqf";
+	player_spawnCheck = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_spawnCheck.sqf";
+	player_spawnLootCheck =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_spawnlootCheck.sqf";
+	player_spawnZedCheck =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_spawnzedCheck.sqf";
 	building_spawnLoot =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\building_spawnLoot.sqf";
 	player_taskHint =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\player_taskHint.sqf";
 	building_spawnZombies =		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\building_spawnZombies.sqf";
@@ -54,7 +56,17 @@ if (!isDedicated) then {
 	zombie_findTargetAgent = 	compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_findTargetAgent.sqf";
 	zombie_loiter = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_loiter.sqf";			//Server compile, used for loiter behaviour
 	zombie_generate = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\zombie_generate.sqf";			//Server compile, used for loiter behaviour
-
+	
+	//Wild
+	//wild_spawnZombies = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\wild_spawnZombies.sqf";
+	
+	//Maps
+	//fnc_MapEventHandler = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\fnc_MapEventHandler.sqf";
+	
+	
+	//
+	dog_findTargetAgent =   compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\dog_findTargetAgent.sqf";
+	
 	// Vehicle damage fix
 	vehicle_handleDamage    = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleDamage.sqf";
 	vehicle_handleKilled    = compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\vehicle_handleKilled.sqf";
@@ -75,6 +87,8 @@ if (!isDedicated) then {
 	player_dropWeapon =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_dropWeapon.sqf";
 	player_setTrap =			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_setTrap.sqf";
 	object_pickup = 			compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\object_pickup.sqf";
+	player_flipvehicle = 		compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_flipvehicle.sqf";
+	player_sleep = 				compile preprocessFileLineNumbers "\z\addons\dayz_code\actions\player_sleep.sqf";
 	
 	//ui
 	player_selectSlot =			compile preprocessFileLineNumbers "\z\addons\dayz_code\compile\ui_selectSlot.sqf";
@@ -92,19 +106,40 @@ if (!isDedicated) then {
 	// TODO: need move it in player_monitor.fsm
 	// allow player disconnect from server, if loading hang, kicked by BE etc.
 	[] spawn {
-		private["_timeOut"];
+		private["_timeOut","_display","_control1","_control2"];
+		disableSerialization;
 		_timeOut = 0;
-		while { _timeOut < 60 } do {
+		dayz_loadScreenMsg = "";
+		diag_log "DEBUG: loadscreen guard started.";
+		_display = uiNameSpace getVariable "BIS_loadingScreen";
+		_control1 = _display displayctrl 8400;
+		_control2 = _display displayctrl 102;
+	// 40 sec timeout
+		while { _timeOut < 400 && !dayz_clientPreload } do {
+			if ( isNull _display ) then {
+				waitUntil { !dialog; };
+				startLoadingScreen ["","RscDisplayLoadCustom"];
+				_display = uiNameSpace getVariable "BIS_loadingScreen";
+				_control1 = _display displayctrl 8400;
+				_control2 = _display displayctrl 102;
+			};
+			if ( dayz_loadScreenMsg != "" ) then {
+				_control1 ctrlSetText dayz_loadScreenMsg;
+				dayz_loadScreenMsg = "";
+			};
+			_control2 ctrlSetText format["%1",round(_timeOut*0.1)];
 			_timeOut = _timeOut + 1;
-			sleep 1;
+			sleep 0.1;
 		};
-		if ( !dayz_preloadFinished ) then {
-			endLoadingScreen;
+		endLoadingScreen;
+		if ( !dayz_clientPreload ) then {
+
+			diag_log "DEBUG: loadscreen guard ended with timeout.";
 			disableUserInput false;
-			cutText ["Something went wrong! disconnect and try again!", "BLACK OUT",1];
+			1 cutText ["Something went wrong! disconnect and try again!", "PLAIN"];
 			player enableSimulation false;
-		};
-	}; 
+		} else { diag_log "DEBUG: loadscreen guard ended."; };
+	};
 	dayz_losChance = {
 		private["_agent","_maxDis","_dis","_val","_maxExp","_myExp"];
 		_agent = 	_this select 0;
@@ -152,10 +187,10 @@ if (!isDedicated) then {
 			_tPos = eyePos _target;	//(getPosASL _target);
 			_zPos = eyePos _agent;	//(getPosASL _agent);
 			if ((count _tPos > 0) and (count _zPos > 0)) then {
-				_cantSee = terrainIntersectASL [(eyePos _target), (eyePos _agent)];
+				_cantSee = terrainIntersectASL [_tPos, _zPos];
 				//diag_log ("terrainIntersectASL: " + str(_cantSee));
 				if (!_cantSee) then {
-					_cantSee = lineIntersects [(eyePos _target), (eyePos _agent)];
+					_cantSee = lineIntersects [_tPos, _zPos];
 					//diag_log ("lineIntersects: " + str(_cantSee));
 				};
 			};
@@ -197,17 +232,48 @@ if (!isDedicated) then {
 		_btnRespawn ctrlEnable false;
 	};
 	
+	abort_enable = 0 spawn {};
 	dayz_disableAbort = {
-		private["_display","_btnAbort","_combattimeout"];
+		private["_display","_btnAbort","_combattimeout","_zAround"];
 		_combattimeout = player getVariable["combattimeout",0];
-		if(_combattimeout < time) exitWith {};
-		disableSerialization;
-		waitUntil {
-			_display = findDisplay 49;
-			!isNull _display;
+		_zAround = (count (player nearEntities ["zZombie_Base",50]) > 0);
+		if (_zAround || _combattimeout > time) then {
+			disableSerialization;
+			waitUntil {
+				_display = findDisplay 49;
+				!isNull _display;
+			};
+			_btnAbort = _display displayCtrl 104;
+			_btnAbort ctrlEnable false;
+			if (_zAround && _combattimeout <= time) then {
+				if (!scriptDone abort_enable) then {
+					terminate abort_enable;
+					sleep 0.5;
+				};
+				abort_enable = [] spawn {
+					private["_timeOut","_timeMax","_display","_btnAbort"];
+					_timeOut = 0;
+					_timeMax = 30;
+					disableSerialization;
+					while {_timeOut <= _timeMax} do {
+						scopeName "loop";
+						_display = findDisplay 49;
+						if (!isNull _display) then {
+							if (_timeOut == _timeMax) then {
+								_btnAbort = _display displayCtrl 104;
+								_btnAbort ctrlEnable true;
+							};
+							cutText [format ["You can Abort in %1",(_timeMax - _timeOut)], "PLAIN DOWN"];
+						} else {
+							breakOut "loop";
+						};
+						_timeOut = _timeOut + 1;
+						sleep 1;
+					};
+					cutText ["", "PLAIN DOWN"];
+				};
+			};
 		};
-		_btnAbort = _display displayCtrl 104;
-		_btnAbort ctrlEnable false;
 	};
 	
 	dayz_spaceInterrupt = {
@@ -311,6 +377,18 @@ if (!isDedicated) then {
 		_vdir = (_vval select 0) atan2 (_vval select 1);
 		if (_vdir < 0) then {_vdir = 360 + _vdir};
 		_vdir
+	};
+	
+	fnc_onKeyDown =
+	{
+	private["_key"];
+		_key = _this select 1;
+		if (_key == 88) then //f12
+		{
+		_nill = execvm "\z\addons\dayz_code\actions\playerstats.sqf";
+		_shift = nil;
+		};
+		_return
 	};
 	
 	dayz_lowHumanity = {

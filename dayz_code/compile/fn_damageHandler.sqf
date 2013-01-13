@@ -45,8 +45,8 @@ if (_isPlayer) then {
 
 if (_unit == player) then {
 	if (_hit == "") then {
-		if ((_source != player) and _isPlayer) then {
-		//Enable aggressor Actions
+		if ((_source != player) and _isPlayer) then {			
+			//Enable aggressor Actions
 			if (_source isKindOf "CAManBase") then {
 				_source setVariable["startcombattimer",1];	
 			};
@@ -108,11 +108,12 @@ if (_hit in USEC_MinorWounds) then {
 	};
 };
 
-/*
+
 if (_unit == player) then {
-	player sideChat str(_damage);
+//incombat
+	_unit setVariable["startcombattimer", 1, false];	
 };
-*/
+
 if (_damage > 0.1) then {
 	if (_unit == player) then {
 		//shake the cam, frighten them!
@@ -131,7 +132,7 @@ if (_damage > 0.4) then {	//0.25
 	_isHit = _unit getVariable[_wound,false];
 	if (_unit == player) then {	
 		_rndPain = 		(random 10);
-		_rndInfection = (random 1000);
+		_rndInfection = (random 500);
 		_hitPain = 		(_rndPain < _damage);
 		if ((_isHeadHit) or (_damage > 1.2 and _hitPain)) then {
 			_hitPain = true;

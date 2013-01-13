@@ -265,7 +265,7 @@ class CfgAmmo {
 	class R_57mm_HE: FakeAmmo {};
 	class R_80mm_HE: FakeAmmo {};
 	class R_S8T_AT: FakeAmmo {};
-	class R_M136_AT: FakeAmmo {};
+	//class R_M136_AT: FakeAmmo {};
 	class R_RPG18_AT: FakeAmmo {};
 	class R_PG7V_AT: FakeAmmo {};
 	class R_PG7VL_AT: FakeAmmo {};
@@ -471,7 +471,9 @@ class CfgMagazines {
 	class 30Rnd_556x45_G36: FakeMagazine {};
 	class 30Rnd_556x45_G36SD: FakeMagazine {};
 	class 200Rnd_556x45_M249: FakeMagazine {};
+	*/
 	class 100Rnd_556x45_BetaCMag: FakeMagazine {};
+	/*
 	class 5Rnd_762x51_M24: FakeMagazine {};
 	class 100Rnd_762x51_M240: FakeMagazine {};
 	class 10Rnd_762x54_SVD: FakeMagazine {};
@@ -665,7 +667,7 @@ class CfgMagazines {
 	//class 5Rnd_127x99_as50: FakeMagazine {};
 	//class 5Rnd_86x70_L115A1: FakeMagazine {};
 	class NLAW: FakeMagazine {};
-	//class 200Rnd_556x45_L110A1: FakeMagazine {};
+	class 200Rnd_556x45_L110A1: FakeMagazine {};
 	//class 200Rnd_762x54_GPMG: FakeMagazine {};
 	class 32Rnd_40mm_GMG: FakeMagazine {};
 	class 12Rnd_CRV7: FakeMagazine {};
@@ -779,48 +781,43 @@ class CfgWeapons {
 	};
 	//class MGun: FakeWeapon {};
 	//class Pistol: FakeWeapon {};
-	/*
-	class M9: FakeWeapon {};
-	class M9SD: FakeWeapon {};
-	class Makarov: FakeWeapon {};
+	//class M9: FakeWeapon {};
+	//class M9SD: FakeWeapon {};
+	//class Makarov: FakeWeapon {};
 	class MakarovSD: FakeWeapon {};
-	class GrenadeLauncher: FakeWeapon {};
-	class Rifle: FakeWeapon {};
-	class M16_base: FakeWeapon {};
-	class M16A2: FakeWeapon {};
-	class M16A2GL: FakeWeapon {};
-	class m16a4: FakeWeapon {};
-	class m16a4_acg: FakeWeapon {};
-	class M16A4_GL: FakeWeapon {};
-	class M16A4_ACG_GL: FakeWeapon {};
-	class M24: FakeWeapon {};
-	class M40A3: FakeWeapon {};
-	class M240: FakeWeapon {};
-	class Mk_48: FakeWeapon {};
-	class M249: FakeWeapon {};
-	class M4A1: FakeWeapon {};
-	class M4A1_Aim: FakeWeapon {};
-	class M4A1_Aim_camo: FakeWeapon {};
-	class M4SPR: FakeWeapon {};
-	class M4A1_RCO_GL: FakeWeapon {};
-	class M4A1_AIM_SD_camo: FakeWeapon {};
-	class M4A1_HWS_GL_SD_Camo: FakeWeapon {};
-	class M4A1_HWS_GL: FakeWeapon {};
-	class M4A1_HWS_GL_camo: FakeWeapon {};
-	class MP5SD: FakeWeapon {};
-	class MP5A5: FakeWeapon {};
-	class PK: FakeWeapon {};
+	//class GrenadeLauncher: FakeWeapon {};
+	//class Rifle: FakeWeapon {};
+	//class M16_base: FakeWeapon {};
+	//class M16A2: FakeWeapon {};
+	//class M16A2GL: FakeWeapon {};
+	//class m16a4: FakeWeapon {};
+	//class m16a4_acg: FakeWeapon {};
+	//class M16A4_GL: FakeWeapon {};
+	//class M16A4_ACG_GL: FakeWeapon {};
+	//class M24: FakeWeapon {};
+	//class M40A3: FakeWeapon {};
+	//class M240: FakeWeapon {};
+	//class Mk_48: FakeWeapon {};
+	//class M249: FakeWeapon {};
+	//class M4A1: FakeWeapon {};
+	//class M4A1_Aim: FakeWeapon {};
+	//class M4A1_Aim_camo: FakeWeapon {};
+	//class M4SPR: FakeWeapon {};
+	//class M4A1_RCO_GL: FakeWeapon {};
+	//class M4A1_AIM_SD_camo: FakeWeapon {};
+	//class M4A1_HWS_GL_SD_Camo: FakeWeapon {};
+	//class M4A1_HWS_GL: FakeWeapon {};
+	//class M4A1_HWS_GL_camo: FakeWeapon {};
+	//class MP5SD: FakeWeapon {};
+	//class MP5A5: FakeWeapon {};
+	//class PK: FakeWeapon {};
 	class Pecheneg: FakeWeapon {};
-	class SVD: FakeWeapon {};
-	class SVD_CAMO: FakeWeapon {};
-	class G36C: FakeWeapon {};
-	class G36_C_SD_eotech: FakeWeapon {};
-	class G36a: FakeWeapon {};
-	class G36K: FakeWeapon {};
-	class MG36: FakeWeapon {};
+	//class SVD: FakeWeapon {};
+	//class SVD_CAMO: FakeWeapon {};
+
 	//class Launcher: FakeWeapon {};
-	class M136: FakeWeapon {};
-	*/
+	class ksvk: FakeWeapon {};
+	class M136: FakeWeapon {}
 	class Javelin: FakeWeapon {};
 	class Stinger: FakeWeapon {};
 	class RPG7V: FakeWeapon {};
@@ -828,15 +825,15 @@ class CfgWeapons {
 	class Igla: FakeWeapon {};
 	class MetisLauncher: FakeWeapon {};
 	//class Binocular: FakeWeapon {};
-	//class Laserdesignator: FakeWeapon {};
-	//class Laserdesignator_mounted: FakeWeapon {};
+	class Laserdesignator: FakeWeapon {};
+	class Laserdesignator_mounted: FakeWeapon {};
 	//class NVGoggles: FakeWeapon {};
 	//class Throw: FakeWeapon {};
 	//class HandGunBase: FakeWeapon {};
 	//class Put: FakeWeapon {};
-	//class TimeBomb: FakeWeapon {};
-	//class Mine: FakeWeapon {};
-	//class MineE: FakeWeapon {};
+	class TimeBomb: FakeWeapon {};
+	class Mine: FakeWeapon {};
+	class MineE: FakeWeapon {};
 	//class PipeBomb: FakeWeapon {};
 	//class SmokeLauncher: FakeWeapon {};
 	//class FlareLauncher: FakeWeapon {};
@@ -944,46 +941,43 @@ class CfgWeapons {
 	class CDF_dogtags: FakeWeapon {};
 	class Moscow_Bombing_File: FakeWeapon {};
 	class Cobalt_File: FakeWeapon {};
-	/*
-	class ItemWatch: FakeWeapon {};
-	class ItemCompass: FakeWeapon {};
-	class ItemGPS: FakeWeapon {};
-	class ItemRadio: FakeWeapon {};
-	class ItemMap: FakeWeapon {};
+	//class ItemWatch: FakeWeapon {};
+	//class ItemCompass: FakeWeapon {};
+	//class ItemGPS: FakeWeapon {};
+	//class ItemRadio: FakeWeapon {};
+	//class ItemMap: FakeWeapon {};
 	class EvPhoto: FakeWeapon {};
-	class EvMap: FakeWeapon {};
+	//class EvMap: FakeWeapon {};
 	class EvMoscow: FakeWeapon {};
 	class EvKobalt: FakeWeapon {};
 	class EvMoney: FakeWeapon {};
 	class EvDogTags: FakeWeapon {};
 	//class AK_BASE: FakeWeapon {};
 	//class AKS_BASE: FakeWeapon {};
-	//class AK_107_BASE: FakeWeapon {};
-	class AK_47_M: FakeWeapon {};
-	class AK_47_S: FakeWeapon {};
+	//class AK_107_BASE: FakeWeapon	{};
+	//class AK_47_M: FakeWeapon {};
+	//class AK_47_S: FakeWeapon {};
 	class AKS_GOLD: FakeWeapon {};
-	class AK_74: FakeWeapon {};
-	class AK_74_GL: FakeWeapon {};
-	class AK_107_kobra: FakeWeapon {};
-	class AK_107_GL_kobra: FakeWeapon {};
+	//class AK_74: FakeWeapon {};
+	//class AK_74_GL: FakeWeapon {};
+	//class AK_107_kobra: FakeWeapon {};
+	//class AK_107_GL_kobra: FakeWeapon {};
 	class AK_107_GL_pso: FakeWeapon {};
-	class AK_107_pso: FakeWeapon {};
-	class AKS_74_kobra: FakeWeapon {};
-	class AKS_74_pso: FakeWeapon {};
-	class AKS_74_U: FakeWeapon {};
+	//class AK_107_pso: FakeWeapon {};
+	//class AKS_74_kobra: FakeWeapon {};
+	//class AKS_74_pso: FakeWeapon {};
+	//class AKS_74_U: FakeWeapon {};
 	class AKS_74_UN_kobra: FakeWeapon {};
 	class RPK_74: FakeWeapon {};
-	class bizon: FakeWeapon {};
-	class bizon_silenced: FakeWeapon {};
-	class Colt1911: FakeWeapon {};
-	class DMR: FakeWeapon {};
-	class ksvk: FakeWeapon {};
-	class M1014: FakeWeapon {};
+	//class bizon: FakeWeapon {};
+	//class bizon_silenced: FakeWeapon {};
+	//class Colt1911: FakeWeapon {};
+	//class DMR: FakeWeapon {};
+	//class M1014: FakeWeapon {};
 	class m107: FakeWeapon {};
 	class M252: FakeWeapon {};
 	class 2B14: FakeWeapon {};
 	class Saiga12K: FakeWeapon {};
-	*/
 	class VSS_vintorez: FakeWeapon {};
 	class PMC_documents: FakeWeapon {};
 	class m8_base: FakeWeapon {};
@@ -1012,27 +1006,28 @@ class CfgWeapons {
 	class CRV7_HEPD: FakeWeapon {};
 	class CRV7_FAT: FakeWeapon {};
 	class M621: FakeWeapon {};
-	//class BAF_AS50_scoped: FakeWeapon {};
-	//class BAF_AS50_TWS: FakeWeapon {};
-	//class BAF_LRR_scoped: FakeWeapon {};
-	//class BAF_LRR_scoped_W: FakeWeapon {};
-	//class BAF_NLAW_Launcher: FakeWeapon {};
-	//class BAF_L17_40mm: FakeWeapon {};
+	class BAF_AS50_scoped: FakeWeapon {};
+	class BAF_AS50_TWS: FakeWeapon {};
+	class BAF_LRR_scoped: FakeWeapon {};
+	class BAF_LRR_scoped_W: FakeWeapon {};
+	class BAF_NLAW_Launcher: FakeWeapon {};
+	class BAF_L17_40mm: FakeWeapon {};
 	//class L85A2_base_BAF: FakeWeapon {};
 	//class BAF_L85A2_RIS_Holo: FakeWeapon {};
-	//class BAF_L85A2_UGL_Holo: FakeWeapon {};
-	//class BAF_L85A2_RIS_SUSAT: FakeWeapon {};
-	//class BAF_L85A2_UGL_SUSAT: FakeWeapon {};
-	//class BAF_L85A2_RIS_ACOG: FakeWeapon {};
-	//class BAF_L85A2_UGL_ACOG: FakeWeapon {};
-	//class BAF_L85A2_RIS_CWS: FakeWeapon {};
-	//class BAF_L86A2_ACOG: FakeWeapon {};
-	//class BAF_L110A1_Aim: FakeWeapon {};
-	//class BAF_L7A2_GPMG: FakeWeapon {};
-	//class BAF_ied_v1: FakeWeapon {};
-	//class BAF_ied_v2: FakeWeapon {};
-	//class BAF_ied_v3: FakeWeapon {};
-	//class BAF_ied_v4: FakeWeapon {};
+	class BAF_L85A2_UGL_Holo: FakeWeapon {};
+	class BAF_L85A2_RIS_SUSAT: FakeWeapon {};
+	class BAF_L85A2_UGL_SUSAT: FakeWeapon {};
+	class BAF_L85A2_RIS_ACOG: FakeWeapon {};
+	class BAF_L85A2_UGL_ACOG: FakeWeapon {};
+	class BAF_L85A2_RIS_CWS: FakeWeapon {};
+	class BAF_L86A2_ACOG: FakeWeapon {};
+	class BAF_L110A1: FakeWeapon {};
+	class BAF_L110A1_Aim: FakeWeapon {};
+	class BAF_L7A2_GPMG: FakeWeapon {};
+	class BAF_ied_v1: FakeWeapon {};
+	class BAF_ied_v2: FakeWeapon {};
+	class BAF_ied_v3: FakeWeapon {};
+	class BAF_ied_v4: FakeWeapon {};
 	class M68: FakeWeapon {};
 	class D10: FakeWeapon {};
 	class PKTBC: FakeWeapon {};
@@ -1048,35 +1043,41 @@ class CfgWeapons {
 	class M120: FakeWeapon {};
 	//class Sa61_EP1: FakeWeapon {};
 	//class UZI_EP1: FakeWeapon {};
-	//class UZI_SD_EP1: FakeWeapon {};
+	class UZI_SD_EP1: FakeWeapon {};
 	//class revolver_EP1: FakeWeapon {};
-	//class revolver_gold_EP1: FakeWeapon {};
+	class revolver_gold_EP1: FakeWeapon {};
 	//class glock17_EP1: FakeWeapon {};
 	//class M60A4_EP1: FakeWeapon {};
 	//class Mk_48_DES_EP1: FakeWeapon {};
 	//class M249_EP1: FakeWeapon {};
 	class M249_TWS_EP1: FakeWeapon {};
-	//class M249_m145_EP1: FakeWeapon {};
+	class M249_m145_EP1: FakeWeapon {};
 	//class M24_des_EP1: FakeWeapon {};
 	//class SVD_des_EP1: FakeWeapon {};
 	//class SVD_NSPU_EP1: FakeWeapon {};
-	class Sa58P_EP1: FakeWeapon {};
-	class Sa58V_EP1: FakeWeapon {};
-	class Sa58V_RCO_EP1: FakeWeapon {};
-	class Sa58V_CCO_EP1: FakeWeapon {};
+	//class Sa58P_EP1: FakeWeapon {};
+	//class Sa58V_EP1: FakeWeapon {};
+	//class Sa58V_RCO_EP1: FakeWeapon {};
+	//class Sa58V_CCO_EP1: FakeWeapon {};
 	//class M4A3_CCO_EP1: FakeWeapon {};
 	//class M4A3_RCO_GL_EP1: FakeWeapon {};
 	//class Binocular_Vector: FakeWeapon {};
 	//class AK_74_GL_kobra: FakeWeapon {};
 	//class AKS_74: FakeWeapon {};
+	class MK_12: FakeWeapon {};
 	class AKS_74_NSPU: FakeWeapon {};
 	class AKS_74_GOSHAWK: FakeWeapon {};
 	//class FN_FAL: FakeWeapon {};
 	//class FN_FAL_ANPVS4: FakeWeapon {};
 	//class G36C_camo: FakeWeapon {};
-	//class G36_C_SD_camo: FakeWeapon {};
+	class G36_C_SD_camo: FakeWeapon {};
 	//class G36A_camo: FakeWeapon {};
 	//class G36K_camo: FakeWeapon {};
+	//class G36C: FakeWeapon {};
+	class G36_C_SD_eotech: FakeWeapon {};
+	//class G36a: FakeWeapon {};
+	//class G36K: FakeWeapon {};
+	class MG36: FakeWeapon {};
 	class MG36_camo: FakeWeapon {};
 	class GrenadeLauncher_EP1: FakeWeapon {};
 	class M32_EP1: FakeWeapon {};
@@ -1091,8 +1092,8 @@ class CfgWeapons {
 	class M47Launcher_EP1: FakeWeapon {};
 	class MAAWS: FakeWeapon {};
 	class SCAR_Base: FakeWeapon {};
-	class SCAR_L_Base: FakeWeapon {};
-	class SCAR_L_CQC: FakeWeapon {};
+	//class SCAR_L_Base: FakeWeapon {};
+	//class SCAR_L_CQC: FakeWeapon {};
 	class SCAR_L_CQC_Holo: FakeWeapon {};
 	class SCAR_L_STD_Mk4CQT: FakeWeapon {};
 	class SCAR_L_STD_EGLM_RCO: FakeWeapon {};
@@ -1664,7 +1665,7 @@ class CfgVehicles {
 	class HMMWV_M2: Banned {};
 	class HMMWV_TOW: Banned {};
 	class HMMWV_MK19: Banned {};
-	class HMMWV: Banned {};
+	//class HMMWV: Banned {};
 	class UAZ_MG_CDF: Banned {};
 	class UAZ_AGS30_CDF: Banned {};
 	class UralOpen_CDF: Banned {};
@@ -1824,7 +1825,7 @@ class CfgVehicles {
 	class UH1Y: Banned {};
 	class UH1Y_cutscene: Banned {};
 	class Su34: Banned {};
-	class UH60_wreck_EP1: Banned {};
+	//class UH60_wreck_EP1: Banned {};
 	class WarfareSalvageTruck_USMC: Banned {};
 	class WarfareSupplyTruck_USMC: Banned {};
 	class WarfareReammoTruck_USMC: Banned {};
@@ -1922,7 +1923,7 @@ class CfgVehicles {
 	class Chukar_AllwaysEnemy_EP1: Banned {};
 	class AH64D_EP1: Banned {};
 	class AH6J_EP1: Banned {};
-	//class AH6X_EP1: Banned {};
+	class AH6X_EP1: Banned {};
 	class MH6J_EP1: Banned {};
 	class An2_1_TK_CIV_EP1: Banned {};
 	class An2_2_TK_CIV_EP1: Banned {};
@@ -2091,7 +2092,107 @@ class CfgSkeletons
 		skeletonInherit = "";
 		skeletonBones[] = {};
 	};
- 
+	
+	class AnimalSkeleton: Default
+	{
+		isDiscrete = 0;
+		skeletonInherit = "";
+		skeletonBones[] ={};
+	};
+	class DogSkeleton
+	{
+		isDiscrete = 0;
+		skeletonInherit = "";
+		skeletonBones[] =
+		{
+			"Hips","",
+			"spine","Hips",
+			"spine1","spine",
+			"spine2","spine1",
+			"neck","spine2",
+			"neck1","neck",
+			"head","neck1",
+			"Jaw","head",
+			"Tongue1","Jaw",
+			"Tongue2","Tongue1",
+			"leftArm","spine2",
+			"leftForeArm","leftArm",
+			"leftHand","leftForeArm",
+			"leftFinger","leftHand",
+			"rightArm","spine2",
+			"rightForeArm","rightArm",
+			"rightHand","rightForeArm",
+			"rightFinger","rightHand",
+			"tail1","Hips",
+			"tail2","tail1",
+			"tail3","tail2",
+			"leftUpLeg","spine",
+			"leftLeg","leftUpLeg",
+			"leftFoot","leftLeg",
+			"leftToe","leftFoot",
+			"rightUpLeg","spine",
+			"rightLeg","rightUpLeg",
+			"rightFoot","rightLeg",
+			"rightToe","rightFoot",
+			"leftEar","head",
+			"rightEar","head"
+		};
+		pivotsModel = "ca\Animals2\Dog_Skeleton.p3d";
+	};
+	class BirdSkeleton: AnimalSkeleton
+	{
+		skeletonInherit = "AnimalSkeleton";
+		skeletonBones[] =
+		{
+			"head","neck",
+			"Hips","spine",
+			"leftArm","leftShoulder",
+			"leftForeArm","leftArm",
+			"leftHand","leftForeArm",
+			"LeftFingerBase","leftHand",
+
+			"leftFoot","leftLeg",
+			"leftFootIndex1","leftFoot",
+			"leftFootMiddle1","leftFoot",
+			"leftFootRing1","leftFoot",
+			"leftFootThumb1","leftFoot",
+
+			"leftLeg","leftUpLeg",
+			"leftShoulder","spine",
+
+			"leftUpLeg","spine",
+			"neck","spine1",
+
+			"rightArm","rightShoulder",
+			"rightForeArm","rightArm",
+			"rightHand","rightForeArm",
+			"rightFingerBase","RightHand",
+
+			"rightFoot","rightLeg",
+			"rightFootIndex1","rightFoot",
+			"rightFootMiddle1","rightFoot",
+			"rightFootRing1","rightFoot",
+			"RightFootThumb1","rightFoot",
+
+			"rightLeg","rightUpLeg",
+			"rightShoulder","spine",
+			"rightUpLeg","spine",
+			"spine","",
+			"spine1","spine",
+			"tail","Hips",
+		};
+	};
+	class CfgMovesButterfly: Default
+	{
+		skeletonBones[] =
+		{
+			"body", "",
+			"LBwing", "",
+			"LTwing", "",
+			"RBwing", "",
+			"RTwing", ""
+		};
+	}; 
 	class OFP2_ManSkeleton
 	{
 		isDiscrete = 0;
@@ -2254,7 +2355,17 @@ class CfgModels
 		sections[] = {};
 		skeletonName = "";
 	};
- 
+ 	class Dog: Default
+	{
+		sections[] = {"trup"};
+		skeletonName = "DogSkeleton";
+		htMin = 60;	// Minimum half-cooling time (in seconds)
+		htMax = 1800;	// Maximum half-cooling time (in seconds)
+		afMax = 30;	// Maximum temperature in case the model is alive (in celsius)
+		mfMax = 0;	// Maximum temperature when the model is moving (in celsius)
+		mFact = 1;	// Metabolism factor - number from interval <0, 1> (0 - metabolism has no influence, 1 - metabolism has full influence (no other temperature source will be considered)).
+		tBody = 37; 	// Metabolism temperature of the model (in celsius)
+	};
 	class ArmaMan : Default
 	{
 		sections[] =
@@ -2389,4 +2500,15 @@ class CfgModels
 	//class zombie_sniffing_264-499 : ArmaMan {};
 	//class zombie_sniffing_573-809 : ArmaMan {};
 	//class zombie_sniffing_573-809 : ArmaMan {};
+	class dogBarkOnce: Dog {};
+	class dogDownIdle: Dog {};
+	class dogDownStand: Dog {};
+	class dogDownStill: Dog {};
+	class dogGestureHeadL: Dog {};
+	class dogGestureHeadR: Dog {};
+	class dogGestureIdle1: Dog {};
+	class dogGestureIdle2: Dog {};
+	class dogGestureSniff: Dog {};
+	class dogStandDown: Dog {};
+	class dogGestureGrowl: Dog {};
 };
