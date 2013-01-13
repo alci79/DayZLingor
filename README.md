@@ -35,13 +35,7 @@ Changelog
 			
 			* [NEW] - Infection changes when eating cooked food and drinking water. (tin and canned items don't count)
 			* [NEW] - Epeen monitor added to display player stats. (Zombies Killed, Headshots, Murders, Bandits Killed, Humanity) - Press f12 to use
-			* [NEW] - Peripheral Dots removed fully.
-			
-			
-			***** Not added to the dev builds *****
-			** [NEW] - Basic Anti teleport script.
-			** [NEW] - Basic Mission system Phase 1 (Server Admin Controlled).
-		
+			* [NEW] - Peripheral Dots removed fully.	
 
 			* [UPDATED] - BAF_L85A2_RIS_CWS replaced with BAF_L85A2_RIS_Holo. (HeliCrash)
 			* [UPDATED] - Added a much faster login process. (Advantages: Login Speed up)
