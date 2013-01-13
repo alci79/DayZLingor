@@ -19,7 +19,7 @@ Changelog
 			* [NEW]	Weapon - G36C_camo. (HeliCrash)
 			* [NEW]	Weapon - G36A_camo. (HeliCrash)
 			* [NEW]	Weapon - G36K_camo. (HeliCrash)
-      * [NEW] Weapon - MG36. (HeliCrash)
+			* [NEW] Weapon - MG36. (HeliCrash)
 			* [NEW]	Weapon - M40A3 (MilitaryS)
 			* [NEW] Vehicle - HMMWV.
 			* [NEW] Vehicle - MH6J_DZ.
