@@ -28,13 +28,13 @@ class CfgMods
 {
 	class DayZ
 	{
-		dir = "DayZLingor";
-		name = "DayZLingor";
+		dir = "DayZ";
+		name = "DayZ";
 		picture = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.dayzmod.com";
-		version = "1.0";
+		version = "1.7.5.M1D12";
 		hiveVersion = 0.96; //0.93
 	};
 };
@@ -115,9 +115,11 @@ class CfgSurvival {
 	class Meat {
 		class Default {
 			yield = 2;
+			rawfoodtype = "FoodSteakRaw";
 		};
 		class Cow: Default {
 			yield = 8;
+			rawfoodtype = "FoodSteakRaw";
 		};
 		class Cow01: Cow {};
 		class Cow02: Cow {};
@@ -125,12 +127,23 @@ class CfgSurvival {
 		class Cow04: Cow {};
 		class Goat: Default {
 			yield = 4;
+			rawfoodtype = "FoodSteakRaw";
 		};
 		class Sheep: Default {
 			yield = 4;
+			rawfoodtype = "FoodmuttonRaw";
 		};
 		class WildBoar: Default {
 			yield = 4;
+			rawfoodtype = "FoodbaconRaw";
+		};
+		class Hen: Default {
+			yield = 4;
+			rawfoodtype = "FoodchickenRaw";
+		};
+		class Rabbit: Default {
+			yield = 4;
+			rawfoodtype = "FoodrabbitRaw";
 		};
 	};
 };
@@ -505,7 +518,6 @@ class CfgBuildingLoot {
 			{"M16A2","weapon"},
 			{"M16A2GL","weapon"},
 			{"M9SD","weapon"},
-			{"AK_47_M","weapon"},
 			{"AK_74","weapon"},
 			{"M4A1_Aim","weapon"},
 			{"AKS_74_kobra","weapon"},
@@ -549,7 +561,6 @@ class CfgBuildingLoot {
 			0.05,
 			0.01,
 			0.02,
-			0.13,
 			0.15,
 			0.01,
 			0.08,
@@ -600,8 +611,6 @@ class CfgBuildingLoot {
 			{"M249_DZ","weapon"},
 			{"M9SD","weapon"},
 			//{"M136","weapon"},
-			
-			{"AK_47_M","weapon"},
 			{"AK_74","weapon"},
 			{"M4A1_Aim","weapon"},
 			{"AKS_74_kobra","weapon"},
@@ -658,7 +667,6 @@ class CfgBuildingLoot {
 			0.01,
 			0.02,
 			//0.01, //m136
-			0.13,
 			0.10,
 			0.02,
 			0.10,
@@ -1050,24 +1058,31 @@ class CfgBuildingLoot {
 	class Land_HouseBlock_C3: HouseRoaming {};
 	class Land_HouseBlock_C4: HouseRoaming {};
 	class Land_HouseBlock_C5: HouseRoaming {};
-	class Land_HouseV2_01B: HouseRoaming{};
-	class Land_Misc_Cargo1D: HouseRoaming{};
-	class Land_HouseV2_03: HouseRoaming{};
-	class Land_Ind_Shed_01_end: HouseRoaming{};
-	class Land_MBG_ApartmentsOne_W: HouseRoaming{};
-	class Land_MBG_ApartmentsTwo_P: HouseRoaming{};
-	class Land_MBG_ApartmentsTwo_G: HouseRoaming{};
-	class Land_MBG_ApartmentsTwo_B: HouseRoaming{};
-	class Land_A_statue01: HouseRoaming
- {
-  zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2","z_soldier","z_soldier_heavy","z_policeman"};
-  minRoaming = 2;
-  maxRoaming = 8;
- };
- class Land_Shed_W02: FarmRoaming{};
- class Land_House_C_1_EP1: Residential
- {
-  lootPos[] = {
+	class Land_HouseV2_01B: HouseRoaming {}; // Qty: 20
+	class Land_Misc_Cargo1D: HouseRoaming {}; // Qty: 29
+	class Land_HouseV2_03: HouseRoaming {}; // Qty: 8
+	class Land_Ind_Shed_01_end: HouseRoaming {}; // Qty: 266
+	class Land_A_statue01: HouseRoaming {
+		zombieClass[] = {"zZombie_Base","zZombie_Base","z_teacher","z_suit1","z_suit2","z_soldier","z_soldier_heavy","z_policeman"};
+		minRoaming = 2;
+		maxRoaming = 8;
+	}; // Qty: 3
+	class Land_Shed_W02: FarmRoaming {}; // Qty: 213
+	//allow 
+	class Grave: HouseRoaming {
+		maxRoaming = 3;
+	};
+	class GraveCross1: HouseRoaming {	
+		maxRoaming = 2;
+	};
+	class GraveCross2: HouseRoaming {	
+		maxRoaming = 2;
+	};
+	class GraveCrossHelmet: Military {	
+		maxRoaming = 4;
+	};
+	class Land_House_C_2_EP1: Residential {
+	lootPos[] = {
    { -3.70313,-0.119629,-0.927744 },
    { -7.34131,-0.464844,-0.927744 },
    { -6.0498,-2.62646,-0.927744 },
@@ -1076,8 +1091,7 @@ class CfgBuildingLoot {
    { 6.72168,-1.4165,-0.927744 },
    { 5.64063,-3.16113,-0.927744 }};
  };
- class Land_House_C_2_EP1: Residential
- {
+ class Land_House_C_2_EP1: Residential {
   lootPos[] = {
    { 1.09351,-0.86499,-2.31269 },
    { 4.32935,-0.392578,-2.31269 },
@@ -1085,8 +1099,7 @@ class CfgBuildingLoot {
    { 3.63306,-0.0957031,0.785267 },
    { -2.43628,-0.856689,0.547504 }};
  };
- class Land_House_C_3_EP1: Residential
- {
+ class Land_House_C_3_EP1: Residential {
   lootPos[] = {
    { 6.61987,-1.8667,-3.91483 },
    { 5.80493,1.21094,-3.91483 },
@@ -1096,8 +1109,7 @@ class CfgBuildingLoot {
    { -4.84521,-2.55664,0.576136 },
    { -1.21606,-1.24634,1.96108 }};
  };
- class Land_House_C_4_EP1: Residential
- {
+ class Land_House_C_4_EP1: Residential {
   lootPos[] = {
    { 5.38452,-0.364746,-3.48355 },
    { 3.16089,2.81616,-3.48355 },
@@ -1108,38 +1120,33 @@ class CfgBuildingLoot {
    { -1.23096,-5.15308,-0.27861 },
    { -4.16602,2.48022,-0.348963 }};
  };
- class Land_House_C_5_EP1: Residential
- {
+ class Land_House_C_5_EP1: Residential {
   lootPos[] = {
    { 3.1499,2.39502,-1.36692 },
    { -1.80127,-2.98022,-1.36692 }};
  };
- class Land_House_C_5_V2_EP1: Residential
- {
+ class Land_House_C_5_V2_EP1: Residential {
   lootPos[] = {
    { 3.42529,1.77832,-1.36692 },
    { -3.6687,1.98779,-1.36692 },
    { -2.0271,-2.9126,-1.36692 },
    { -1.271,-3.94385,1.33329 }};
  };
- class Land_House_C_5_V3_EP1: Residential
- {
+ class Land_House_C_5_V3_EP1: Residential {
   lootPos[] = {
    { 2.59375,2.28711,-1.4715 },
    { -2.56445,-3.37988,-1.4715 },
    { 1.88525,2.08398,1.42051 },
    { -1.42725,-4.34424,1.23343 }};
  };
- class Land_House_C_5_V1_EP1: Residential
- {
+ class Land_House_C_5_V1_EP1: Residential {
   lootPos[] = {
    { 2.59375,2.28711,-1.4715 },
    { -2.56445,-3.37988,-1.4715 },
    { 1.88525,2.08398,1.42051 },
    { -1.42725,-4.34424,1.23343 }};
  };
- class Land_House_C_9_EP1: Residential
- {
+ class Land_House_C_9_EP1: Residential {
   lootPos[] = {
    { -3.47339,2.13086,-3.74726 },
    { -3.17773,4.19849,-3.74837 },
@@ -1151,8 +1158,7 @@ class CfgBuildingLoot {
    { 1.66138,4.33472,-0.152166 },
    { 4.38208,-5.14136,-0.152166 }};
  };
- class Land_House_C_10_EP1: Residential
- {
+ class Land_House_C_10_EP1: Residential {
   lootPos[] = {
    { -1.69873,-1.29932,-4.18862 },
    { -1.44849,-6.23291,-4.19626 },
@@ -1165,8 +1171,7 @@ class CfgBuildingLoot {
    { -2.33911,-5.66138,-0.86986 },
    { -2.09888,1.83032,-0.868948 }};
  };
- class Land_House_C_11_EP1: Residential
- {
+ class Land_House_C_11_EP1: Residential {
   lootPos[] = {
    { -4.875,-3.75586,-2.45703 },
    { -1.22852,-3.17529,-2.08453 },
@@ -1176,8 +1181,7 @@ class CfgBuildingLoot {
    { 0.449219,-3.03857,0.972969 },
    { 4.8291,3.44629,0.972969 }};
  };
- class Land_House_C_12_EP1: Industrial
- {
+ class Land_House_C_12_EP1: Industrial {
   lootPos[] = {
    { 6.2915,1.28516,-3.51101 },
    { 6.84961,-2.6499,-3.51101 },
@@ -1188,8 +1192,7 @@ class CfgBuildingLoot {
    { -3.02686,-8.6123,0.136051 },
    { 0.570801,-8.02637,0.139021 }};
  };
- class Land_House_K_3_EP1: Residential
- {
+ class Land_House_K_3_EP1: Residential {
   lootPos[] = {
    { 0.524414,3.5166,-0.53767 },
    { 1.53491,-0.0644531,-0.790318 },
@@ -1197,15 +1200,13 @@ class CfgBuildingLoot {
    { -4.46191,1.38379,-0.795597 },
    { 1.1001,5.40723,2.81719 }};
  };
- class Land_House_K_7_EP1: Residential
- {
+ class Land_House_K_7_EP1: Residential {
   lootPos[] = {
    { -0.995361,1.89014,-0.218372 },
    { -4.9541,3.85254,-0.218374 },
    { -3.4502,4.0376,3.32767 }};
  };
- class Land_House_L_7_EP1: Residential
- {
+ class Land_House_L_7_EP1: Residential {
   lootPos[] = {
    { 0.769287,1.41162,-1.44695 },
    { -1.43384,1.45557,-1.45483 },
@@ -1213,8 +1214,7 @@ class CfgBuildingLoot {
    { 4.55078,1.49414,1.281 },
    { 6.6394,1.8252,1.281 }};
  };
- class Land_House_L_6_EP1: Residential
- {
+ class Land_House_L_6_EP1: Residential {
   lootPos[] = {
    { -3.84692,-0.850586,-1.5254 },
    { -1.49683,1.06152,-1.45482 },
@@ -1222,8 +1222,7 @@ class CfgBuildingLoot {
    { 5.48096,-0.556641,-1.509 },
    { 7.14697,2.24023,-1.509 }};
  };
- class Land_House_K_8_EP1: Residential
- {
+ class Land_House_K_8_EP1: Residential {
   lootPos[] = {
    { 2.47577,-2.24414,-2.56724 },
    { -1.96313,-1.05566,-2.54675 },
@@ -1234,8 +1233,7 @@ class CfgBuildingLoot {
    { -0.392883,3.23242,3.35996 },
    { -1.83887,-0.766602,3.35996 }};
  };
- class Land_House_K_5_EP1: Residential
- {
+ class Land_House_K_5_EP1: Residential {
   lootPos[] = {
    { -2.40381,1.90674,1.51889 },
    { -5.96777,0.826416,0.710116 },
@@ -1245,8 +1243,7 @@ class CfgBuildingLoot {
    { 4.17725,0.271484,2.4009 },
    { 1.30908,1.50195,1.55225 }};
  };
- class Land_House_K_1_EP1: Residential
- {
+ class Land_House_K_1_EP1: Residential {
   lootPos[] = {
    { -0.685547,4.02161,1.56626 },
    { 3.71387,5.48114,1.56626 },
@@ -1254,8 +1251,7 @@ class CfgBuildingLoot {
    { -3.30566,4.65558,1.54929 },
    { -3.77539,2.02087,1.60863 }};
  };
- class Land_House_L_3_EP1: Residential
- {
+ class Land_House_L_3_EP1: Residential {
   lootPos[] = {
    { -5.59863,-0.384766,-0.173644 },
    { -5.23425,2.49609,-0.22691 },
@@ -1263,8 +1259,7 @@ class CfgBuildingLoot {
    { -0.387817,0.0234375,-0.222477 },
    { 2.11365,2.99512,-0.222477 }};
  };
- class Land_House_L_4_EP1: Residential
- {
+ class Land_House_L_4_EP1: Residential {
   lootPos[] = {
    { -3.34961,-0.487122,-1.33058 },
    { -6.60547,0.131348,-1.29852 },
@@ -1273,8 +1268,7 @@ class CfgBuildingLoot {
    { 3.47559,0.370972,-1.05766 },
    { 5.41992,3.25671,-1.01435 }};
  };
- class LAND_ibr_bank: Office
- {
+ class LAND_ibr_bank: Office {
   lootPos[] = {
    { 1.44702,-0.9551,-1.60158 },
    { -7.40649,-4.9482,-1.60158 },
@@ -1285,8 +1279,7 @@ class CfgBuildingLoot {
    { -14.0247,-6.4653,-1.60158 },
    { -10.1897,-2.6592,-1.60158 }};
  };
- class Land_House_L_8_EP1: Residential
- {
+ class Land_House_L_8_EP1: Residential {
   lootPos[] = {
    { 0.662598,5.04395,-1.01205 },
    { 0.73291,2.59424,-1.01574 },
@@ -1295,8 +1288,7 @@ class CfgBuildingLoot {
    { -2.51514,-2.19971,-1.55013 },
    { -2.51514,-2.19971,-1.55013 }};
  };
- class Land_ibrhotel: Residential
- {
+ class Land_ibrhotel: Residential {
   lootPos[] = {
    { -8.44922,9.08105,-7.74672 },
    { -0.813965,9.1748,-7.74672 },
@@ -1362,8 +1354,7 @@ class CfgBuildingLoot {
    { -1.54492,0.158691,6.24485 },
    { 3.11914,5.81445,6.24485 }};
  };
- class Land_MBG_Shanty_BIG: Residential
- {
+ class Land_MBG_Shanty_BIG: Residential {
   lootPos[] = {
    { -29.8752,-15.8057,2.99997 },
    { 23.4097,11.5024,24.9672 },
@@ -1371,31 +1362,27 @@ class CfgBuildingLoot {
    { 23.2319,11.6201,27.9672 },
    { -33.3779,-11.3564,5.81198 }};
  };
- class Land_dum_istan3_hromada2: Residential
- {
+ class Land_dum_istan3_hromada2: Residential {
   lootPos[] = {
    { 1.67627,3,-4.62603 },
    { -1.47363,4.92285,-1.28517 },
    { 6.43848,1.93555,2.08801 }};
  };
- class Land_budova4_in: Military
- {
+ class Land_budova4_in: Military {
   lootPos[] = {
    { -6.50415,2.1416,-1.88723 },
    { -1.66162,2.10168,-1.88723 },
    { 2.94312,2.297,-1.88723 },
    { 5.34082,-1.82922,-1.88723 }};
  };
- class Land_army_hut_int: Military
- {
+ class Land_army_hut_int: Military {
   lootPos[] = {
    { 2.7959,-5.07373,-1.33056 },
    { 2.79785,-2.1626,-1.33056 },
    { -0.943359,-0.060791,-1.35981 },
    { 0.689453,1.87134,-1.36167 }};
  };
- class Land_army_hut3_long_int: Military
- {
+ class Land_army_hut3_long_int: Military {
   lootPos[] = {
    { -2.88721,-4.36035,-1.23617 },
    { 0.753906,-3.90039,-1.23617 },
@@ -1404,23 +1391,20 @@ class CfgBuildingLoot {
    { -0.0664063,-1.70801,-1.23617 },
    { 0.141113,2.31104,-1.23617 }};
  };
- class Land_army_hut2_int: Military
- {
+ class Land_army_hut2_int: Military {
   lootPos[] = {
    { -0.421387,-0.0517578,-0.948329 },
    { 1.80103,0.945313,-0.948329 },
    { 2.24585,-2.6875,-0.948329 },
    { -1.24561,-1.53955,-0.948329 }};
  };
- class land_ibr_hangar: Military
- {
+ class land_ibr_hangar: Military {
   lootPos[] = {
    { -5.75635,9.95386,-3.57318 },
    { -8.06152,-11.4065,-3.58192 },
    { 8.68555,-5.30371,-3.57942 }};
  };
- class Land_MBG_Police_Station: Office
- {
+ class Land_MBG_Police_Station: Office {
   lootPos[] = {
    { 9.81543,-4.36365,-1.59829 },
    { 1.01172,-6.02344,-1.59829 },
@@ -1440,8 +1424,7 @@ class CfgBuildingLoot {
    { -5.33887,3.92529,1.68834 },
    { -2.3125,6.18774,1.68834 }};
  };
- class Land_dum_mesto_in: Residential
- {
+ class Land_dum_mesto_in: Residential {
   lootPos[] = {
    { -5.53796,-2.51996,-3.99769 },
    { -4.66113,1.34052,-4.26331 },
@@ -1457,8 +1440,7 @@ class CfgBuildingLoot {
    { -2.42969,-1.18854,-1.27582 },
    { -4.77722,3.51996,-1.27582 }};
  };
- class Land_tovarna1: Industrial
- {
+ class Land_tovarna1: Industrial {
   lootPos[] = {
    { 2.83887,5.23889,-5.75442 },
    { -2.30774,7.31934,-5.75442 },
@@ -1475,26 +1457,22 @@ class CfgBuildingLoot {
    { -5.77393,-7.28271,2.17997 },
    { -0.484985,-3.14197,4.82992 }};
  };
- class Land_hut01: Residential
- {
+ class Land_hut01: Residential {
   lootPos[] = {
    { 0.304749,-0.543213,-0.448339 },
    { 0.885254,2.90747,-0.44834 }};
  };
- class Land_hut02: Residential
- {
+ class Land_hut02: Residential {
   lootPos[] = {
    { -0.498901,2.974,-0.445764 },
    { -1.07245,-0.756958,-0.445764 }};
  };
- class Land_hut04: Residential
- {
+ class Land_hut04: Residential {
   lootPos[] = {
    { -1.07227,-0.354492,-0.437198 },
    { 0.939697,2.78271,-0.437198 }};
  };
- class Land_Ind_Oil_Tower_EP1: Industrial
- {
+ class Land_Ind_Oil_Tower_EP1: Industrial {
   lootPos[] = {
    { 3.55743,-5.92773,-12.9755 },
    { 4.63086,1.24902,-12.9932 },
@@ -1502,8 +1480,7 @@ class CfgBuildingLoot {
    { 6.87689,-6.34961,-8.00889 },
    { 2.31177,0.231689,-8.00478 }};
  };
- class Land_ibr_terminal: Office
- {
+ class Land_ibr_terminal: Office {
   lootPos[] = {
    { 11.1885,-13.0669,-4.04974 },
    { 4.42383,-9.64746,-4.04974 },
@@ -1518,8 +1495,7 @@ class CfgBuildingLoot {
    { -2.83545,10.9009,-0.949741 },
    { -2.27686,-16.4238,3.68157 }};
  };
- class Land_A_Villa_EP1: Office
- {
+ class Land_A_Villa_EP1: Office {
   lootPos[] = {
    { -23.3442,1.71484,-3.65929 },
    { 14.5498,-5.69775,-5.06722 },
@@ -1542,8 +1518,7 @@ class CfgBuildingLoot {
    { -11.8062,14.2358,-1.4844 },
    { -15.5771,14.0396,-1.4844 }};
  };
- class Land_A_Office01_EP1: Land_A_Office01
- {
+ class Land_A_Office01_EP1: Land_A_Office01 {
   lootPos[] = {
    { -2.50391,-2.46948,-4.728 },
    { 4.23535,-0.336914,-4.728 },
@@ -1581,3 +1556,6 @@ class CfgBuildingLoot {
  class Land_ibrPanelak: Land_Panelak{};
  class Land_ibrPanelak2: Land_Panelak2{};
 };
+/*
+class Land_Mil_House: Default {}; // Qty: 5
+*/
