@@ -33,7 +33,7 @@
 
 	DayZLand.eu Übernehmen:
 		Grabstein -> Wenn man stirbt kommt ein Grabstein mit dem Inventar des Toten. Den Grabstein despawnt nach 30 min und man kann ihn Kaputtschießen.
-		Spawnpunkt beim Spawnen auswählen. (Drassen / Chupinka oder Zuf�llig)
+		Spawnpunkt beim Spawnen auswählen. (Drassen / Chupinka oder Zufällig)
 		Geschlechtsauswahl -> Männlich / Weiblich
 
 	Wasteland Ideen:
