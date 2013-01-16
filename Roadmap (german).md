@@ -14,7 +14,7 @@
 
 	-Dublizieren Bug Beheben! (Ich Frag mal p. Schneider)
 
-	1.7.5 -> https://github.com/Stapo/DayZMod/tree/1.7.5/SQF
+	1.7.5 -> https://github.com/R4Z0R49/DayZMod/tree/Development/SQF
 		-Blut-/Essen-/Trinken-/Temperaturanzeige überarbeiten
 		-ATV Flippen
 		-Großes Auto mit 4 Spielern Flippen (DayZLand.eu)
