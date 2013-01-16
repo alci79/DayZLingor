@@ -1,51 +1,51 @@
--Lingor auf den Neusten Stand bringen. AH6X_DZ Integration, Loot Table Aktualisieren
--Baracken Türen Fixen (Man kommt bei einer Seite nicht durch)
--Müll ist auf den Straßen Platziert (nicht mehr auf dem Wasser)
--Medic Zelte sind nicht mehr mitten im Wald (Nordosten Calamar)
--Medic Zelte südlich in Calamar und auf der Kleinen Insel bei den Brücken. (Wie in Version 0.34)
--Neue Gebäude auf Leeren Stellen (Calamar, FOB Eddy, El Villon) - Nicht über die Missionsdatei sondern über den Code!
--Neue Spawnpunkte von Fahrzeugen (mi17_dz, Ah6x_dz, an2_dz)
--Neue Spawnpunkte für Spieler
--AN2_DZ Etwas schneller und einfacher zu Fliegen.
--Debugmonitor Clientside an und ausschalten. (Alte DayZ Version)
+	-Lingor auf den Neusten Stand bringen. AH6X_DZ Integration, Loot Table Aktualisieren
+	-Baracken TÃ¼ren Fixen (Man kommt bei einer Seite nicht durch)
+	-MÃ¼ll ist auf den StraÃŸen Platzieren (nicht mehr auf dem Wasser)
+	-Medic Zelte sind nicht mehr mitten im Wald (Nordosten Calamar)
+	-Medic Zelte sÃ¼dlich in Calamar und auf der Kleinen Insel bei den Brï¿½cken. (Wie in Version 0.34)
+	-Neue GebÃ¤ude auf Leeren Stellen (Calamar, FOB Eddy, El Villon) - Nicht ï¿½ber die Missionsdatei sondern ï¿½ber den Code!
+	-Neue Spawnpunkte von Fahrzeugen (mi17_dz, Ah6x_dz, an2_dz)
+	-Neue Spawnpunkte fÃ¼r Spieler
+	-AN2_DZ Etwas schneller und einfacher zu Fliegen.
+	-Debugmonitor Clientside an und ausschalten. (Alte DayZ Version)
 
 
--Tarn-Zelt! Texture wie ein Ghillysuit!
+	-Tarn-Zelt! Texture wie ein Ghillysuit!
 
--Dublizieren Bug Beheben! (Ich Frag mal p. Schneider)
+	-Dublizieren Bug Beheben! (Ich Frag mal p. Schneider)
 
-1.7.5 -> https://github.com/Stapo/DayZMod/tree/1.7.5/SQF
--Blut-/Essen-/Trinken-/Temperaturanzeige überarbeiten
--ATV Flippen
--Größes Auto mit 4 Spielern Flippen (DayZLand.eu)
+	1.7.5 -> https://github.com/Stapo/DayZMod/tree/1.7.5/SQF
+		-Blut-/Essen-/Trinken-/Temperaturanzeige ï¿½berarbeiten
+		-ATV Flippen
+		-GroÃŸes Auto mit 4 Spielern Flippen (DayZLand.eu)
 
-Loot:
--Neue Waffen einbauen: G36 (Alle Versionen), RPK_74, M40A3, Sa61_EP1, AK_107_GL_kobra, VSS_Vintorez 
--AS50, M107_DZ Anpassen?  (Soweit ich weiß soll M107 kein Großes Problem sein.) (DayZLand.eu)
--Helicrashllot Bearbeiten: Bison_SD Entfernen
+	Loot:
+	-Neue Waffen einbauen: G36 (Alle Versionen), RPK_74, M40A3, Sa61_EP1, AK_107_GL_kobra, VSS_Vintorez 
+	-AS50, M107_DZ Anpassen?  (Soweit ich weiï¿½ soll M107 kein Groï¿½es Problem sein.) (DayZLand.eu)
+	-Helicrashllot Bearbeiten: Bison_SD Entfernen
 
-Bannen:
--M136 (Fix)
--MV22 (Fix)
--C130j 
--HMMWV_M1151_M2_DES_EP1 (Fix)
--HMMWV_M998_crows_MK19_DES_EP1 (Fix)
+	Bannen:
+	-M136
+	-MV22
+	-C130j 
+	-HMMWV_M1151_M2_DES_EP1 (Fix)
+	-HMMWV_M998_crows_MK19_DES_EP1 (Fix)
 
-DayZLand.eu übernehmen:
-Grabstein -> Wenn man stirbt kommt ein Grabstein mit dem Inventar des Toten. Den Grabstein despawnt nach 30 min und man kann ihn Kaputtschießen.
-Spawnpunkt beim Spawnen auswählen. (Drassen / Chupinka oder Zufällig)
-Geschlechtsauswahl -> Männlich / Weiblich
+	DayZLand.eu Ãœbernehmen:
+		Grabstein -> Wenn man stirbt kommt ein Grabstein mit dem Inventar des Toten. Den Grabstein despawnt nach 30 min und man kann ihn Kaputtschieï¿½en.
+		Spawnpunkt beim Spawnen auswÃ¤hlen. (Drassen / Chupinka oder Zufï¿½llig)
+		Geschlechtsauswahl -> MÃ¤nnlich / Weiblich
 
-Wasteland Ideen:
-Playermenü wo man Squads erstellen kann
-Sichtweite einstellen.
+	Wasteland Ideen:
+	PlayermenÃ¼ wo man Squads erstellen kann
+	Sichtweite einstellen.
 
-Script Idee:
-C130 Fliegt über die Map und Schmeißt diese Care Package mit ein Fallschirm drann ab.
+	Script Idee:
+	C130 Fliegt Ã¼ber die Map und SchmeiÃŸt diese Care Package mit ein Fallschirm drann ab.
 
-Grobe Ideen:
--IceBreakr:
-	-Neue Insel
-	-Brücke von Drassen zu Pista
+	Grobe Ideen:
+	-IceBreakr:
+		-Neue Insel
+		-BrÃ¼cke von Drassen zu Pista
 
--Serverfiles erstellt von Philipp Schneider@https://github.com/p-schneider/
+	-Serverfiles erstellt von Philipp Schneider@https://github.com/p-schneider/
