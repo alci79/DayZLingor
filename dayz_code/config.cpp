@@ -28,13 +28,13 @@ class CfgMods
 {
 	class DayZ
 	{
-		dir = "DayZ";
-		name = "DayZ";
+		dir = "DayZLingor";
+		name = "DayZLingor";
 		picture = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.dayzmod.com";
-		version = "1.7.5.M1D12";
+		version = "1.0";
 		hiveVersion = 0.96; //0.93
 	};
 };
