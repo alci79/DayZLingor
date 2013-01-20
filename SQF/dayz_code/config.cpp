@@ -56,11 +56,85 @@ class CfgAddons
 
 class CfgInGameUI
 {
+
     class PeripheralVision
     {
         cueColor[] = {0,0,0,0};
     };
+
+	
+	class MPTable
+	{
+		color[] = {0,0,0,0}; //{0.7,0.7,0.7,1};
+		colorTitleBg[] = {0,0,0,0}; //{0.1,0.15,0.15,1};
+		colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.9};
+		colorSelected[] = {0,0,0,0}; //{0.7,0.7,0.7,0.4};
+		colorWest[] = {0,0,0,0}; //{0.7,0.95,0.7,1};
+		colorEast[] = {0,0,0,0}; //{0.95,0.7,0.7,1};
+		colorCiv[] = {0,0,0,0}; //{0.8,0.8,0.8,1};
+		colorRes[] = {0,0,0,0}; //{0.7,0.7,0.95,1};
+		font = "EtelkaNarrowMediumPro";
+		size = "0"; //"( 21 / 408 )";
+		class Columns
+		{
+			class Order
+			{
+				width = 0; //0.046;
+				colorBg[] = {0,0,0,0}; //{0.1,0.27,0.1,0.8};
+				doubleLine = 0;
+			};
+			class Player
+			{
+				width = 0; //0.25;
+				colorBg[] = {0,0,0,0}; //{0.1,0.23,0.1,0.8};
+				doubleLine = 0;
+			};
+			class KillsInfantry
+			{
+				width = 0; //0.11;
+				doubleLine = 0;
+				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
+				picture = ""; //"\ca\ui\data\stats_infantry_ca.paa";
+			};
+			class KillsSoft
+			{
+				width = 0; //0.1;
+				doubleLine = 0;
+				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
+				picture = ""; //"\ca\ui\data\stats_soft_ca.paa";
+			};
+			class KillsArmor
+			{
+				width = 0; //0.11;
+				doubleLine = 0;
+				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
+				picture = ""; //"\ca\ui\data\stats_armored_ca.paa";
+			};
+			class KillsAir
+			{
+				width = 0; //0.1;
+				doubleLine = 0;
+				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
+				picture = ""; //"\ca\ui\data\stats_air_ca.paa";
+			};
+			class Killed
+			{
+				width = 0; //0.1;
+				doubleLine = 0;
+				colorBg[] = {0,0,0,0}; //{0.1,0.15,0.1,0.8};
+				picture = ""; //"\ca\ui\data\stats_killed_ca.paa";
+			};
+			class KillsTotal
+			{
+				width = 0; //0.1;
+				doubleLine = 0;
+				colorBg[] = {0,0,0,0}; //{0.1,0.35,0.1,0.9};
+				picture = ""; //"\ca\ui\data\stats_total_ca.paa";
+			};
+		};
+	};
 };
+
 
 class RscPictureGUI
 {
@@ -1090,14 +1164,6 @@ class CfgBuildingLoot {
    { 3.69873,0.496582,-0.927744 },
    { 6.72168,-1.4165,-0.927744 },
    { 5.64063,-3.16113,-0.927744 }};
- };
- class Land_House_C_2_EP1: Residential {
-  lootPos[] = {
-   { 1.09351,-0.86499,-2.31269 },
-   { 4.32935,-0.392578,-2.31269 },
-   { 0.98291,2.44946,-2.30486 },
-   { 3.63306,-0.0957031,0.785267 },
-   { -2.43628,-0.856689,0.547504 }};
  };
  class Land_House_C_3_EP1: Residential {
   lootPos[] = {
