@@ -1,0 +1,11 @@
+mainLight="Sun";
+renderFlags[]=
+{
+	"AlphaTest32"
+};
+fogMode="Fog";
+VertexShaderID="Grass";
+PixelShaderID="Grass";
+ambient[]={2.300000,2.300000,2.300000,1.500000};
+diffuse[]={0.000000,0.000000,0.000000,0.000000};
+forcedDiffuse[]={0.650000,0.650000,0.650000,1.000000};

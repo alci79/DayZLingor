@@ -1,0 +1,45 @@
+//Class mb_rocksmall.rvmat
+ambient[] = {0.5,0.5,0.5,1.0};
+diffuse[] = {0.5,0.5,0.5,1.0};
+forcedDiffuse[] = {0.0,0.0,0.0,1.0};
+emmisive[] = {0.0,0.0,0.0,1.0};
+specular[] = {0.3,0.3,0.3,1.0};
+specularPower = 90.0;
+PixelShaderID = "NormalMapDetailSpecularMap";
+VertexShaderID = "NormalMap";
+class Stage1
+{
+ texture = "ibr\lingor_objects\data\skala33_nohq.tga";
+ uvSource = "tex";
+ class uvTransform
+ {
+  aside[] = {1.0,0.0,0.0};
+  up[] = {0.0,1.0,0.0};
+  dir[] = {0.0,0.0,0.0};
+  pos[] = {0.0,0.0,0.0};
+ };
+};
+class Stage2
+{
+ texture = "ibr\lingor_objects\data\skala33_mco.tga";
+ uvSource = "tex";
+ class uvTransform
+ {
+  aside[] = {1.0,0.0,0.0};
+  up[] = {0.0,1.0,0.0};
+  dir[] = {0.0,0.0,0.0};
+  pos[] = {0.0,0.0,0.0};
+ };
+};
+class Stage3
+{
+ texture = "ibr\lingor_objects\data\skala33_sm.tga";
+ uvSource = "tex";
+ class uvTransform
+ {
+  aside[] = {1.0,0.0,0.0};
+  up[] = {0.0,1.0,0.0};
+  dir[] = {0.0,0.0,0.0};
+  pos[] = {0.0,0.0,0.0};
+ };
+};
