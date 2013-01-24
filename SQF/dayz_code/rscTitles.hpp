@@ -8,11 +8,6 @@ class RscIGUIShortcutButton;
 class RscGearShortcutButton;
 class RscIGUIListNBox;
 class RscActiveText;
-class RscDisplayLoadMission;
-class RscDisplayLoadCustom : RscDisplayLoadMission {
-	enableSimulation = 0;
-	onload = "_this call compile preprocessfilelinenumbers 'ca\ui\scripts\ui_loadingTextCustom.sqf';";
-};
 
 class RscPictureKeepAspect;
 class RscStandardDisplay;
@@ -83,7 +78,7 @@ class RscDisplayMain : RscStandardDisplay
 			text = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
 		};
 	};
-	
+
 	onLoad = "((_this select 0) displayCtrl 138) ctrlEnable false;";
 
 	class controls 
@@ -134,7 +129,7 @@ class RscDisplayGenderSelect
 			h = 0.542373 * safezoneH;
 			color[] = { 0.5, 0.5, 0.5, 1 };
 			colorActive[] = { 1, 1, 1, 1 };
-			action = "closeDialog 0;dayz_selectGender = 'New_Random';";
+			action = "closeDialog 0;dayz_selectGender = 'Survivor2_DZ';";
 		};
 		class GenderPic_Woman : RscActiveText
 		{
@@ -169,53 +164,6 @@ class RscDisplayGenderSelect
 			h = 0.3 * safezoneH;
 			colorBackground[] = {-1,-1,-1,0};
 		};
-	};
-};
-class RscDisplaySpawnlocationSelect {
-	idd = 6903;
-	enableDisplay = 1;
-	class controls
-	{
-		class RscSelectedRegion1 : RscActiveText
-		{
-			idc = -1;
-			style = 48;
-			text = "z\addons\dayz_code\gui\spawn_drassen.paa";
-			x = 0.20 * safezoneW + safezoneX;
-			y = 0.20 * safezoneH + safezoneY;
-			w = 0.190 * safezoneW;
-			h = 0.400 * safezoneH;
-			color[] = { 0.5, 0.5, 0.5, 1 };
-			colorActive[] = { 1, 1, 1, 1 };
-			action = "closeDialog 0;dayz_selectRegion = 0;";
-		};
-		class RscSelectedRegion2 : RscActiveText
-		{
-			idc = -1;
-			style = 48;
-			text = "z\addons\dayz_code\gui\spawn_chupinka.paa";
-			x = 0.40 * safezoneW + safezoneX;
-			y = 0.20 * safezoneH + safezoneY;
-			w = 0.190 * safezoneW;
-			h = 0.400 * safezoneH;
-			color[] = { 0.5, 0.5, 0.5, 1 };
-			colorActive[] = { 1, 1, 1, 1 };
-			action = "closeDialog 0;dayz_selectRegion = 1;";
-		};
-		class RscSelectedRegionR : RscActiveText
-		{
-			idc = -1;
-			style = 48;
-			text = "z\addons\dayz_code\gui\spawn_random.paa";
-			x = 0.60 * safezoneW + safezoneX;
-			y = 0.20 * safezoneH + safezoneY;
-			w = 0.190 * safezoneW;
-			h = 0.400 * safezoneH;
-			color[] = { 0.5, 0.5, 0.5, 1 };
-			colorActive[] = { 1, 1, 1, 1 };
-			action = "closeDialog 0;dayz_selectRegion = 2;";
-		};
-		
 	};
 };
 
@@ -1031,7 +979,7 @@ class RscTitles
 			};
 		};
 	};
-	
+
 	class playerStatusWaiting
 	{
 		idd = 6901;
