@@ -1,0 +1,15 @@
+[0.03] 4th August, 2010
+-Added door to MBG_Shanty_BIG
+-Removed strange Geometry Sections 27 & 34 from MBG_FlatOne_*
+-Removed unused MBG_FlatOne_ruins.p3d due to ingame & .rpt errors
+
+[0.02] 3rd August, 2010
+-Added Big Shanty Villa
+
+[0.01] 1st August, 2010
+-Added the different Flats with each three different colors
+
+
+
+
+LOCKABLE DOOR
