@@ -1,0 +1,484 @@
+/*%FSM<COMPILE "C:\Program Files\Bohemia Interactive\Tools\FSM Editor Personal Edition\scriptedFSM.cfg, Croc_Hunt">*/
+/*%FSM<HEAD>*/
+/*
+item0[] = {"Start",0,250,-36.011238,-96.910118,53.988762,-46.910118,0.000000,"Start"};
+item1[] = {"_",8,218,-37.497772,-166.527512,52.502228,-116.527512,0.000000,""};
+item2[] = {"Idle_",2,250,-37.094845,-244.449188,52.905170,-194.449188,0.000000,"Idle" \n ""};
+item3[] = {"HUNTING_",4,218,-39.289169,-403.763885,50.710838,-353.763336,0.000000,"HUNTING" \n ""};
+item4[] = {"not_alive_",4,218,250.737427,-245.106186,340.737488,-195.105896,60.000000,"not alive" \n ""};
+item5[] = {"End__",1,250,393.807007,-244.235321,483.807098,-194.235168,0.000000,"End" \n "" \n ""};
+item6[] = {"_",2,250,-558.315674,-343.650360,-468.315857,-293.650299,0.000000,""};
+item7[] = {"_",8,218,-558.092651,-245.314728,-468.092834,-195.314575,0.000000,""};
+item8[] = {"NONE_",4,218,-251.459702,-310.974091,-161.459717,-260.974091,40.000000,"NONE" \n ""};
+item9[] = {"MOVE_",2,4346,-561.421814,-1128.204712,-471.422119,-1078.204712,0.000000,"MOVE" \n ""};
+item10[] = {"_",4,218,-577.582825,-635.673035,-487.582947,-585.672668,0.000000,""};
+item11[] = {"___",2,250,-34.203247,-795.592957,55.796768,-745.592957,0.000000,"0" \n ""};
+item12[] = {"_",8,218,-42.559761,-1130.294922,47.440239,-1080.294922,0.000000,""};
+item13[] = {"____1",2,250,-37.638031,-1458.385132,52.362152,-1408.385010,0.000000,"0" \n ""};
+item14[] = {"CLOSE",4,218,-42.593231,-1575.815186,47.406708,-1525.815552,0.000000,"CLOSE"};
+item15[] = {"FAR",4,218,-190.933243,-1458.228882,-100.933067,-1408.228760,10.000000,"FAR"};
+item16[] = {"STALK_",2,250,-40.727020,-1704.143555,49.272980,-1654.143677,0.000000,"STALK" \n ""};
+item17[] = {"MOVE",2,250,-334.552063,-1459.535034,-244.551987,-1409.534912,0.000000,"MOVE"};
+item18[] = {"_",8,218,-562.783691,-1460.366577,-472.783569,-1410.366455,0.000000,""};
+item19[] = {"HAS_PREY_",4,218,-39.025604,-673.380798,50.974483,-623.380798,0.000000,"HAS PREY" \n ""};
+item20[] = {"NO_PREY",4,218,312.859772,-672.307800,402.859528,-622.307800,0.000000,"NO PREY"};
+item21[] = {"FIND_POS",2,250,528.171143,-672.639221,618.171204,-622.639221,0.000000,"FIND POS"};
+item22[] = {"NO_WP",4,218,527.802979,-891.428833,617.802917,-841.428833,0.000000,"NO WP"};
+item23[] = {"NO_POS",4,218,45.686584,-468.466034,135.686600,-418.466034,40.000000,"NO POS"};
+item24[] = {"HAS_WP",4,218,528.739624,-474.676666,618.739624,-424.676544,0.000000,"HAS WP"};
+item25[] = {"UPDATE_WP",2,250,657.782471,-358.761536,747.782471,-308.761505,0.000000,"UPDATE WP"};
+item26[] = {"WAIT",4,218,815.715698,-125.228027,905.715698,-75.228027,0.000000,"WAIT"};
+item27[] = {"CREATE_WP",2,250,817.537354,-892.171631,907.537354,-842.171631,0.000000,"CREATE WP"};
+item28[] = {"__",2,250,-38.641148,-561.627136,51.358868,-511.627136,0.000000,"0"};
+link0[] = {0,1};
+link1[] = {1,2};
+link2[] = {2,3};
+link3[] = {2,4};
+link4[] = {2,8};
+link5[] = {3,28};
+link6[] = {4,5};
+link7[] = {6,7};
+link8[] = {7,2};
+link9[] = {8,6};
+link10[] = {9,10};
+link11[] = {10,6};
+link12[] = {11,12};
+link13[] = {12,13};
+link14[] = {13,14};
+link15[] = {13,15};
+link16[] = {14,16};
+link17[] = {15,17};
+link18[] = {16,18};
+link19[] = {17,18};
+link20[] = {18,9};
+link21[] = {19,11};
+link22[] = {20,6};
+link23[] = {21,22};
+link24[] = {21,23};
+link25[] = {21,24};
+link26[] = {22,27};
+link27[] = {23,2};
+link28[] = {24,25};
+link29[] = {25,26};
+link30[] = {26,2};
+link31[] = {27,26};
+link32[] = {28,19};
+link33[] = {28,20};
+globals[] = {0.000000,0,0,0,0,640,480,1,146,6316128,1,-744.559814,554.605530,-416.848724,-1907.345581,550,631,1};
+window[] = {2,-1,-1,-32000,-32000,675,110,878,145,3,568};
+*//*%FSM</HEAD>*/
+class FSM
+{
+  fsmName = "Croc_Hunt";
+  class States
+  {
+    /*%FSM<STATE "Start">*/
+    class Start
+    {
+      name = "Start";
+      init = /*%FSM<STATEINIT""">*/"_crocodile =_this select 0;" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="Idle_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "Idle_">*/
+    class Idle_
+    {
+      name = "Idle_";
+      init = /*%FSM<STATEINIT""">*/"_time=time;" \n
+       "_hunted= _crocodile getvariable ""CHN_CROCCLOSESTTAR"";" \n
+       "_huntmode = _crocodile getvariable ""CHN_CROCHUNTMODE"";" \n
+       "_crocfood = _crocodile getvariable ""CHN_CROCFOOD"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "not_alive_">*/
+        class not_alive_
+        {
+          priority = 60.000000;
+          to="End__";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(not alive _crocodile) or (isnull _crocodile)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "NONE_">*/
+        class NONE_
+        {
+          priority = 40.000000;
+          to="_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_huntmode==""NONE"") or (!(isNil ""_crocfood""))"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "HUNTING_">*/
+        class HUNTING_
+        {
+          priority = 0.000000;
+          to="__";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_huntmode==""HUNTING"")"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "End__">*/
+    class End__
+    {
+      name = "End__";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "_">*/
+    class _
+    {
+      name = "_";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="Idle_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "MOVE_">*/
+    class MOVE_
+    {
+      name = "MOVE_";
+      init = /*%FSM<STATEINIT""">*/"if ( (! (isnull _hunted)) and (! (_crocodile in CHN_CROCSTALKERARR)) ) then " \n
+       "{" \n
+       "_crocodile domove position _hunted;" \n
+       "	if (!(isnil ""CHN_DEBUG"")) then {" \n
+       "	_crocodile globalchat format [""i move to %1"",_hunted];" \n
+       "	};" \n
+       "};" \n
+       "	"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time>_time+5"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "___">*/
+    class ___
+    {
+      name = "___";
+      init = /*%FSM<STATEINIT""">*/"_wp= _crocodile getvariable ""CHN_CROCWP"";" \n
+       "" \n
+       "if (count _wp>0) then" \n
+       "{" \n
+       "	_crocodile setvariable [""CHN_CROCWP"",[]];" \n
+       "	deleteWaypoint _wp;" \n
+       "	_crocodile setvariable [""CHN_CROCHASWP2"",false];" \n
+       "	_crocodile setvariable [""CHN_CROCWP"",[],true];" \n
+       "	" \n
+       "};" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="____1";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "____1">*/
+    class ____1
+    {
+      name = "____1";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "FAR">*/
+        class FAR
+        {
+          priority = 10.000000;
+          to="MOVE";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(_crocodile distance _hunted>=90)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "CLOSE">*/
+        class CLOSE
+        {
+          priority = 0.000000;
+          to="STALK_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"_crocodile distance _hunted<90"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "STALK_">*/
+    class STALK_
+    {
+      name = "STALK_";
+      init = /*%FSM<STATEINIT""">*/"if (! (_crocodile getvariable ""CHN_CROCSTALKING"")) then" \n
+       "{" \n
+       "	_crocodile setvariable [""CHN_CROCSTALKING"",true];" \n
+       "	CHN_CROCSTALKERARR set [count CHN_CROCSTALKERARR,_crocodile];" \n
+       "};" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="MOVE_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "MOVE">*/
+    class MOVE
+    {
+      name = "MOVE";
+      init = /*%FSM<STATEINIT""">*/"if ((_crocodile getvariable ""CHN_CROCSTALKING"") and (_crocodile in  CHN_CROCSTALKERARR)) then" \n
+       "{" \n
+       "	_crocodile setvariable [""CHN_CROCSTALKING"",false];" \n
+       "	_i =CHN_CROCSTALKERARR find _crocodile;" \n
+       "	CHN_CROCSTALKERARR set [_i,objnull];" \n
+       "	CHN_CROCSTALKERARR = CHN_CROCSTALKERARR - [objnull];" \n
+       "};"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "_">*/
+        class _
+        {
+          priority = 0.000000;
+          to="MOVE_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "FIND_POS">*/
+    class FIND_POS
+    {
+      name = "FIND_POS";
+      init = /*%FSM<STATEINIT""">*/"if ((_crocodile getvariable ""CHN_CROCSTALKING"") and (_predator in  CHN_CROCSTALKERARR)) then" \n
+       "{" \n
+       "	_crocodile setvariable [""CHN_CROCSTALKING"",false];" \n
+       "	_i =CHN_CROCSTALKERARR find _crocodile;" \n
+       "	CHN_CROCSTALKERARR set [_i,objnull];" \n
+       "	CHN_CROCSTALKERARR = CHN_CROCSTALKERARR - [objnull];" \n
+       "};" \n
+       "" \n
+       "" \n
+       "_wppos= [_crocodile] call CHN_fn_FINDWP1;" \n
+       "_haswp = _crocodile getvariable ""CHN_CROCHASWP2"";" \n
+       "_wpp = _crocodile getvariable ""CHN_CROCWP"";" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "NO_POS">*/
+        class NO_POS
+        {
+          priority = 40.000000;
+          to="Idle_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(count _wppos==0) or (_crocodile != leader group _crocodile)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "HAS_WP">*/
+        class HAS_WP
+        {
+          priority = 0.000000;
+          to="UPDATE_WP";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(count _wpp>0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "NO_WP">*/
+        class NO_WP
+        {
+          priority = 0.000000;
+          to="CREATE_WP";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"(count _wpp==0)"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "UPDATE_WP">*/
+    class UPDATE_WP
+    {
+      name = "UPDATE_WP";
+      init = /*%FSM<STATEINIT""">*/"_wp = _crocodile getvariable ""CHN_CROCWP"";" \n
+       "_wp setWaypointPosition [_wppos, 0];" \n
+       "" \n
+       "// unstuck crocodile if it is stuck in terrain" \n
+       "" \n
+       "_lp = _crocodile getvariable ""CHN_CROCCHECKPOS"";" \n
+       "_lptime= _crocodile getvariable ""CHN_CROCCHECKPOSTIME"";" \n
+       "if (time+45>_lptime) then" \n
+       "{" \n
+       "	if (_lp distance position _crocodile<1.3) then " \n
+       "	{" \n
+       "		_randang= random 360;" \n
+       "		_rax= (position _crocodile select 0) + 5 * sin _randang;" \n
+       "		_ray= (position _crocodile select 1) + 5 * cos _randang;" \n
+       "		_crocodile setpos [_rax,_ray];" \n
+       "		_crocodile disableAI ""MOVE"";" \n
+       "		_crocodile enableAI ""MOVE"";" \n
+       "		//hintsilent ""Reposition stuck _crocodile"";" \n
+       "	};" \n
+       "	_crocodile setvariable [""CHN_CROCCHECKPOS"",position _crocodile];" \n
+       "	_crocodile setvariable [""CHN_CROCCHECKPOSTIME"",time];" \n
+       "};" \n
+       "" \n
+       "//player sidechat ""update wp"";"/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "WAIT">*/
+        class WAIT
+        {
+          priority = 0.000000;
+          to="Idle_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time>_time+6"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "CREATE_WP">*/
+    class CREATE_WP
+    {
+      name = "CREATE_WP";
+      init = /*%FSM<STATEINIT""">*/"_wp = (group _crocodile) addWaypoint [_wppos, 0];" \n
+       "_wp setWaypointType ""MOVE"";" \n
+       "_wp setWaypointBehaviour ""AWARE"";" \n
+       "" \n
+       "_crocodile setvariable [""CHN_CROCWP"",_wp,true];" \n
+       "_crocodile setvariable [""CHN_CROCHASWP2"",true,true];" \n
+       "" \n
+       "" \n
+       ""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "WAIT">*/
+        class WAIT
+        {
+          priority = 0.000000;
+          to="Idle_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"time>_time+6"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+    /*%FSM<STATE "__">*/
+    class __
+    {
+      name = "__";
+      init = /*%FSM<STATEINIT""">*/""/*%FSM</STATEINIT""">*/;
+      precondition = /*%FSM<STATEPRECONDITION""">*/""/*%FSM</STATEPRECONDITION""">*/;
+      class Links
+      {
+        /*%FSM<LINK "NO_PREY">*/
+        class NO_PREY
+        {
+          priority = 0.000000;
+          to="_";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"isnull _hunted"/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+        /*%FSM<LINK "HAS_PREY_">*/
+        class HAS_PREY_
+        {
+          priority = 0.000000;
+          to="___";
+          precondition = /*%FSM<CONDPRECONDITION""">*/""/*%FSM</CONDPRECONDITION""">*/;
+          condition=/*%FSM<CONDITION""">*/"! (isnull _hunted)" \n
+           ""/*%FSM</CONDITION""">*/;
+          action=/*%FSM<ACTION""">*/""/*%FSM</ACTION""">*/;
+        };
+        /*%FSM</LINK>*/
+      };
+    };
+    /*%FSM</STATE>*/
+  };
+  initState="Start";
+  finalStates[] =
+  {
+    "End__",
+  };
+};
+/*%FSM</COMPILE>*/

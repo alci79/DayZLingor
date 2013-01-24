@@ -1,0 +1,33 @@
+_this = _this select 0;
+setaperture 0.00001;
+sleep 0.2;
+setaperture 0;
+
+(_this) say ["mindBender",1];
+"dynamicBlur" ppEffectEnable true;
+"dynamicBlur" ppEffectAdjust [2.5];
+"dynamicBlur" ppEffectCommit 2;
+sleep 2;
+"dynamicBlur" ppEffectAdjust [1.2];
+"dynamicBlur" ppEffectCommit 3;
+sleep 1;
+"dynamicBlur" ppEffectAdjust [0];
+"dynamicBlur" ppEffectCommit 2;
+sleep 2;
+"dynamicBlur" ppEffectAdjust [2.5];
+"dynamicBlur" ppEffectCommit 2;
+sleep 2;
+"dynamicBlur" ppEffectAdjust [1.2];
+"dynamicBlur" ppEffectCommit 3;
+sleep 1;
+"dynamicBlur" ppEffectAdjust [0];
+"dynamicBlur" ppEffectCommit 2;
+sleep 2;
+"dynamicBlur" ppEffectAdjust [2.5];
+"dynamicBlur" ppEffectCommit 2;
+sleep 2;
+"dynamicBlur" ppEffectAdjust [1.2];
+"dynamicBlur" ppEffectCommit 3;
+sleep 2;
+
+"dynamicBlur" ppEffectEnable false;

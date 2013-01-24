@@ -1,0 +1,73 @@
+_snake = _this select 0;
+
+while {(alive _snake)} do
+{
+_snake animate ["ta1", 1];
+_snake animate ["ta9", 0];
+sleep 0.1;
+_snake animate ["ta2", 1];
+_snake animate ["ta10", 0];
+sleep 0.1;
+_snake animate ["ta3", 1];
+_snake animate ["ta11", 0];
+sleep 0.1;
+_snake animate ["ta4", 1];
+_snake animate ["ta12", 0];
+sleep 0.1;
+_snake animate ["ta5", 1];
+_snake animate ["ta13", 0];
+sleep 0.1;
+_snake animate ["ta6", 1];
+_snake animate ["ta14", 0];
+sleep 0.1;
+_snake animate ["ta7", 1];
+_snake animate ["ta15", 0];
+sleep 0.1;
+_snake animate ["ta8", 1];
+_snake animate ["ta16", 0];
+sleep 0.1;
+_snake animate ["ta9", 1];
+_snake animate ["ta1", 0];
+sleep 0.1;
+_snake animate ["ta10", 1];
+_snake animate ["ta2", 0];
+sleep 0.1;
+_snake animate ["ta11", 1];
+_snake animate ["ta3", 0];
+sleep 0.1;
+_snake animate ["ta12", 1];
+_snake animate ["ta4", 0];
+sleep 0.1;
+_snake animate ["ta13", 1];
+_snake animate ["ta5", 0];
+sleep 0.1;
+_snake animate ["ta14", 1];
+_snake animate ["ta6", 0];
+sleep 0.1;
+_snake animate ["ta15", 1];
+_snake animate ["ta7", 0];
+sleep 0.1;
+_snake animate ["ta16", 1];
+_snake animate ["ta8", 0];
+sleep 0.1;
+};
+deleteVehicle (driver _snake);
+
+_snake animate ["ta1", .5];
+_snake animate ["ta2", .6];
+_snake animate ["ta3", .7];
+_snake animate ["ta4", .7];
+_snake animate ["ta5", .7];
+_snake animate ["ta6", .7];
+_snake animate ["ta7", .6];
+_snake animate ["ta8", .5];
+_snake animate ["ta9", .4];
+_snake animate ["ta10", .3];
+_snake animate ["ta11", .3];
+_snake animate ["ta12", .3];
+_snake animate ["ta13", .4];
+_snake animate ["ta14", .4];
+_snake animate ["ta15", .5];
+_snake animate ["ta16", .5];
+
+
