@@ -20,7 +20,7 @@ class RscStandardDisplay;	// External class reference
 #include "CfgMovesBasic.hpp"
 #include "CfgMovesMaleSdr.hpp"
 #include "CfgMovesZombie.hpp"
-//#include "CfgTownGenerator.hpp" Remove Wrecks
+//#include "CfgTownGenerator.hpp"
 #include "CfgFaces.hpp"
 #include "CfgVoice.hpp"
 #include "CfgIdentities.hpp"
