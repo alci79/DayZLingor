@@ -78,7 +78,7 @@ class RscDisplayMain : RscStandardDisplay
 			text = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
 		};
 	};
-
+	
 	onLoad = "((_this select 0) displayCtrl 138) ctrlEnable false;";
 
 	class controls 
@@ -87,7 +87,7 @@ class RscDisplayMain : RscStandardDisplay
 		class DAYZ_Version : CA_Version
 		{
 			idc = -1;
-			text = "DayZ Lingor v1.0 (Skaronator.com)";
+			text = "DayZ 1.7.5.ReleaseData-1st-M1D25";
 			y = "(SafeZoneH + SafeZoneY) - (1 - 0.95)";
 		};
 		class CA_TitleMainMenu;
@@ -979,7 +979,7 @@ class RscTitles
 			};
 		};
 	};
-
+	
 	class playerStatusWaiting
 	{
 		idd = 6901;
