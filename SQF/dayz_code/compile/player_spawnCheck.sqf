@@ -93,7 +93,7 @@ if (_nearbyCount < 1) exitwith {};
 	_config = 		configFile >> "CfgBuildingLoot" >> _type;
 	_canLoot = 		isClass (_config);
 	_dis = _x distance player;
-	if ((_dis < 120) and (_dis > 30) and _canLoot and !_inVehicle) then {
+	if ((_dis < 200) and (_dis > 10) and _canLoot and !_inVehicle) then {
 	//diag_log ("Loot System Running");
 		[_radius, _position, _inVehicle, _dateNow, _age, _locationstypes, _nearestCity] call player_spawnlootCheck;
 	};
