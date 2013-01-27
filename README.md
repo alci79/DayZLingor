@@ -14,6 +14,7 @@ DayZ Lingor Changelog:
 			* You see now the damage in percent
 			* Trash spawn now on the Road (Like Old Lingor Version v0.34)
 			* AH6X_DZ Add (1.7.4)
+			* Barackdoors Fixed
 			* and more...
 
 1.7.5 Changelog:
