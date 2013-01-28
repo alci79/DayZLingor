@@ -11,9 +11,9 @@ Changelog
 ==========
 DayZ Lingor Changelog:
 
-			* [NEW] You see now the damage in percent
-			* [NEW] AH6X_DZ Add (1.7.4)
-			* [NEW] MV22_DZ Add
+			* [NEW] You see now the damage of vehicles in percent
+			* [NEW] Vehicle - AH6X_DZ
+			* [NEW] Vehicle - MV22_DZ
 			
 			* [Fixed] Barackdoors Fixed
 			
