@@ -1816,7 +1816,7 @@ class CfgVehicles {
 	class Ka52Black: Banned {};
 	class MQ9PredatorB: Banned {};
 	class MQ9PredatorB_campaign: Banned {};
-	class MV22: Banned {};
+	//class MV22: Banned {};
 	class Pchela1T: Banned {};
 	class Su25_CDF: Banned {};
 	class Su25_Ins: Banned {};

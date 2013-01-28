@@ -13,6 +13,7 @@ DayZ Lingor Changelog:
 
 			* [NEW] You see now the damage in percent
 			* [NEW] AH6X_DZ Add (1.7.4)
+			* [NEW] MV22_DZ Add
 			
 			* [Fixed] Barackdoors Fixed
 			
