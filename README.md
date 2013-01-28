@@ -11,10 +11,14 @@ Changelog
 ==========
 DayZ Lingor Changelog:
 
-			* You see now the damage in percent
-			* Trash spawn now on the Road (Like Old Lingor Version v0.34)
-			* AH6X_DZ Add (1.7.4)
-			* Barackdoors Fixed
+			* [NEW] You see now the damage in percent
+			* [NEW] AH6X_DZ Add (1.7.4)
+			
+			* [Fixed] Barackdoors Fixed
+			
+			* [UPDATED] Trash spawn now on the Road (Like Old Lingor Version v0.34)
+			* [UPDATED] Change Tent Model
+			* [UPDATED] Tent Now 60 Item Slots, 15 Weapons Slots
 			* and more...
 
 1.7.5 Changelog:
