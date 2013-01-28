@@ -7,22 +7,22 @@ DayZLingor (Skaronator.com)
 ==========
 
 
-Changelog
+Changelog Lingor
 ==========
-DayZ Lingor Changelog:
 
 			* [NEW] You see now the damage of vehicles in percent
 			* [NEW] Vehicle - AH6X_DZ
 			* [NEW] Vehicle - MV22_DZ
 			
-			* [Fixed] Barackdoors Fixed
+			* [Fixed] Barackdoors
 			
 			* [UPDATED] Trash spawn now on the Road (Like Old Lingor Version v0.34)
 			* [UPDATED] Change Tent Model
 			* [UPDATED] Tent Now 60 Item Slots, 15 Weapons Slots
 			* and more...
 
-1.7.5 Changelog:
+Changelog DayZ
+==========
 
 			* [NEW]	Weapon - Sa58P_EP1. (Military)
 			* [NEW]	Weapon - Sa58V_EP1. (Military)
