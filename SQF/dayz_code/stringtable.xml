@@ -1118,7 +1118,7 @@
 			<Spanish>Box of Wet Matches</Spanish>
 			<Dutch>Box of Wet Matches</Dutch>
 			<French>Boîte d'Allumettes mouillées</French>
-		</Key>						
+		</Key>			
 		<Key ID="STR_EQUIP_CODE_DESC_3">						
 			<Original>Box of wet matches.</Original>						
 			<English>Box of wet matches.</English>						
@@ -1145,7 +1145,7 @@
 			<Spanish>Your Hatchet appears to be too bunt to be used.</Spanish>
 			<Dutch>Your Hatchet appears to be too bunt to be used.</Dutch>
 			<French>Votre Hache semble être trop émoussée pour l'utiliser</French>
-		</Key>
+		</Key> 
 		<Key ID="STR_EQUIP_CODE_NAME_4">						
 			<Original>Blunt Knife</Original>						
 			<English>Blunt Knife</English>						
