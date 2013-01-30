@@ -35,7 +35,7 @@ class CfgMods
 		hideName = 0;
 		action = "http://www.dayzmod.com";
 		version = "2.0";
-		hiveVersion = 0.96; //0.93
+		hiveVersion = 0.96;
 	};
 };
 
