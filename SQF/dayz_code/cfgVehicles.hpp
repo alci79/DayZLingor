@@ -145,7 +145,7 @@ class CfgVehicles {
 	
 	class Mi17_DZ: Mi17_base	
 	{
-		displayname = "Mi-8M";
+		displayname = "Mi17";
 		displaynameshort = "Mi17_DZ";
 		scope = 2;
 		side = 2;
