@@ -17,9 +17,9 @@ Changelog Lingor
 			
 			* [Fixed] Barackdoors
 			
-			* [UPDATED] Trash spawn now on the Road (Like Old Lingor Version v0.34)
-			* [UPDATED] Change Tent Model
-			* [UPDATED] Tent Now 60 Item Slots, 15 Weapons Slots
+			* [UPDATED] Wrecks and road blocks are now on the Road (Like Old Lingor Version v0.34)
+			* [UPDATED] Changed tent model
+			* [UPDATED] Tents Now have 60 Item Slots, 15 Weapons Slots
 			* and more...
 
 Changelog DayZ
