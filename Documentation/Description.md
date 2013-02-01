@@ -32,6 +32,7 @@ Changelog
 ==========
 
 Code:
+
 			* [FIXED]   buggy barrack doors has been fixed (omg, nothing was more annoying...)
 			* [UPDATED] DayZ Code has been updated to 1.7.5
 			* [NEW]     vehicle wrecks and road blocks are now where they supposed to be.. ON THE ROAD!
@@ -44,7 +45,8 @@ Code:
 			* 			- tents have now 60 item slots, 15 weapon slots and 5 backpack slots
 			
 Updated Map Addons:
-Newest version of Brg_Africa has been added (Created by Berghoff http://www.armaholic.com/page.php?id=8523):
+Newest version of Brg_Africa has been added (Created by Berghoff http://www.armaholic.com/page.php?id=8523)
+
 			* Minor cleanup, fixed some rpt errors
 			* Changed view geo lods on nearly all trees/plants
 			* Changed mass and damage type on Banana plants/trees
