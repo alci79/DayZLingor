@@ -1,5 +1,5 @@
 class CfgPatches {
-	class at_gui_compass {
+	class compass {
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 1.0;
