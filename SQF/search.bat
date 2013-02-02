@@ -1,3 +1,3 @@
 @Echo
-findstr /s /simpc:"dayz_logo_ca.paa" "*.sqf" "*.txt" "*.hpp" "*.xml" "*.paa"
+findstr /s /simpc:"UH" "*.sqf" "*.txt" "*.hpp" "*.xml" "*.paa"
 pause

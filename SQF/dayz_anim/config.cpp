@@ -1822,6 +1822,7 @@ class CfgVehicles {
 	class Su25_Ins: Banned {};
 	class Su39: Banned {};
 	//class UH1Wreck: Banned {};
+	//class UH60Wreck: Banned {};
 	class UH1Y: Banned {};
 	class UH1Y_cutscene: Banned {};
 	class Su34: Banned {};
