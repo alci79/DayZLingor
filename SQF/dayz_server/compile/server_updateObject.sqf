@@ -104,7 +104,7 @@ _object_killed = {
 		_object setHit ["_selection", _hit]
 	} forEach _hitpoints;
 	_damage = 1;
-	
+
 	if (_objectID == "0") then {
 		_key = format["CHILD:306:%1:%2:%3:",_uid,_array,_damage];
 	} else {
