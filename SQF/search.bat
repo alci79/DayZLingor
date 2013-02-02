@@ -1,3 +1,3 @@
 @Echo
-findstr /s /simpc:"UH" "*.sqf" "*.txt" "*.hpp" "*.xml" "*.paa"
+findstr /s /simpc:"Land_Ind_TankSmall" "*.sqf" "*.txt" "*.hpp" "*.xml" "*.paa"
 pause
