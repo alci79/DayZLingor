@@ -9,7 +9,7 @@ _array = 	[];
 _agent = 	objNull;
 
 //Exit if a player is nearby
-if (!isNoone) exitWith {};
+if (!is_Noone) exitWith {};
 
 if (count _unitTypes == 0) then {
 	_unitTypes = 	[]+ getArray (configFile >> "CfgBuildingLoot" >> "Default" >> "zombieClass");
