@@ -1,8 +1,8 @@
 Changelog Lingor
 ==========
 
-			* [NEW] You see now the damage of vehicles in percent - [screenshort] (https://dl.dropbox.com/u/23896685/DayZLingor/Status.jpg)
-			* [NEW] Compass is now twice as big! -  [screenshort] (https://dl.dropbox.com/u/23896685/DayZLingor/compass.png)
+			* [NEW] You see now the damage of vehicles in percent - https://dl.dropbox.com/u/23896685/DayZLingor/Status.jpg
+			* [NEW] Compass is now twice as big! - https://dl.dropbox.com/u/23896685/DayZLingor/compass.png
 			* [NEW] Vehicle - AH6X_DZ
 			* [NEW] Vehicle - MV22_DZ
 			
