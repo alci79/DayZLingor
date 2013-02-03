@@ -13,17 +13,10 @@ _classbag = typeOf _bag;
 _isWater = 		(surfaceIsWater (position player)) or dayz_isSwimming;
 _hasAntiB = 	"ItemAntibiotic" in magazines player;
 _hasFuelE = 	"ItemJerrycanEmpty" in magazines player;
-//Raw Food
-_hasSteakRaw = 	"FoodSteakRaw" in magazines player;	
-_hasmuttonRaw = 	"FoodmuttonRaw" in magazines player;
-_haschickenRaw = 	"FoodchickenRaw" in magazines player;
-_hasrabbitRaw = 	"FoodrabbitRaw" in magazines player;
-_hasbaconRaw = 		"FoodbaconRaw" in magazines player;
-//boiled Water
-_hasbottleitem = "ItemWaterbottle" in magazines player;
-_hastinitem = ("TrashTinCan" in magazines player) or ("ItemSodaEmpty" in magazines player);
-//Define all Raw food
-_hasRawMeat = _hasSteakRaw or _hasmuttonRaw or _haschickenRaw or _hasrabbitRaw or _hasbaconRaw;
+	//boiled Water
+	_hasbottleitem = "ItemWaterbottle" in magazines player;
+	_hastinitem = ("TrashTinCan" in magazines player) or ("ItemSodaEmpty" in magazines player);
+
 
 _hasKnife = 	"ItemKnife" in items player;
 _hasToolbox = 	"ItemToolbox" in items player;
@@ -68,7 +61,8 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 	_isAlive = alive cursorTarget;
 	_canmove = canmove cursorTarget;
 	_text = getText (configFile >> "CfgVehicles" >> typeOf cursorTarget >> "displayName");
-
+	
+	
 	_rawmeat = meatraw;
 	_hasRawMeat = false;
 		{
@@ -76,12 +70,13 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 				_hasRawMeat = true;
 			};
 		} forEach _rawmeat; 
-
+	
+	
 	if (_hasFuelE) then {
 		_isFuel = (cursorTarget isKindOf "Land_Ind_TankSmall") or (cursorTarget isKindOf "Land_fuel_tank_big") or (cursorTarget isKindOf "Land_fuel_tank_stairs") or (cursorTarget isKindOf "Land_wagon_tanker") or (cursorTarget isKindOf "Land_fuelstation") or (cursorTarget isKindOf "Land_fuelstation_army");
 	};
 	//diag_log ("OWNERID = " + _ownerID + " CHARID = " + dayz_characterID + " " + str(_ownerID == dayz_characterID));
-
+	
 	//Allow player to delete objects
 	if(_isDestructable and _hasToolbox and _canDo) then {
 		if (s_player_deleteBuild < 0) then {
@@ -91,7 +86,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_deleteBuild;
 		s_player_deleteBuild = -1;
 	};
-
+	
 	/*
 	//Allow player to force save
 	if((_isVehicle or _isTent) and _canDo and !_isMan) then {
@@ -112,7 +107,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_flipveh;
 		s_player_flipveh = -1;
 	};
-
+	
 	//Allow player to fill jerrycan
 	if(_hasFuelE and _isFuel and _canDo) then {
 		if (s_player_fillfuel < 0) then {
@@ -122,7 +117,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_fillfuel;
 		s_player_fillfuel = -1;
 	};
-
+	
 	if (!alive cursorTarget and _isAnimal and _hasKnife and !_isHarvested and _canDo) then {
 		if (s_player_butcher < 0) then {
 			s_player_butcher = player addAction [localize "str_actions_self_04", "\z\addons\dayz_code\actions\gather_meat.sqf",cursorTarget, 3, true, true, "", ""];
@@ -131,9 +126,9 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_butcher;
 		s_player_butcher = -1;
 	};
-
+	
 	//Fireplace Actions check
-	if(inflamed _cursor and _hasRawMeat and _canDo) then {
+	if (inflamed cursorTarget and _hasRawMeat and _canDo) then {
 		if (s_player_cook < 0) then {
 			s_player_cook = player addAction [localize "str_actions_self_05", "\z\addons\dayz_code\actions\cook.sqf",cursorTarget, 3, true, true, "", ""];
 		};
@@ -141,15 +136,15 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_cook;
 		s_player_cook = -1;
 	};
-	if(inflamed _cursor and (_hasbottleitem and  _hastinitem) and _canDo) then {
+	if (inflamed cursorTarget and (_hasbottleitem and _hastinitem) and _canDo) then {
 		if (s_player_boil < 0) then {
-			s_player_boil = player addAction [localize "str_actions_boilwater", "\z\addons\dayz_code\actions\boil.sqf",_cursor, 3, true, true, "", ""];
+			s_player_boil = player addAction [localize "str_actions_boilwater", "\z\addons\dayz_code\actions\boil.sqf",cursorTarget, 3, true, true, "", ""];
 		};
 	} else {
 		player removeAction s_player_boil;
 		s_player_boil = -1;
 	};
-
+	
 	if(cursorTarget == dayz_hasFire and _canDo) then {
 		if ((s_player_fireout < 0) and !(inflamed cursorTarget) and (player distance cursorTarget < 3)) then {
 			s_player_fireout = player addAction [localize "str_actions_self_06", "\z\addons\dayz_code\actions\fire_pack.sqf",cursorTarget, 0, false, true, "",""];
@@ -158,7 +153,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_fireout;
 		s_player_fireout = -1;
 	};
-
+	
 	//Packing my tent
 	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == dayz_characterID) then {
 		if ((s_player_packtent < 0) and (player distance cursorTarget < 3)) then {
@@ -168,7 +163,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_packtent;
 		s_player_packtent = -1;
 		};
-
+	
 	//Sleep
 	if(cursorTarget isKindOf "TentStorage" and _canDo and _ownerID == dayz_characterID) then {
 		if ((s_player_sleep < 0) and (player distance cursorTarget < 3)) then {
@@ -178,7 +173,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_sleep;
 		s_player_sleep = -1;
 	};
-
+	
 	//Repairing Vehicles
 	if ((dayz_myCursorTarget != cursorTarget) and !_isMan and _hasToolbox and (damage cursorTarget < 1)) then {
 		_vehicle = cursorTarget;
@@ -187,22 +182,22 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 
 		_allFixed = true;
 		_hitpoints = _vehicle call vehicle_getHitpoints;
-
+		
 		{
 			_damage = [_vehicle,_x] call object_getHit;
 			_part = "PartGeneric";
-
+			
 			//change "HitPart" to " - Part" rather than complicated string replace
 			_cmpt = toArray (_x);
 			_cmpt set [0,20];
 			_cmpt set [1,toArray ("-") select 0];
 			_cmpt set [2,20];
 			_cmpt = toString _cmpt;
-
+				
 			if(["Engine",_x,false] call fnc_inString) then {
 				_part = "PartEngine";
 			};
-
+					
 			if(["HRotor",_x,false] call fnc_inString) then {
 				_part = "PartVRotor"; //yes you need PartVRotor to fix HRotor LOL
 			};
@@ -210,36 +205,38 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 			if(["Fuel",_x,false] call fnc_inString) then {
 				_part = "PartFueltank";
 			};
-
+			
 			if(["Wheel",_x,false] call fnc_inString) then {
 				_part = "PartWheel";
 
 			};
-
+					
 			if(["Glass",_x,false] call fnc_inString) then {
 				_part = "PartGlass";
 			};
 
 			// get every damaged part no matter how tiny damage is!
+			_damagePercent = round((1 - _damage) * 100);
 			if (_damage > 0) then {
-
+				
 				_allFixed = false;
 				_color = "color='#ffff00'"; //yellow
 				if (_damage >= 0.5) then {_color = "color='#ff8800'";}; //orange
 				if (_damage >= 0.9) then {_color = "color='#ff0000'";}; //red
 
+				_cmpt = _cmpt + " Status: " + str(_damagePercent) + "%";
 				_string = format["<t %2>Repair%1</t>",_cmpt,_color]; //Repair - Part
 				_handle = dayz_myCursorTarget addAction [_string, "\z\addons\dayz_code\actions\repair.sqf",[_vehicle,_part,_x], 0, false, true, "",""];
 				s_player_repairActions set [count s_player_repairActions,_handle];
 
 			};
-
+					
 		} forEach _hitpoints;
 		if (_allFixed) then {
 			_vehicle setDamage 0;
 		};
 	};
-
+	
 	if (_isMan and !_isAlive and !_isZombie) then {
 		if (s_player_studybody < 0) then {
 			s_player_studybody = player addAction [localize "str_action_studybody", "\z\addons\dayz_code\actions\study_body.sqf",cursorTarget, 0, false, true, "",""];
@@ -258,7 +255,7 @@ if (!isNull cursorTarget and !_inVehicle and (player distance cursorTarget < 4))
 		player removeAction s_player_tamedog;
 		s_player_tamedog = -1;
 	};
-
+	
 	if (_isDog and _ownerID == dayz_characterID and _isAlive and _canDo) then {
 		_dogHandle = player getVariable ["dogID", 0];
 		if (s_player_feeddog < 0 and _hasRawMeat) then {

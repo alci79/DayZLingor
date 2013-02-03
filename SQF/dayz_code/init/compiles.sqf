@@ -205,7 +205,7 @@ if (!isDedicated) then {
 		_empty = [player] call BIS_fnc_invSlotsEmpty;
 		_needed = [_config] call BIS_fnc_invSlotType;
 		_diff = [_empty,_needed] call BIS_fnc_vectorDiff;
-
+		
 		_success = true;
 		{
 			if (_x > 0) then {_success = false};
@@ -213,7 +213,7 @@ if (!isDedicated) then {
 		hint format["Config: %5\nEmpty: %1\nNeeded: %2\nDiff: %3\nSuccess: %4",_empty,_needed,_diff,_success,_config];
 		_success
 	};
-
+		
 	dayz_spaceInterrupt = {
 		private ["_dikCode", "_handled"];
 		_dikCode = 	_this select 1;
@@ -270,8 +270,8 @@ if (!isDedicated) then {
 			dayz_lastCheckBit = time;
 			[player,15,false,(getPosATL player)] spawn player_alertZombies;
 		};
-
-
+		
+		
 		if ((_dikCode == 0x38 or _dikCode == 0xB8) and (time - dayz_lastCheckBit > 10)) then {
 			dayz_lastCheckBit = time;
 			call dayz_forceSave;

@@ -730,6 +730,15 @@
 			<Dutch>Kampvuur verwijderen</Dutch>
 			<French>Retirer le Feu de camp</French>
 		</Key>
+		<Key ID="str_actions_boilwater">
+			<Original>Boil Water</Original>
+			<English>Boil Water</English>
+			<German>Wasser kochen</German>
+			<Russian>Вскипятить воду</Russian>
+			<Spanish>Hervir el Agua</Spanish>
+			<Dutch>koge vand</Dutch>
+			<French>faire bouillir l'eau</French>
+		</Key>
 		<Key ID="str_actions_self_07">
 			<Original>Pack Tent</Original>
 			<English>Pack Tent</English>
@@ -1389,7 +1398,7 @@
 		<Key ID="STR_ITEMWATERBOTTLEBOILED_CODE_DESC">						
 			<Original>A bottle of boiled water that has been filled and can be consumed.</Original>
 			<English>A bottle of boiledwater that has been filled and can be consumed.</English>	
-			<German>A bottle of boiledwater that has been filled and can be consumed.</German>
+			<German>Eine Flasche mit abgekochten Wasser.</German>
 			<Russian>Ôëÿæêà êèïÿ÷åíîé âîäû. Ïðèãîäíà äëÿ ïèòüÿ.</Russian>
 		</Key>
 	</Package>
