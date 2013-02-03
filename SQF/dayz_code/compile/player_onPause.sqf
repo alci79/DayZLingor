@@ -10,10 +10,10 @@ private["_display","_btnRespawn","_btnAbort","_timeOut","_timeMax","_isDead"];
 		_btnAbort ctrlEnable false;
 		_timeOut = 0;
 		_timeMax = 30;
-		
+
 		if(r_player_dead) exitWith {_btnAbort ctrlEnable true;};
 		if(r_fracture_legs) exitWith {_btnRespawn ctrlEnable true;};
-				
+
 		while {!isNull _display} do {
 			switch true do {
 				case ({isPlayer _x} count (player nearEntities ["AllVehicles", 6]) > 1) : {
