@@ -5,7 +5,15 @@ DayZLingor (Skaronator.com)
 
 Current Version
 ==================================
- - 2.0 (Development)
+<table>
+  <tr>
+    <td>World</td><td>World Name (Database)</td><td>Mod Folders</td><td>Version</td><td>URL</td>
+  </tr>
+  <tr>
+    <td>Lingor Island (Skaronator.com)</td><td>lingor-skaro</td><td>@dayzlingorskaro</td><td>2.0</td><td>http://dl.skaronator.com (PreRelease)</td>
+  </tr>
+</table>
+Serverfiles can you Found here: https://github.com/thevisad/DayZ-Private-master
 
 Requirements
 ------------
