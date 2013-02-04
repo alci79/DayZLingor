@@ -13,6 +13,7 @@ Changelog Lingor
 			* [UPDATED] Changed tent model
 			* [UPDATED] Tents Now have 60 Item Slots, 15 Weapons Slots
 			* [UPDATED] Loadingscreen
+			* [UPDATED] You can Refill Jerry Can's
 
 Changelog DayZ
 ==========
