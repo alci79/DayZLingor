@@ -7,9 +7,9 @@ if (local _animalbody) then {
 	for "_x" from 1 to _qty do {
 		_animalbody addMagazine _rawfoodtype;
 	};
-
+	
 	sleep 1;
-
+	
 	[time, _animalbody] spawn { 
 		private ["_timer", "_body"]; 
 		_timer = _this select 0; 
@@ -22,7 +22,7 @@ if (local _animalbody) then {
 		deleteVehicle _body;
 		true;
 	};
-
+	
 } else {
 	_ehLoc = "client";
 	if (isServer) then { _ehLoc = "server"; };

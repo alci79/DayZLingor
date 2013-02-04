@@ -86,8 +86,8 @@ class CfgInGameUI
 		colorEast[] = {0,0,0,0}; //{0.95,0.7,0.7,1};
 		colorCiv[] = {0,0,0,0}; //{0.8,0.8,0.8,1};
 		colorRes[] = {0,0,0,0}; //{0.7,0.7,0.95,1};
-		font = "";
-		size = ""; //"( 21 / 408 )";
+		font = "EtelkaNarrowMediumPro";
+		size = "0"; //"( 21 / 408 )";
 		class Columns
 		{
 			class Order
