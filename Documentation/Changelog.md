@@ -12,6 +12,7 @@ Changelog Lingor
 			* [UPDATED] Wrecks and road blocks are now on the Road (Like Old Lingor Version v0.34)
 			* [UPDATED] Changed tent model
 			* [UPDATED] Tents Now have 60 Item Slots, 15 Weapons Slots
+			* [UPDATED] Loadingscreen
 
 Changelog DayZ
 ==========
