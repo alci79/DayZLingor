@@ -57,4 +57,4 @@ Newest version of Brg_Africa has been added (Created by Berghoff http://www.arma
 			* Switched to ArmA II tree shaders
 
 We recently implemented everything from the DayZ 1.7.5. Changelog can be found here: 
-https://github.com/Skaronator/DayZLingor/blob/Development/README.md#changelog-dayz
+https://github.com/Skaronator/DayZLingor/blob/Development/Documentation/Changelog.md#changelog-dayz
