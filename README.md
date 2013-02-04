@@ -7,10 +7,10 @@ Current Version
 ==================================
 <table>
   <tr>
-    <td>World</td><td>World Name (Database)</td><td>Mod Folders</td><td>Version</td><td>URL</td>
+    <td>Version</td><td>Mod Folders</td><td>Download</td><td>URL</td>
   </tr>
   <tr>
-    <td>Lingor Island (Skaronator.com)</td><td>lingor-skaro</td><td>@dayzlingorskaro</td><td>2.0</td><td>http://dl.skaronator.com (PreRelease)</td>
+    <td>2.0 Pre Release</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingorSkaro%20!PreRelease!%20v2.0.zip</td>
   </tr>
 </table>
 Serverfiles can you Found here: https://github.com/thevisad/DayZ-Private-master
