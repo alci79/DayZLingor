@@ -7,7 +7,7 @@ Current Version
 ==================================
 <table>
   <tr>
-    <td>Version</td><td>Mod Folders</td><td>Download</td><td>URL</td>
+    <td>Version</td><td>Mod Folders</td><td>Download</td>
   </tr>
   <tr>
     <td>2.0 Pre Release</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingorSkaro%20!PreRelease!%20v2.0.zip</td>
