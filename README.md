@@ -10,7 +10,7 @@ Current Version
     <td>Version</td><td>Mod Folders</td><td>Download</td>
   </tr>
   <tr>
-    <td>2.0</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingor%20by%20Skaronator.com%20-%20Version%202.0.zip</td>
+    <td>2.0</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.0.rar</td>
   </tr>
 </table>
 Serverfiles can you Found here: https://github.com/thevisad/DayZ-Private-master
