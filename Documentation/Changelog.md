@@ -1,6 +1,6 @@
 Rolling Changelog
 ==========
-
+			* [UPDATED] Loadingscreen
 
 
 Release v2.0
