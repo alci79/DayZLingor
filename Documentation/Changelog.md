@@ -1,5 +1,11 @@
-Rolling Changelog
+Rolling Changelog for v2.1
 ==========
+			
+			* [New] Vehicle - Ka137_DZ ( transportMaxWeapons = 1;, transportMaxMagazines = 10;, transportmaxbackpacks = 1; )
+			* [NEW] Weapon - RPK_74 (Military)
+			* [NEW] Weapon - MG36 (MilitaryS)
+			* [NEW] Weapon - MakarovSD (Military / MilitaryS)
+			* [NEW] Weapon - BAF_L85A2_UGL_Holo (HeliCrash)
 			* [UPDATED] Loadingscreen
 
 

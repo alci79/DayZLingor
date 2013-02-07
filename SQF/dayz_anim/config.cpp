@@ -784,7 +784,7 @@ class CfgWeapons {
 	//class M9: FakeWeapon {};
 	//class M9SD: FakeWeapon {};
 	//class Makarov: FakeWeapon {};
-	class MakarovSD: FakeWeapon {};
+	//class MakarovSD: FakeWeapon {};
 	//class GrenadeLauncher: FakeWeapon {};
 	//class Rifle: FakeWeapon {};
 	//class M16_base: FakeWeapon {};
@@ -968,7 +968,7 @@ class CfgWeapons {
 	//class AKS_74_pso: FakeWeapon {};
 	//class AKS_74_U: FakeWeapon {};
 	class AKS_74_UN_kobra: FakeWeapon {};
-	class RPK_74: FakeWeapon {};
+	//class RPK_74: FakeWeapon {};
 	//class bizon: FakeWeapon {};
 	//class bizon_silenced: FakeWeapon {};
 	//class Colt1911: FakeWeapon {};
@@ -1014,7 +1014,7 @@ class CfgWeapons {
 	class BAF_L17_40mm: FakeWeapon {};
 	//class L85A2_base_BAF: FakeWeapon {};
 	//class BAF_L85A2_RIS_Holo: FakeWeapon {};
-	class BAF_L85A2_UGL_Holo: FakeWeapon {};
+	//class BAF_L85A2_UGL_Holo: FakeWeapon {};
 	class BAF_L85A2_RIS_SUSAT: FakeWeapon {};
 	class BAF_L85A2_UGL_SUSAT: FakeWeapon {};
 	class BAF_L85A2_RIS_ACOG: FakeWeapon {};
@@ -1077,7 +1077,7 @@ class CfgWeapons {
 	class G36_C_SD_eotech: FakeWeapon {};
 	//class G36a: FakeWeapon {};
 	//class G36K: FakeWeapon {};
-	class MG36: FakeWeapon {};
+	//class MG36: FakeWeapon {};
 	class MG36_camo: FakeWeapon {};
 	class GrenadeLauncher_EP1: FakeWeapon {};
 	class M32_EP1: FakeWeapon {};
@@ -1939,7 +1939,7 @@ class CfgVehicles {
 	class UH1H_TK_GUE_EP1: Banned {};
 	class UH60M_EP1: Banned {};
 	class UH60M_MEV_EP1: Banned {};
-	class Ka137_PMC: Banned {};
+	//class Ka137_PMC: Banned {};
 	class Ka137_MG_PMC: Banned {};
 	class Ka60_GL_PMC: Banned {};
 	class Ka60_PMC: Banned {};

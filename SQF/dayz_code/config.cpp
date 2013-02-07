@@ -34,7 +34,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.dayzmod.com";
-		version = "2.0";
+		version = "2.1";
 		hiveVersion = 0.96;
 	};
 };
@@ -350,7 +350,7 @@ class CfgBuildingLoot {
 		};
 		itemChance[] =	{
 			0.18,
-			0.29,
+			0.20,
 			0.04,
 			0.04,
 			0.05,
@@ -471,7 +471,6 @@ class CfgBuildingLoot {
 			{"BAF_AS50_scoped","weapon"},
 			{"Mk_48_DZ","weapon"},
 			{"M249_DZ","weapon"},
-			//{"BAF_L85A2_RIS_CWS","weapon"},
 			{"BAF_L85A2_RIS_Holo","weapon"},
 			{"DMR","weapon"},
 			{"","military"},
@@ -487,7 +486,8 @@ class CfgBuildingLoot {
 			//{"G36_C_SD_camo","weapon"},
 			{"G36A_camo","weapon"},
 			{"G36K_camo","weapon"},
-			{"100Rnd_762x54_PK","magazine"}
+			{"100Rnd_762x54_PK","magazine"},
+			{"BAF_L85A2_UGL_Holo","weapon"}
 		};
 		itemChance[] =	{
 			0.02,		//{"FN_FAL","weapon"},
@@ -498,7 +498,7 @@ class CfgBuildingLoot {
 			0.01,		//{"BAF_AS50_scoped","weapon"},
 			0.03,		//{"Mk_48_DZ","weapon"},
 			0.05,		//{"M249_DZ","weapon"},
-			0.01,		//{"BAF_L85A2_RIS_CWS","weapon"}, BAF_L85A2_RIS_Holo
+			0.01,		//BAF_L85A2_RIS_Holo
 			0.06,		//{"DMR","weapon"},
 			1,			//{"","military"},
 			0.5,		//{"","medical"},
@@ -513,7 +513,8 @@ class CfgBuildingLoot {
 			//0.01,	//G36_C_SD_camo
 			0.02,	//G36A_camo
 			0.02,	//G36K_camo
-			0.01	//("100Rnd_762x54_PK","magazine"}
+			0.01,	//("100Rnd_762x54_PK","magazine"}
+			0.03	//BAF_L85A2_UGL_Holo
 		};
 	};
 	class HeliCrash_No50s: Default {
@@ -641,7 +642,9 @@ class CfgBuildingLoot {
 			{"ItemEtool","weapon"},
 			{"ItemSandbag","magazine"},
 			{"Sa58P_EP1","weapon"},
-			{"Sa58V_EP1","weapon"}
+			{"Sa58V_EP1","weapon"},
+			{"RPK_74","weapon"},
+			{"MakarovSD","weapon"}
 		};
 		itemChance[] =	{
 			0.05,
@@ -682,7 +685,9 @@ class CfgBuildingLoot {
 			0.05,
 			0.02,
 			0.03,
-			0.03
+			0.03,
+			0.04, //RPK_74
+			0.02 //MakarovSD
 		};
 	};
 	class MilitarySpecial: Default {
@@ -746,7 +751,9 @@ class CfgBuildingLoot {
 			{"Sa58V_CCO_EP1","weapon"},
 			{"G36_C_SD_camo","weapon"},
 			{"M40A3","weapon"},
-			{"100Rnd_762x54_PK","magazine"}
+			{"100Rnd_762x54_PK","magazine"},
+			{"MG36","weapon"},
+			{"MakarovSD","weapon"}
 		};
 		itemChance[] =	{
 			0.10,
@@ -800,6 +807,8 @@ class CfgBuildingLoot {
 			0.01, //{"G36_C_SD_camo","weapon"},
 			0.02, // M40A3
 			0.01	//("100Rnd_762x54_PK","magazine"}
+			0.05, //MG36
+			0.02 //MakarovSD
 		};
 	};
 	class Church: Residential {
