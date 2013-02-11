@@ -8,6 +8,7 @@ Rolling Changelog for v2.1
 			* [NEW] Weapon - BAF_L85A2_UGL_Holo (HeliCrash)
 			* [Fixed] Fix Battleye Kick #84
 			* [UPDATED] Loadingscreen
+			* [UPDATED] DayZ Code to 1.7.5.2
 
 
 Release v2.0
