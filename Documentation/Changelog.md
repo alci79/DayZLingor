@@ -6,6 +6,7 @@ Rolling Changelog for v2.1
 			* [NEW] Weapon - MG36 (MilitaryS)
 			* [NEW] Weapon - MakarovSD (Military / MilitaryS)
 			* [NEW] Weapon - BAF_L85A2_UGL_Holo (HeliCrash)
+			* [Fixed] Fix Battleye Kick #84
 			* [UPDATED] Loadingscreen
 
 
