@@ -13,7 +13,9 @@ Current Version
     <td>2.0</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.0.rar</td>
   </tr>
 </table>
-Serverfiles can you Found here: https://github.com/thevisad/DayZ-Private-master
+Serverfiles can you Found here: 
+ - For Reality https://github.com/thevisad/DayZ-Private-master
+ - For Lite https://github.com/Stapo/Lite-DayZ-Private-Server
 
 Requirements
 ------------
