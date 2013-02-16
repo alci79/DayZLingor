@@ -806,7 +806,7 @@ class CfgBuildingLoot {
 			0.01, //Sa58V_CCO_EP1
 			0.01, //{"G36_C_SD_camo","weapon"},
 			0.02, // M40A3
-			0.01	//("100Rnd_762x54_PK","magazine"}
+			0.01,	//("100Rnd_762x54_PK","magazine"}
 			0.05, //MG36
 			0.02 //MakarovSD
 		};
