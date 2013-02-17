@@ -3,6 +3,9 @@ DayZ Lingor Developers
 DayZ Credits
 
 * Skaronator (Skaronator.com)
+* Stapo (for Serverfiles and for the contact with important people)
+* thevisad (for Serverfiles)
+* p-schneider (Help with the Serverfiles)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)
