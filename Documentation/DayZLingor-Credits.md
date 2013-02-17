@@ -1,6 +1,6 @@
 DayZ Lingor Developers
 -------
-DayZ Credits
+DayZ Lingor Credits
 
 * Skaronator (Skaronator.com)
 * Stapo (for Serverfiles and for the contact with important people)
