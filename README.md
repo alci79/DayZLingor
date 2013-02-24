@@ -30,7 +30,6 @@ Branches
 
 - **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor)
 - **Version 2.0** - Is the current release version. (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)
-- **Server** - Serverfiles for Reality. (https://github.com/Skaronator/DayZLingorServer)
 
 Directories
 -----------
