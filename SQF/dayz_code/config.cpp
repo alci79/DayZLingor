@@ -33,7 +33,7 @@ class CfgMods
 		picture = "z\addons\dayz_code\gui\dayz_logo_ca.paa";
 		hidePicture = 0;
 		hideName = 0;
-		action = "http://www.dayzmod.com";
+		action = "http://www.Skaronator.com";
 		version = "2.1";
 		hiveVersion = 0.96;
 	};
@@ -188,6 +188,7 @@ class RscStructuredTextGUI: RscStructuredText
 #include "CfgMagazines.hpp"
 #include "cfgLoot.hpp"
 #include "CfgMarkers.hpp"
+#include "CfgAmmo.hpp"
 
 class CfgSurvival {
 	class Inventory {
@@ -202,11 +203,11 @@ class CfgSurvival {
 	class Meat {
 		class Default {
 			yield = 2;
-			rawfoodtype = "FoodSteakRaw";
+			rawfoodtype = "FoodmeatRaw";
 		};
 		class Cow: Default {
-			yield = 8;
-			rawfoodtype = "FoodSteakRaw";
+			yield = 6;
+			rawfoodtype = "FoodbeefRaw";
 		};
 		class Cow01: Cow {};
 		class Cow02: Cow {};
@@ -214,7 +215,7 @@ class CfgSurvival {
 		class Cow04: Cow {};
 		class Goat: Default {
 			yield = 4;
-			rawfoodtype = "FoodSteakRaw";
+			rawfoodtype = "FoodmuttonRaw";
 		};
 		class Sheep: Default {
 			yield = 4;
@@ -225,11 +226,11 @@ class CfgSurvival {
 			rawfoodtype = "FoodbaconRaw";
 		};
 		class Hen: Default {
-			yield = 4;
+			yield = 2;
 			rawfoodtype = "FoodchickenRaw";
 		};
 		class Rabbit: Default {
-			yield = 4;
+			yield = 1;
 			rawfoodtype = "FoodrabbitRaw";
 		};
 	};
@@ -276,20 +277,22 @@ class CfgBuildingLoot {
 			{"LeeEnfield","weapon"},
 			{"revolver_EP1","weapon"},
 			
-			{"DZ_Patrol_Pack_EP1","object"}, //8
 			{"DZ_Assault_Pack_EP1","object"}, // 12
 			{"DZ_Czech_Vest_Puch","object"}, // 12-0
+			{"DZ_ALICE_Pack_EP1","object"}, // 16
+			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
+			{"DZ_British_ACU","object"}, // 18
 			
 			{"Winchester1866","weapon"},
 			{"WeaponHolder_ItemTent","object"},
 			{"","military"},
 			{"","trash"},
-			{"Crossbow","weapon"},
+			{"Crossbow_DZ","weapon"},
 			{"Binocular","weapon"},
 			{"PartWoodPile","magazine"},
 			{"Skin_Camo1_DZ","magazine"},
 			{"Skin_Sniper1_DZ","magazine"},
-			{"WeaponHolder_MeleeCrowbar","object"},
+			{"WeaponHolder_ItemCrowbar","object"},
 			{"MR43","weapon"}
 		};
 		itemChance[] =	{
@@ -305,9 +308,12 @@ class CfgBuildingLoot {
 			2,
 			0.06,
 			0.04,
-			0.04, //8
-			0.01, //12
-			0.03, //12-0
+			0.05, //12
+			0.04, // 12-0
+
+			0.02, //16
+			0.02, //16
+			0.01, //18
 			0.01,
 			0.01,
 			0.03,
@@ -350,7 +356,7 @@ class CfgBuildingLoot {
 		};
 		itemChance[] =	{
 			0.18,
-			0.20,
+			0.15,
 			0.04,
 			0.04,
 			0.05,
@@ -379,11 +385,11 @@ class CfgBuildingLoot {
 			{"LeeEnfield","weapon"},
 			{"Winchester1866","weapon"},
 			{"","trash"},
-			{"Crossbow","weapon"},
+			{"Crossbow_DZ","weapon"},
 			{"PartWoodPile","magazine"},
 			{"WeaponHolder_ItemHatchet","object"},
 			{"MR43","weapon"},
-			{"TrapBear","magazine"}
+			{"WeaponHolder_ItemMachete","magazine"}
 		};
 		itemChance[] =	{
 			0.06,
@@ -396,7 +402,7 @@ class CfgBuildingLoot {
 			0.11,
 			0.17,
 			0.06,
-			0.01
+			0.03
 		};
 	};
 	class Supermarket: Default {
@@ -418,15 +424,18 @@ class CfgBuildingLoot {
 			{"LeeEnfield","weapon"},
 			{"revolver_EP1","weapon"},
 					
-			{"DZ_Patrol_Pack_EP1","object"}, //8
+
 			{"DZ_Assault_Pack_EP1","object"}, // 12
 			{"DZ_Czech_Vest_Puch","object"}, // 12-0
+			{"DZ_ALICE_Pack_EP1","object"}, // 16
+			{"DZ_TK_Assault_Pack_EP1","object"}, // 16
+			{"DZ_British_ACU","object"}, // 18
 			
 			{"Winchester1866","weapon"},
 			{"WeaponHolder_ItemTent","object"},
 			{"","food"},
 			{"","trash"},
-			{"Crossbow","weapon"},
+			{"Crossbow_DZ","weapon"},
 			{"Binocular","weapon"},
 			{"PartWoodPile","magazine"},
 			{"MR43","weapon"}
@@ -443,9 +452,12 @@ class CfgBuildingLoot {
 			0.05,
 			0.01,
 			0.01,
-			0.04, //8
-			0.01, //12
-			0.03, // 12-0
+			0.05, //12
+			0.04, // 12-0
+
+			0.02, //16
+			0.02, //16
+			0.01, //18
 			0.01,
 			0.01,
 			0.3,
@@ -471,7 +483,7 @@ class CfgBuildingLoot {
 			{"BAF_AS50_scoped","weapon"},
 			{"Mk_48_DZ","weapon"},
 			{"M249_DZ","weapon"},
-			{"BAF_L85A2_RIS_Holo","weapon"},
+			{"BAF_L85A2_RIS_SUSAT","weapon"},
 			{"DMR","weapon"},
 			{"","military"},
 			{"","medical"},
@@ -498,7 +510,7 @@ class CfgBuildingLoot {
 			0.01,		//{"BAF_AS50_scoped","weapon"},
 			0.03,		//{"Mk_48_DZ","weapon"},
 			0.05,		//{"M249_DZ","weapon"},
-			0.01,		//BAF_L85A2_RIS_Holo
+			0.01,		//BAF_L85A2_RIS_SUSAT
 			0.06,		//{"DMR","weapon"},
 			1,			//{"","military"},
 			0.5,		//{"","medical"},
@@ -513,8 +525,7 @@ class CfgBuildingLoot {
 			//0.01,	//G36_C_SD_camo
 			0.02,	//G36A_camo
 			0.02,	//G36K_camo
-			0.01,	//("100Rnd_762x54_PK","magazine"}
-			0.03	//BAF_L85A2_UGL_Holo
+			0.01	//("100Rnd_762x54_PK","magazine"}
 		};
 	};
 	class HeliCrash_No50s: Default {
@@ -528,12 +539,9 @@ class CfgBuildingLoot {
 			{"bizon_silenced","weapon"},
 			{"M14_EP1","weapon"},
 			{"FN_FAL_ANPVS4","weapon"},
-//			{"M107_DZ","weapon"},
-//			{"BAF_AS50_scoped","weapon"},
 			{"Mk_48_DZ","weapon"},
 			{"M249_DZ","weapon"},
-			//{"BAF_L85A2_RIS_CWS","weapon"},
-			{"BAF_L85A2_RIS_Holo","weapon"},
+			{"BAF_L85A2_RIS_SUSAT","weapon"},
 			{"DMR","weapon"},
 			{"","military"},
 			{"","medical"},
@@ -555,11 +563,9 @@ class CfgBuildingLoot {
 			0.05,		//{"bizon_silenced","weapon"},
 			0.05,		//{"M14_EP1","weapon"},
 			0.02,		//{"FN_FAL_ANPVS4","weapon"},
-//			0.02,		//{"m107","weapon"},
-//			0.01,		//{"BAF_AS50_scoped","weapon"},
 			0.03,		//{"Mk_48_DZ","weapon"},
 			0.05,		//{"M249_DZ","weapon"},
-			0.01,		//{"BAF_L85A2_RIS_CWS","weapon"}, BAF_L85A2_RIS_Holo
+			0.01,		//{"BAF_L85A2_RIS_SUSAT","weapon"}, BAF_L85A2_RIS_Holo
 			0.06,		//{"DMR","weapon"},
 			1,			//{"","military"},
 			0.5,		//{"","medical"},
@@ -644,7 +650,8 @@ class CfgBuildingLoot {
 			{"Sa58P_EP1","weapon"},
 			{"Sa58V_EP1","weapon"},
 			{"RPK_74","weapon"},
-			{"MakarovSD","weapon"}
+			{"MakarovSD","weapon"},
+			{"BAF_L85A2_RIS_Holo","weapon"}
 		};
 		itemChance[] =	{
 			0.05,
@@ -687,7 +694,8 @@ class CfgBuildingLoot {
 			0.03,
 			0.03,
 			0.04, //RPK_74
-			0.02 //MakarovSD
+			0.02, //MakarovSD
+			0.01
 		};
 	};
 	class MilitarySpecial: Default {
@@ -809,6 +817,36 @@ class CfgBuildingLoot {
 			0.01,	//("100Rnd_762x54_PK","magazine"}
 			0.05, //MG36
 			0.02 //MakarovSD
+		};
+	};
+	class Hunting: Default {
+		zombieChance = 0.4;
+		minRoaming = 1;
+		maxRoaming = 3;
+		zombieClass[] = {"z_hunter","z_hunter","z_hunter"};
+		lootChance = 1;
+		lootPos[] = {};
+		itemType[] =	{
+			{"ItemMap","weapon"},
+			{"ItemFlashlight","generic"},
+			{"ItemKnife","generic"},
+			{"ItemMatchbox","generic"},
+			{"Crossbow_DZ","weapon"},
+			{"","military"},
+			{"WeaponHolder_ItemMachete", "object"},
+			{"huntingrifle","weapon"},
+			{"","hunter"}
+		};
+		itemChance[] =	{
+			0.08,
+			0.05,
+			0.04,
+			0.06,
+			0.03,
+			2.00,
+			0.03,
+			0.04,
+			3.00
 		};
 	};
 	class Church: Residential {
