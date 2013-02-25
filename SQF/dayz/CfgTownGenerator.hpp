@@ -3654,7 +3654,7 @@ class CfgTownGenerator {
 	class Calamar {
 		type = "NameCityCapital";
 		position[] = {4074.94, 1667.19};
-		size = 1300;
+		size = 2500;
 		buildings = 400;
 		
 		class Object0 {
@@ -9486,7 +9486,7 @@ class CfgTownGenerator {
 		access = ReadOnly;
 		type = "NameVillage";
 		position[] = {4606, 5600};
-		size = 547;
+		size = 900;
 		buildings = 50;
 		
 		class Object2 {
