@@ -2,6 +2,10 @@ setViewDistance 1500;
 titleCut ["","BLACK IN", 20];
 showCinemaBorder false;
 
+0 fadeMusic 0;
+playMusic ["dayz_track_death_1",16];
+5 fadeMusic 0.5;
+
 while {true} do 
 {
 	waitUntil {preloadCamera getPos camera_1};
