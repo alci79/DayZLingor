@@ -2,6 +2,7 @@ Rolling Changelog for v2.2
 ==========
 			* [NEW] Finally Lingor Units:
 			* [Vehicle] Jetski (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 2)
+			* [UPDATED] Refuel Speed on Gas Station
 
 
 
