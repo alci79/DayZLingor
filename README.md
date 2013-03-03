@@ -10,7 +10,7 @@ Current Version
     <td>Version</td><td>Mod Folders</td><td>Download</td>
   </tr>
   <tr>
-    <td>2.0</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.0.rar</td>
+    <td>2.1</td><td>@dayzlingorskaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.1.rar</td>
   </tr>
 </table>
 Serverfiles can you Found here: 
