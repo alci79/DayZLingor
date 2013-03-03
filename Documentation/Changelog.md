@@ -1,4 +1,11 @@
-Rolling Changelog for v2.1
+Rolling Changelog for v2.2
+==========
+			* [NEW] Finally Lingor Units:
+			* [Vehicle] Jetski (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 2)
+
+
+
+Release v2.1
 ==========
 			
 			* [New] Vehicle - Ka137_DZ ( transportMaxWeapons = 1;, transportMaxMagazines = 10;, transportmaxbackpacks = 1; )
@@ -8,9 +15,8 @@ Rolling Changelog for v2.1
 			* [NEW] Weapon - BAF_L85A2_UGL_Holo (HeliCrash)
 			* [NEW] Vehicle - Jetski
 			* [Fixed] Fix Battleye Kick #84
-			* [NEW] Lingor Unit (IceBrakr)
 			* [UPDATED] Loadingscreen
-			* [UPDATED] DayZ Code to 1.7.5.2
+			* [UPDATED] DayZ Code to 1.7.6
 			* [UPDATED] Refuel Speed on Gas Station
 
 
