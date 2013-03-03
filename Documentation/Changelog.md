@@ -14,7 +14,6 @@ Release v2.1
 			* [NEW] Weapon - MG36 (MilitaryS)
 			* [NEW] Weapon - MakarovSD (Military / MilitaryS)
 			* [NEW] Weapon - BAF_L85A2_UGL_Holo (HeliCrash)
-			* [NEW] Vehicle - Jetski
 			* [Fixed] Fix Battleye Kick #84
 			* [UPDATED] Loadingscreen
 			* [UPDATED] DayZ Code to 1.7.6
