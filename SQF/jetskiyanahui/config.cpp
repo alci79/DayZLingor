@@ -2,7 +2,7 @@ class DefaultEventhandlers;
 
 class CfgPatches {
 	class JetSkiYanahuiAddon {
-		units[] = {"JetSkiYanahui", "JetSkiYanahui_Case", "JetSkiYanahui_Case_Green", "JetSkiYanahui_White", "JetSkiYanahui_Red"};
+		units[] = {"JetSkiYanahui_Case_Yellow","JetSkiYanahui_Case_Green","JetSkiYanahui_Case_White","JetSkiYanahui_Case_Red","JetSkiYanahui_Yellow","JetSkiYanahui_Green","JetSkiYanahui_White","JetSkiYanahui_Red"};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"CAData", "CACharacters", "CAWeapons", "CA_Anims_Char"};
@@ -27,10 +27,10 @@ class CfgFactionClasses {
 class CfgVehicles {
 	class Zodiac;	// External class reference
 	
-	class JetSkiYanahui : Zodiac {
+	class JetSkiYanahui_Yellow : Zodiac {
 		vehicleClass = "Ship";
 		model = "\JetSkiYanahui\JetSkiYanahui.p3d";
-		displayname = "JetSki Yanahui 100500 (Yellow)";
+		displayname = "JetSki Yanahui Yellow";
 		accuracy = 0.5;
 		transportSoldier = 1;
 		icon = "\JetSkiYanahui\UI\icon_jetski_ca.paa";
@@ -49,7 +49,8 @@ class CfgVehicles {
 		getInRadius = 2;
 		supplyRadius = 0.5;
 		transportMaxMagazines = 10;
-		transportMaxWeapons = 2;
+		transportMaxWeapons = 1;
+		transportmaxbackpacks = 0;
 		brakeDistance = 10;
 		canFloat = 1;
 		autocenter = 1;
@@ -133,10 +134,13 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_co.paa", "\jetskiyanahui\benzobak_co.paa"};
 	};
 	
-	class JetSkiYanahui_Case : JetSkiYanahui {
+	class JetSkiYanahui_Case : JetSkiYanahui_Yellow {
 		scope = 1;
 		accuracy = 1000;
-		displayname = "JetSki Yanahui 100500";
+		displayname = "JetSki Yanahui (Case)";
+		transportMaxWeapons = 2;
+		transportMaxMagazines = 20;
+		transportmaxbackpacks = 1;
 		
 		class AnimationSources {
 			class CaseHide {
@@ -171,37 +175,47 @@ class CfgVehicles {
 		};
 	};
 	
-	class JetSkiYanahui_Case_Green : JetSkiYanahui_Case {
-		scope = 2;
-		side = 2;
-		faction = "ibr_arl_faction";
-		crew = "ibr_arl_rif";
-		typicalcargo[] = {"ibr_arl_rif", "ibr_arl_rif"};
+	class JetSkiYanahui_Green : JetSkiYanahui_Yellow {
 		accuracy = 1000;
-		displayname = "JetSki Yanahui 100500 (Green)";
+		displayname = "JetSki Yanahui Green";
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_green_co.paa", "\jetskiyanahui\benzobak_co.paa"};
 	};
 	
-	class JetSkiYanahui_Case_Green2 : JetSkiYanahui_Case {
-		scope = 2;
-		side = 2;
-		faction = "ibr_drg_faction";
-		crew = "ibr_drg_man6";
-		typicalcargo[] = {"ibr_drg_man6", "ibr_drg_man5"};
+	class JetSkiYanahui_White : JetSkiYanahui_Yellow {
 		accuracy = 1000;
-		displayname = "JetSki Yanahui 100500 (Green)";
-		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_green_co.paa", "\jetskiyanahui\benzobak_co.paa"};
-	};
-	
-	class JetSkiYanahui_White : JetSkiYanahui {
-		accuracy = 1000;
-		displayname = "JetSki Yanahui 100500 (Blue)";
+		displayname = "JetSki Yanahui Blue";
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_blue_co.paa", "\jetskiyanahui\benzobak_co.paa"};
 	};
 	
-	class JetSkiYanahui_Red : JetSkiYanahui {
+	class JetSkiYanahui_Red : JetSkiYanahui_Yellow {
 		accuracy = 1000;
-		displayname = "JetSki Yanahui 100500 (Red)";
+		displayname = "JetSki Yanahui Red";
+		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_red_co.paa", "\jetskiyanahui\benzobak_co.paa"};
+	};
+	
+	//Jetski's with Case transportMaxWeapons = 2 transportMaxMagazines = 20 transportmaxbackpacks = 1
+	
+	class JetSkiYanahui_Case_Yellow : JetSkiYanahui_Case {
+		accuracy = 1000;
+		displayname = "JetSki Yanahui Green (Case)";
+		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_co.paa", "\jetskiyanahui\benzobak_co.paa"};
+	};
+	
+	class JetSkiYanahui_Case_Green : JetSkiYanahui_Case {
+		accuracy = 1000;
+		displayname = "JetSki Yanahui Green (Case)";
+		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_green_co.paa", "\jetskiyanahui\benzobak_co.paa"};
+	};
+	
+	class JetSkiYanahui_Case_White : JetSkiYanahui_Case {
+		accuracy = 1000;
+		displayname = "JetSki Yanahui Blue (Case)";
+		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_blue_co.paa", "\jetskiyanahui\benzobak_co.paa"};
+	};
+	
+	class JetSkiYanahui_Case_Red : JetSkiYanahui_Case {
+		accuracy = 1000;
+		displayname = "JetSki Yanahui Red (Case)";
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_red_co.paa", "\jetskiyanahui\benzobak_co.paa"};
 	};
 };
