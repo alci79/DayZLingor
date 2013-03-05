@@ -210,6 +210,9 @@ class CfgVehicles {
 		hideWeaponsCargo = 1;
 		radartype = 0;
 		side = 1;
+		transportMaxMagazines = 20;
+		transportMaxWeapons = 2;
+		transportmaxbackpacks = 1;
 		transportSoldier = 5;
 		crew = "LIN_Soldier_Pilot";
 		Icon = "\ibr_as350lingor\IconFireEcureuil.paa";
