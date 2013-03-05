@@ -1,8 +1,13 @@
 Rolling Changelog for v2.2
 ==========
 			* [NEW] Finally Lingor Units:
-			* [Vehicle] Jetski (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 2)
+			* [Vehicle] Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
+			* [Vehicle] Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
+			* [Vehicle] AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			* [Vehicle] AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			* [Vehicle] AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 			* [UPDATED] Refuel Speed on Gas Station
+			* [UPDATED] DayZ Code to 1.7.6.2
 
 
 
