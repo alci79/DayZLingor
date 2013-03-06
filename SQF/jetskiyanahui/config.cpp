@@ -181,7 +181,7 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_green_co.paa", "\jetskiyanahui\benzobak_co.paa"};
 	};
 	
-	class JetSkiYanahui_White : JetSkiYanahui_Yellow {
+	class JetSkiYanahui_Blue : JetSkiYanahui_Yellow {
 		accuracy = 1000;
 		displayname = "JetSki Yanahui Blue";
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_blue_co.paa", "\jetskiyanahui\benzobak_co.paa"};
@@ -207,7 +207,7 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_green_co.paa", "\jetskiyanahui\benzobak_co.paa"};
 	};
 	
-	class JetSkiYanahui_Case_White : JetSkiYanahui_Case {
+	class JetSkiYanahui_Case_Blue : JetSkiYanahui_Case {
 		accuracy = 1000;
 		displayname = "JetSki Yanahui Blue (Case)";
 		hiddenSelectionsTextures[] = {"\jetskiyanahui\korpus_blue_co.paa", "\jetskiyanahui\benzobak_co.paa"};
