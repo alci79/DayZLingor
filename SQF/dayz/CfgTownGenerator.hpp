@@ -11235,7 +11235,7 @@ class CfgTownGenerator {
 			direction = 75.9467;
 			onFire = 0;
 		};
-		
+		/*
 		class Object133 {
 			position[] = {6985.92, 6712.99, 0};
 			TYPE = "BRDMWreck";
@@ -11249,7 +11249,7 @@ class CfgTownGenerator {
 			direction = 76.9711;
 			onFire = 0;
 		};
-		
+		*/
 		class Object136 {
 			position[] = {6954.74, 6705.59, 0};
 			TYPE = "S1203_ambulance_EP1";
@@ -11263,7 +11263,7 @@ class CfgTownGenerator {
 			direction = 37.114;
 			onFire = 0;
 		};
-		
+		/*
 		class Object157 {
 			position[] = {6905.31, 6677.63, 0};
 			TYPE = V3S_TK_GUE_EP1;
@@ -11277,7 +11277,7 @@ class CfgTownGenerator {
 			direction = 39.9243;
 			onFire = 0;
 		};
-		
+		*/
 		class Object174 {
 			position[] = {7019.87, 6711.27, 0};
 			TYPE = "Land_CncBlock";
