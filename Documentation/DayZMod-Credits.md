@@ -4,7 +4,7 @@ Community Dev Project Sponsor
 * Rocket
 
 Community Dev Project Manager
-* R4Z0R49 https://github.com/R4Z0R49/DayZMod
+* R4Z0R49
 
 Contributions By
 * fred41
@@ -24,6 +24,9 @@ Contributions By
 * Venthos
 * VRShiva
 * AlexAFlorov
+* Elvaron
+* JoeysLucky22
+* Skaronator
 * Sharkiller  (Spanish Tranlations)
 * Markolie	(Dutch Translations)
 * LordGoF (French Translations)
@@ -35,6 +38,8 @@ Contributions By
 Art Work
 * Alexander (G17 incombat Icon)
 * Des (Gender images & Gui icon's revamp)
+* JoeysLucky22
+* Elvaron
 
 Testers:
 * AJ (Leadz)
@@ -47,8 +52,10 @@ Testers:
 * Adam (Max)
 * Gaz Green
 * DzAirmaX
+* Bodster
+
 
 Contributing
 ------------
 Want to contribute? Or have we missed your name?
-Please contact R4Z0R49 on [http://dayzmod.com/forums/.](http://dayzmod.com/forum/
+Please contact R4Z0R49 on [http://dayzmod.com/forums/.](http://dayzmod.com/forum/)
