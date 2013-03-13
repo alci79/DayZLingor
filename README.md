@@ -29,12 +29,12 @@ Branches
 --------
 
 - **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor)
-- **Version 2.0** - Is the current release version. (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)
 
 Directories
 -----------
 
  - **SQF** - Source Code for DayZLingor
+ - **SQF** - Source Code for Serverside Lingor Changes
  - **Documentation** - Changelog & Credits and Suggestions
 
 Bugs/Issues
