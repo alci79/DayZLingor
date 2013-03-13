@@ -607,7 +607,7 @@ class CfgVehicles {
 		displayName = "$STR_CHAR_2";
 		side = 1;
 		weapons[] = {"Throw","Put"};
-		model = "\dayz\characters\man_bandit";
+		model = "\ca\characters_E\GER\GER_rifleman";
 		portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
 		magazines[] = {};
 		backpack = "";
