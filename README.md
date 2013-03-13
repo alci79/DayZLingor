@@ -34,7 +34,7 @@ Directories
 -----------
 
  - **SQF** - Source Code for DayZLingor
- - **SQF** - Source Code for Serverside Lingor Changes
+ - **SQF-Server** - Source Code for Serverside Lingor Changes
  - **Documentation** - Changelog & Credits and Suggestions
 
 Bugs/Issues

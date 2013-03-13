@@ -7,6 +7,7 @@ Rolling Changelog for v2.2
 			* [Vehicle] AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 			* [Vehicle] AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 			* [UPDATED] Refuel Speed on Gas Station
+			* [UPDATED] Bandit Skin (Using Old Bandit Skin - Lingor 0.34)
 			* [UPDATED] Lingor Hangars (Open Close Option)
 			* [UPDATED] Lingor Weather (More Sun)
 			* [UPDATED] DayZ Code to 1.7.6.2
