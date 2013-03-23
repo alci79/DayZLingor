@@ -9,7 +9,7 @@ Rolling Changelog for v2.2
 			* [UPDATED] Refuel Speed on Gas Station
 			* [UPDATED] Loadingscreen
 			* [UPDATED] Bandit Skin (Using Old Bandit Skin - Lingor 0.34)
-			* [UPDATED] Lingor Hangars (Open Close Option)
+			* [UPDATED] Lingor Hangars (Open-Close Option)
 			* [UPDATED] Lingor Weather (More Sun)
 			* [UPDATED] DayZ Code to 1.7.6.2
 
