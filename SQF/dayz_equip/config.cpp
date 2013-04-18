@@ -1746,8 +1746,8 @@ class CfgVehicles {
 	class WeaponHolder_ItemJerrycanSide : WeaponHolder_ItemJerrycan {
 		model = "\dayz_equip\proxy\jerrycan_side.p3d";
 	};
-	class ACamp_EP1;	// External class reference
-	class TentStorage : ACamp_EP1 {
+	class Land_A_tent;	// External class reference
+	class TentStorage : Land_A_tent {
 		vehicleClass = "Survival";
 		transportMaxMagazines = 60;
 		transportMaxWeapons = 15;
