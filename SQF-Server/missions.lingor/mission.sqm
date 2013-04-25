@@ -15,8 +15,6 @@ class Mission
 		"dayz_sfx",
 		"dayz_vehicles",
 		"dayz_weapons",
-		"jetskiyanahui",
-		"ibr_as350lingor",
 		"mbg_buildings_2"
 	};
 	addOnsAuto[]=
