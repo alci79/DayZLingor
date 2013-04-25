@@ -3,7 +3,7 @@
 DayZLingor (Skaronator.com)
 ==========
 
-Current Version
+Released Versions
 ==================================
 <table>
   <tr>
@@ -22,6 +22,24 @@ Current Version
 Serverfiles can you Found here: 
  - For Reality https://github.com/thevisad/DayZ-Private-master
  - For Lite https://github.com/Stapo/Lite-DayZ-Private-Server
+ 
+Files updated
+------------
+DayZ Files:
+ - Dayz_anim
+ - Dayz_code
+ - Dayz_communityassets
+ - Dayz_sfx
+ - Dayz_equip
+ - Dayz_server (server admins only)
+ - Mission (server admins only) (Prerequisites)
+ - SQL Files (server admins only)
+ 
+Lingor Files:
+ - jetskiyanahui
+ - ibr_as350lingor
+ - ibr_hangars
+ - lingor_fuel
 
 Requirements
 ------------
@@ -34,15 +52,17 @@ Requirements
 Branches
 --------
 
-- **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor)
+- **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor/tree/Development)
+- **Release_2.1** Released: 21/Nov/12 (https://github.com/Skaronator/DayZLingor/tree/Release_2.1)
+- **Release_2.0** Released: 21/Nov/12 (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)
 
 Directories
 -----------
 
- - **SQF** - Source Code for DayZLingor
- - **SQF-Server** - Source Code for Serverside Lingor Changes
- - **Documentation** - Changelog & Credits and Suggestions
  - **BattlEye-Filter** - Current Battleye Filters to run my Version
+ - **Documentation** - Changelog and Credits
+ - **SQF-Server** - Source Code for Serverside Lingor Changes
+ - **SQF** - Source Code for DayZLingor
 
 Bugs/Issues
 -----------
