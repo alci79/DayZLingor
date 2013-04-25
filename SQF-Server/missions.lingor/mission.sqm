@@ -4,21 +4,10 @@ class Mission
 	addOns[]=
 	{
 		"brg_africa",
-		"ibr"
 		"ibr_lingor",
-		"ibr_airports",
-		"ibr_hangars",
-		"ibr_lcivilians",
-		"lingor",
-		"lingor_bank",
-		"lingor_fuel",
-		"lingor_objects",
-		"lingor_roads",
-		"lingor_sounds",
 		"ca_modules_animals",
 		"cacharacters_pmc",
 		"ca_modules_functions",
-		"dayz",
 		"dayz_anim",
 		"dayz_code",
 		"dayz_communityassets",
@@ -28,7 +17,7 @@ class Mission
 		"dayz_weapons",
 		"jetskiyanahui",
 		"ibr_as350lingor",
-		"mbg_buildings_2",
+		"mbg_buildings_2"
 	};
 	addOnsAuto[]=
 	{
@@ -1178,79 +1167,6 @@ class Mission
 					skill=0.60000002;
 				};
 			};
-		};
-	};
-	class Vehicles
-	{
-		items=8;
-		class Item0
-		{
-			position[]={924.23309,5.9915962,9220.9873};
-			id=101;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-		};
-		class Item1
-		{
-			position[]={934.7226,5.9915962,9220.7734};
-			id=102;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-		};
-		class Item2
-		{
-			position[]={922.13,5.9915962,9251.8965};
-			id=103;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-		};
-		class Item3
-		{
-			position[]={936.21216,5.9915962,9251.877};
-			id=104;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-		};
-		class Item4
-		{
-			position[]={915.44269,5.9915962,9243.8818};
-			azimut=90.394051;
-			id=105;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-		};
-		class Item5
-		{
-			position[]={915.30786,5.9915962,9230.0781};
-			azimut=90.394051;
-			id=106;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-		};
-		class Item6
-		{
-			position[]={941.78571,5.9915962,9242.9443};
-			azimut=90.6903;
-			id=107;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
-			text="wall";
-		};
-		class Item7
-		{
-			position[]={941.69513,5.9915962,9230.0664};
-			azimut=90.690323;
-			id=108;
-			side="EMPTY";
-			vehicle="Base_WarfareBBarrier10xTall";
-			skill=0.60000002;
 		};
 	};
 	class Markers
