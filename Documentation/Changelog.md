@@ -13,6 +13,7 @@ Rolling Changelog for v2.2
 		* [UPDATED] Lingor Hangars (Open-Close Option)
 		* [UPDATED] Lingor Weather (More Sun)
 		* [UPDATED] DayZ Code to 1.7.7
+		* [REMOVED] Real Vehicles near Maruko-Bridge
 
 
 Release v2.1
