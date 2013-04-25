@@ -6,8 +6,8 @@ DayZ Lingor Credits
 * Stapo (for Serverfiles and for the contact with important people)
 * thevisad (for Serverfiles)
 * p-schneider (Help with the Serverfiles)
-* BBS||DeadEye (Spawnzone Selection)
-* DayZLand.eu (Spawnzone Selection)
+* IceBrakr (Icebrakr.info)
+* dotjosh (DayZCommander)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)
