@@ -19,9 +19,9 @@ Released Versions
     <td>2.0</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.0.rar</td><td>05/FEB/2013</td>
   </tr>
 </table>
-Serverfiles can you Found here: 
- - For Reality https://github.com/thevisad/DayZ-Private-master
- 
+
+Serverfiles for Reality can you found [here] (https://github.com/thevisad/DayZ-Private-master) 
+
 Files updated
 ------------
 DayZ Files:
