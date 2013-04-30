@@ -53,8 +53,8 @@ Branches
 --------
 
 - **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor/tree/Development)
-- **Release_2.1** Released: 21/Nov/12 (https://github.com/Skaronator/DayZLingor/tree/Release_2.1)
-- **Release_2.0** Released: 21/Nov/12 (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)
+- **Release_2.1** Released: 25/FEB/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.1)
+- **Release_2.0** Released: 05/FEB/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)
 
 Directories
 -----------
