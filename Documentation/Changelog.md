@@ -1,12 +1,14 @@
 Rolling Changelog for v2.2
 ==========
 		* [NEW] Finally Lingor Units:
-		* [Vehicle] Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
-		* [Vehicle] Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
-		* [Vehicle] AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* [Vehicle] AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* [Vehicle] AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* [Fixed] Saving of the player position (Update Mission.sqm)
+		* [NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
+		* [NEW] Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
+		* [NEW] Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* [NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* [NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
+		* [NEW] Weapon -RPG7V (MilitaryS)
+		* [Fixed] Saving of the player position (Update Mission File)
 		* [UPDATED] Refuel Speed on Gas Station
 		* [UPDATED] Loadingscreen
 		* [UPDATED] Bandit Skin (Using Old Bandit Skin - Lingor 0.34)
