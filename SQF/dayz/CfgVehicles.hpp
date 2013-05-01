@@ -383,10 +383,4 @@ class CfgVehicles {
 		displayName = "Garbage5";
 		vehicleClass = "Survival";
 	};
-	
-	class SUV_TK_CIV_EP1;
-	class SUV_Special : SUV_TK_CIV_EP1 {
-		displayName = "SUV Special";
-		hiddenSelectionsTextures[] = {"\dayz\textures\vehicle\suv_body_special_co.paa"};
-	};
 };
