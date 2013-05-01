@@ -738,7 +738,7 @@ class CfgBuildingLoot {
 			{"M16A2GL","weapon"},
 			{"M249_DZ","weapon"},
 			{"M9SD","weapon"},
-			//{"M136","weapon"},
+			{"RPG7V","weapon"},
 			{"AK_74","weapon"},
 			{"M4A1_Aim","weapon"},
 			{"AKS_74_kobra","weapon"},
@@ -796,7 +796,7 @@ class CfgBuildingLoot {
 			0.05,
 			0.01,
 			0.02,
-			//0.01, //m136
+			0.01, //RPG7V
 			0.10,
 			0.02,
 			0.10,
