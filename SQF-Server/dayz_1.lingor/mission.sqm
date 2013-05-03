@@ -1,3 +1,9 @@
+/****************************************************************************
+mission.sqm for DayZ Lingor - Skaronator.com Version
+@Autor: DayZ Community & Skaronator
+@Version: For Clientversion +2.2
+@Last Edit: 03/05/2013
+*****************************************************************************/
 version=11;
 class Mission
 {
@@ -31,7 +37,7 @@ class Mission
 		startWeather=0.067362607;
 		forecastWeather=0.52341133;
 		year=2008;
-		month=10;
+		month=8;
 		day=1;
 		hour=12;
 	};
@@ -1266,7 +1272,7 @@ class Intro
 		startWeather=0.25;
 		forecastWeather=0.25;
 		year=2008;
-		month=10;
+		month=8;
 		day=11;
 		hour=9;
 		minute=20;
@@ -1288,7 +1294,7 @@ class OutroWin
 		startWeather=0.25;
 		forecastWeather=0.25;
 		year=2008;
-		month=10;
+		month=8;
 		day=11;
 		hour=9;
 		minute=20;
@@ -1310,7 +1316,7 @@ class OutroLoose
 		startWeather=0.25;
 		forecastWeather=0.25;
 		year=2008;
-		month=10;
+		month=8;
 		day=11;
 		hour=9;
 		minute=20;

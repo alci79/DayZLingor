@@ -1,3 +1,10 @@
+/****************************************************************************
+init.sqf for DayZ Lingor - Skaronator.com Version
+@Autor: DayZ Community & Skaronator
+@Version: For Clientversion +2.2
+@Last Edit: 03/05/2013
+*****************************************************************************/
+
 startLoadingScreen ["","DayZ_loadingScreen"];
 enableSaving [false, false];
 //Lingor Island Spawnpoints by Skaronator.com Drassen, Chupinka, Random = 150 Spawnpoints!

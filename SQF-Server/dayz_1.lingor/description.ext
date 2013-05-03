@@ -1,3 +1,9 @@
+/****************************************************************************
+description.ext for DayZ Lingor - Skaronator.com Version
+@Autor: DayZ Community & Skaronator
+@Version: For Clientversion +2.2
+@Last Edit: 03/05/2013
+*****************************************************************************/
 respawn = "BASE";
 respawndelay = 5;
 onLoadMission = "DayZ Lingor";
