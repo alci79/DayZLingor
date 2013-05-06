@@ -8,6 +8,8 @@ DayZ Lingor Credits
 * p-schneider (Help with the Serverfiles)
 * IceBrakr (Icebrakr.info)
 * dotjosh (DayZCommander)
+* playWithSix Team
+* Christian.1987 (G3, Aug A3 and Farmas)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)
