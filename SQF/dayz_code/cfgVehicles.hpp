@@ -838,7 +838,7 @@ class CfgVehicles {
 	class SUV_TK_CIV_EP1;
 	class SUV_Special : SUV_TK_CIV_EP1 {
 		displayName = "SUV Special";
-		hiddenSelectionsTextures[] = {"\dayz\textures\vehicle\suv_body_special_co.paa"};
+		hiddenSelectionsTextures[] = {"\lingor_skaronator\vehicle\suv_body_special_co.paa"};
 	};
 	// This parent class is made to make referring to these objects easier later with allMissionObjects
 	class SpawnableWreck : House {};

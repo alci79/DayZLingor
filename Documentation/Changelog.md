@@ -7,7 +7,10 @@ Rolling Changelog for v2.2
 		* [NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 		* [NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
-		* [NEW] Weapon -RPG7V (MilitaryS)
+		* [NEW] Weapon - RPG7V (MilitaryS)
+		* [NEW] Weapon - Aug A3 (Not done)
+		* [NEW] Weapon - G3 (Not done)
+		* [NEW] Weapon - Farmas (Not done)
 		* [NEW] Mainmenu Intro
 		* [Fixed] Saving of the player position (Update Mission File)
 		* [UPDATED] Refuel Speed on Gas Station
