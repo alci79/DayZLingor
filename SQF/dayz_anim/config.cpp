@@ -506,12 +506,12 @@ class CfgMagazines {
 	class 1Rnd_SmokeGreen_GP25: FakeMagazine {};
 	class 1Rnd_SmokeYellow_GP25: FakeMagazine {};
 	class CA_LauncherMagazine: FakeMagazine {};
-	*/
 	class M136: FakeMagazine {};
+	*/
 	class Javelin: FakeMagazine {};
 	class AT13: FakeMagazine {};
-	//class PG7V: FakeMagazine {};
-	//class PG7VL: FakeMagazine {};
+	class PG7V: FakeMagazine {};
+	class PG7VL: FakeMagazine {};
 	//class PG7VR: FakeMagazine {};
 	class OG7: FakeMagazine {};
 	class PG9_AT: FakeMagazine {};
@@ -820,7 +820,7 @@ class CfgWeapons {
 	class M136: FakeWeapon {};
 	class Javelin: FakeWeapon {};
 	class Stinger: FakeWeapon {};
-	//class RPG7V: FakeWeapon {};
+	class RPG7V: FakeWeapon {};
 	class Strela: FakeWeapon {};
 	class Igla: FakeWeapon {};
 	class MetisLauncher: FakeWeapon {};
