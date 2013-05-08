@@ -14,6 +14,7 @@
 #define EAST 0 // (Russian)
 
 #include "basicdefines.hpp"
+#include "CfgTownGeneratorLingor.hpp"
 
 class CfgPatches {
 	class dayz_code {
