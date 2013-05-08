@@ -1,4 +1,4 @@
-class CfgTownGenerator {
+class CfgTownGeneratorLingor {
 	class NEAirport {
 		position[] = {8203.9, 7726.22};
 		size = 400;
