@@ -9,7 +9,6 @@ DayZ Lingor Credits
 * IceBrakr (Icebrakr.info)
 * dotjosh (DayZCommander)
 * playWithSix Team
-* Christian.1987 (G3, Aug A3 and Farmas)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)
