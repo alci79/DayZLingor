@@ -25,11 +25,15 @@ Serverfiles for Reality can you found [here] (https://github.com/thevisad/DayZ-P
 Files updated
 ------------
 DayZ Files:
+ - Dayz
  - Dayz_anim
  - Dayz_code
  - Dayz_communityassets
  - Dayz_sfx
  - Dayz_equip
+ - Dayz_vehicles
+ - Dayz_weapons
+ - lingor_skaronator
  - Dayz_server (server admins only)
  - Mission (server admins only) (Prerequisites)
  - SQL Files (server admins only)

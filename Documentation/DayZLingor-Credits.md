@@ -9,6 +9,7 @@ DayZ Lingor Credits
 * IceBrakr (Icebrakr.info)
 * dotjosh (DayZCommander)
 * playWithSix Team
+* Python.au (SUV Skin)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)
