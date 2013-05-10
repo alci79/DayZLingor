@@ -1,14 +1,11 @@
 ;Lingor cutscene by Skaronator
 
 titleCut ["", "BLACK FADED", 0];
-
-_tracks = ["Track21_Rise_Of_The_Fallen","Track22_Chernarussian_Anthem", "Track07_Last_Men_Standing", "Track13_Sharping_Knives"]
-_trackNumber = 0
-
 showCinemaBorder false
-0 fadeSound 0.3
 
-
+0 fadeMusic 0;
+playMusic ["dayz_track_intro_1",16];
+5 fadeMusic 0.5;
 
 skipTime random 9;
 0 setOvercast random 0.85;
@@ -27,6 +24,8 @@ skipTime random 9;
 
 
 _camera = "camera" camCreate  [3115.8906, 7951.4409, 5.9424839]
+
+;##################1 - 1. Point
 _camera camPrepareTarget [54535.92,92139.19,6255.64]
 _camera camPrepareFOV 0.700
 _camera camCommand "intertia on"
@@ -36,15 +35,13 @@ _camera camPrepareTarget [54535.92,92139.19,6255.64]
 _camera camPreparePos [3115.8906, 7951.4409, 5.9424839]
 _camera camPreload 15
 #loop
-;=== Ozerko start again
+
 camPreloaded _camera
 _camera camCommitPrepared 0
 titleCut ["", "BLACK IN", 5];
-0 fadeMusic 0.25
-playMusic (_tracks select random count _tracks)
 
 
-;=== Ozerko svenk
+;##################1 - 2. Point
 _camera camPrepareTarget [3072.6096, 8056.7598, -0.32911244]
 _camera camPreparePos [3004.3499, 8019.6094, 33.31295]
 _camera camPrepareFOV 0.719
@@ -52,7 +49,7 @@ _camera camCommitPrepared 30
 
 ~15
 
-;=== Zelenogorsk preload
+;##################2 - 1. Point
 _camera camPrepareTarget [88586.16,55674.17,3499.59]
 _camera camPreparePos [3965.1428, 1122.7181, 4.0531158e-006]
 _camera camPrepareFOV 0.700
@@ -64,7 +61,7 @@ _camera camCommitPrepared 0
 titleCut ["", "BLACK IN", 5];
 
 
-;=== Zelenogorsk svenk
+;##################2 - 2. Point
 _camera camPrepareTarget [-96356.48,-10876.77,3768.74]
 _camera camPreparePos [3906.2524, 1122.2699, 33.259941]
 _camera camPrepareFOV 0.700
@@ -72,7 +69,7 @@ _camera camCommitPrepared 30
 
 ~15
 
-;=== Vybor do udoli
+;##################3 - 1. Point
 _camera camPrepareTarget [-66723.01,-61139.55,10889.51]
 _camera camPreparePos [6859.6074, 6468.417, 26.033756]
 _camera camPrepareFOV 0.700
@@ -83,14 +80,14 @@ titleCut ["", "BLACK OUT", 5];
 _camera camCommitPrepared 0
 titleCut ["", "BLACK IN", 5];
 
-;=== Vybor svenk na hrad
+;##################3 - 2. Point
 _camera camPrepareTarget [104881.13,20644.71,10620.63]
 _camera camPreparePos [6915.2705, 6375.355, 5.3916254]
 _camera camPrepareFOV 0.700
 _camera camCommitPrepared 30
 
 ~15
-;=====ozerko again
+;##################1 - 1. Point
 _camera camPrepareTarget [3072.6096, 8056.7598, -0.32911244]
 _camera camPreparePos [3115.8906, 7951.4409, 5.9424839]
 _camera camPreload 15
@@ -112,3 +109,4 @@ player cameraEffect ["terminate","back"]
 _this switchMove ""
 camDestroy _camera
 exit
+
