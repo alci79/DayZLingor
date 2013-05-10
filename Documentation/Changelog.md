@@ -7,6 +7,7 @@ Rolling Changelog for v2.2
 		* [NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 		* [NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
+		* [NEW] Huey (UH1H_DZ) Sound and Skin
 		* [NEW] Weapon (RPG) - Panzerfaust 60
 		* [NEW] Weapon (Pistol) - P1
 		* [NEW] Weapon (Pistol) - P5
@@ -43,6 +44,7 @@ Rolling Changelog for v2.2
 		* [NEW] Weapon - RPD
 		* [NEW] Mainmenu Intro
 		* [Fixed] Saving of the player position (Update Mission File)
+		* [Fixed] Repair Issue
 		* [UPDATED] Refuel Speed on Gas Station
 		* [UPDATED] Loadingscreen
 		* [UPDATED] Bandit Skin (Using Old Bandit Skin - Lingor 0.34)
