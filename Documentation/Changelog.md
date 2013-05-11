@@ -1,4 +1,4 @@
-Rolling Changelog for v2.2
+Rolling Changelog for DayZ Lingor 2.2
 ==========
 		* [NEW] Finally Lingor Units:
 		* [NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
@@ -54,7 +54,7 @@ Rolling Changelog for v2.2
 		* [REMOVED] Real Vehicles near Maruko-Bridge
 
 
-Release v2.1
+DayZ Lingor 2.1
 ==========
 			
 		* [New] Vehicle - Ka137_DZ ( transportMaxWeapons = 1;, transportMaxMagazines = 10;, transportmaxbackpacks = 1; )
@@ -68,7 +68,7 @@ Release v2.1
 		* [UPDATED] Refuel Speed on Gas Station
 
 
-Release v2.0
+DayZ Lingor 2.0
 ==========
 
 		* [NEW] You see now the damage of vehicles in percent - https://dl.dropbox.com/u/23896685/DayZLingor/Status.jpg
