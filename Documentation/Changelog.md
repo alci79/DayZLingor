@@ -43,14 +43,16 @@ Rolling Changelog for DayZ Lingor 2.2
 		* [NEW] Weapon - SWT 40
 		* [NEW] Weapon - RPD
 		* [NEW] Mainmenu Intro
+		
 		* [Fixed] Saving of the player position (Update Mission File)
 		* [Fixed] Repair Issue
+		
 		* [UPDATED] Refuel Speed on Gas Station
 		* [UPDATED] Loadingscreen
 		* [UPDATED] Bandit Skin (Using Old Bandit Skin - Lingor 0.34)
 		* [UPDATED] Lingor Hangars (Open-Close Option)
 		* [UPDATED] Lingor Weather (More Sun)
-		* [UPDATED] DayZ Code to 1.7.7
+		
 		* [REMOVED] Real Vehicles near Maruko-Bridge
 
 
