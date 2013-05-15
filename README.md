@@ -62,7 +62,7 @@ Branches
 Directories
 -----------
 
- - **BattlEye-Filter** - Current Battleye Filters to run my Version
+ - **BattlEye-Filters** - Current Battleye Filters to run my Version
  - **Documentation** - Changelog and Credits
  - **SQF-Server** - Source Code for Serverside Lingor Changes
  - **SQF** - Source Code for DayZLingor
