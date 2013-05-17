@@ -1,10 +1,10 @@
-;Lingor cutscene by Skaronator
+;init Lingor create by Skaronator and BIS
 
 titleCut ["", "BLACK FADED", 0];
 showCinemaBorder false
 
 0 fadeMusic 0;
-playMusic ["dayz_track_intro_1",16];
+playMusic ["dayz_track_death_1",16];
 5 fadeMusic 0.5;
 
 skipTime random 9;

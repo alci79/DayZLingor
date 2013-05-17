@@ -1,5 +1,5 @@
-class GER_Soldier_EP1;
-class Bandit1_DZ : GER_Soldier_EP1 {
+class Soldier_Crew_PMC;
+class Bandit1_DZ : Soldier_Crew_PMC {
 	displayName = "$STR_CHAR_2";
 	side = 1;
 	weapons[] = {"Throw","Put"};
