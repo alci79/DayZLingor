@@ -486,7 +486,6 @@ class CfgMagazines {
 	class 8Rnd_B_Saiga12_74Slug: FakeMagazine {};
 	class 8Rnd_B_Beneli_74Slug: FakeMagazine {};
 	class 5Rnd_127x108_KSVK: FakeMagazine {};
-	class 10Rnd_127x99_m107: FakeMagazine {};
 	class 1Rnd_HE_M203: FakeMagazine {};
 	class FlareWhite_M203: FakeMagazine {};
 	class FlareGreen_M203: FakeMagazine {};
@@ -508,6 +507,7 @@ class CfgMagazines {
 	class CA_LauncherMagazine: FakeMagazine {};
 	class M136: FakeMagazine {};
 	*/
+	class 10Rnd_127x99_m107: FakeMagazine {};
 	class Javelin: FakeMagazine {};
 	class AT13: FakeMagazine {};
 	class PG7V: FakeMagazine {};
@@ -664,7 +664,7 @@ class CfgMagazines {
 	class ARTY_40Rnd_120mmHE_BM21: FakeMagazine {};
 	class Warfare30Rnd82mmMortar: FakeMagazine {};
 	class 100Rnd_127x99_L2A1: FakeMagazine {};
-	//class 5Rnd_127x99_as50: FakeMagazine {};
+	class 5Rnd_127x99_as50: FakeMagazine {};
 	//class 5Rnd_86x70_L115A1: FakeMagazine {};
 	class NLAW: FakeMagazine {};
 	class 200Rnd_556x45_L110A1: FakeMagazine {};
@@ -1006,7 +1006,7 @@ class CfgWeapons {
 	class CRV7_HEPD: FakeWeapon {};
 	class CRV7_FAT: FakeWeapon {};
 	class M621: FakeWeapon {};
-	//class BAF_AS50_scoped: FakeWeapon {};
+	class BAF_AS50_scoped: FakeWeapon {};
 	class BAF_AS50_TWS: FakeWeapon {};
 	class BAF_LRR_scoped: FakeWeapon {};
 	class BAF_LRR_scoped_W: FakeWeapon {};

@@ -54,6 +54,7 @@ Rolling Changelog for DayZ Lingor 2.2
 		* [UPDATED] Lingor Weather (More Sun)
 		
 		* [REMOVED] Real Vehicles near Maruko-Bridge
+		* [REMOVED] AS50 & M107
 
 
 DayZ Lingor 2.1

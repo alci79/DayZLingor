@@ -3,8 +3,8 @@ class Bandit1_DZ : GER_Soldier_EP1 {
 	displayName = "$STR_CHAR_2";
 	side = 1;
 	weapons[] = {"Throw","Put"};
-	//model = "\dayz\characters\man_bandit";
-	//portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
+	model = "\ca\characters_E\GER\GER_rifleman";
+	portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
 	magazines[] = {};
 	backpack = "";
 	respawnWeapons[] = {"Throw","Put"};
@@ -12,7 +12,6 @@ class Bandit1_DZ : GER_Soldier_EP1 {
 	weaponSlots = "1	 + 	4	 + 12*		256	 + 2*	4096	 + 	2	 + 8*	16  + 12*131072";
 	canHideBodies = 1;
 };
-
 class BAF_Soldier_Officer_W;
 class Rocket_DZ: BAF_Soldier_Officer_W {
 	displayName = "Rocket";
