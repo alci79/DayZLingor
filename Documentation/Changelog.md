@@ -1,12 +1,12 @@
 Rolling Changelog for DayZ Lingor 2.2
 ==========
 		* [NEW] Finally Lingor Units:
-		* [NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
-		* [NEW] Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
-		* [NEW] Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* [NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* [NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
+		* 	[NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
+		* 	[NEW] Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
+		* 	[NEW] Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* 	[NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* 	[NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* 	[NEW] Vehicle - SUV Special Edition (Camo Skin)
 		* [NEW] Huey (UH1H_DZ) Sound and Skin
 		* [NEW] Weapon (RPG) - Panzerfaust 60
 		* [NEW] Weapon (Pistol) - P1
@@ -52,6 +52,7 @@ Rolling Changelog for DayZ Lingor 2.2
 		* [UPDATED] Bandit Skin (Using Old Bandit Skin - Lingor 0.34)
 		* [UPDATED] Lingor Hangars (Open-Close Option)
 		* [UPDATED] Lingor Weather (More Sun)
+		* [UPDATED] Change to Default Tentmodel + Tentspace
 		
 		* [REMOVED] Real Vehicles near Maruko-Bridge
 		* [REMOVED] AS50 & M107
