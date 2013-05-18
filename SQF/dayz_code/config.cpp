@@ -13,7 +13,17 @@
 
 #define EAST 0 // (Russian)
 
-#include "basicDefines.hpp"
+#include "Configs\basicDefines.hpp"
+//#include "Configs\CfgWorlds.hpp"
+#include "Configs\CfgMoves.hpp"
+#include "Configs\rscTitles.hpp"
+#include "Configs\CfgVehicles.hpp"
+#include "Configs\CfgWeapons.hpp"
+#include "Configs\CfgMagazines.hpp"
+#include "Configs\CfgMarkers.hpp"
+#include "Configs\CfgAmmo.hpp"
+#include "Configs\CfgLoot\CfgBuildingLoot.hpp"
+#include "Configs\CfgTownGeneratorLingor.hpp"
 
 class CfgPatches {
 	class dayz_code {
@@ -106,46 +116,18 @@ class CfgInGameUI
     };
 };
 
-class RscPictureGUI
-{
-	access = 0;
-	type = 0;
-	idc = -1;
-	colorBackground[] = {0,0,0,0};
-	colorText[] = {0.38,0.63,0.26,0.75};
-	font = "TahomaB";
-	sizeEx = 0;
-	lineSpacing = 0;
-	text = "";
-	style = "0x30 + 0x100";
-	x = 0;
-	y = 0;
-	w = 0.2;
-	h = 0.15;
+class RscObject;
+class RscCompass : RscObject {
+	scale = 0.64;
 };
 
-class RscStructuredText {
-	class Attributes;
-};
-class RscStructuredTextGUI: RscStructuredText
-{
-	colorBackground[] = {0,0,0,0};
-	colorText[] = {1,1,1,1};
-	class Attributes: Attributes
-	{
-		align = "center";
-		valign = "middle";
+class RscDisplayMainMap {
+	class objects {
+		class Compass : RscObject {
+			scale = 0.5;
+		};
 	};
 };
-//#include "CfgWorlds.hpp"
-#include "cfgMoves.hpp"
-#include "rscTitles.hpp"
-#include "CfgVehicles.hpp"
-#include "CfgWeapons.hpp"
-#include "CfgMagazines.hpp"
-#include "CfgMarkers.hpp"
-#include "CfgAmmo.hpp"
-#include "Configs\CfgLoot\CfgBuildingLoot.hpp"
 
 class CfgSurvival {
 	class Inventory {

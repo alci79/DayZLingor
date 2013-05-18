@@ -1,6 +1,7 @@
 class RscPicture;
 class RscButton;
 class CA_IGUI_Title;
+class CA_Title;
 class RscText;
 class RscControlsGroup;
 class RscLineBreak;
@@ -14,6 +15,39 @@ class RscStandardDisplay;
 class RscProgress;
 class RscProgressNotFreeze;
 class RscButtonTextOnly;
+
+class RscPictureGUI
+{
+	access = 0;
+	type = 0;
+	idc = -1;
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {0.38,0.63,0.26,0.75};
+	font = "TahomaB";
+	sizeEx = 0;
+	lineSpacing = 0;
+	text = "";
+	style = "0x30 + 0x100";
+	x = 0;
+	y = 0;
+	w = 0.2;
+	h = 0.15;
+};
+
+
+class RscStructuredText {
+	class Attributes;
+};
+class RscStructuredTextGUI: RscStructuredText
+{
+	colorBackground[] = {0,0,0,0};
+	colorText[] = {1,1,1,1};
+	class Attributes: Attributes
+	{
+		align = "center";
+		valign = "middle";
+	};
+};
 
 class RscDisplayLoading 
 {
@@ -64,6 +98,7 @@ class RscDisplayDebriefing: RscStandardDisplay
 		delete Mainback;
 	};
 };
+
 class RscDisplayMissionFail: RscStandardDisplay
 {
 	class controls
@@ -137,7 +172,7 @@ class RscDisplayMain : RscStandardDisplay
 		class DAYZ_Version : CA_Version
 		{
 			idc = -1;
-			text = "DayZLingor 2.1 (Original Map by IceBreakr)";
+			text = "1.7.7.Pre-Release.02052013";
 			y = "(SafeZoneH + SafeZoneY) - (1 - 0.95)";
 		};
 		delete CA_TitleMainMenu;
@@ -146,7 +181,7 @@ class RscDisplayMain : RscStandardDisplay
 			idc = 109;
 			style = 256;
 			colorbackground[] = {0.1, 0.1, 0.1, 0};
-			x = "SafeZoneX + 0.15";
+			x = "SafeZoneX + 0.05";
 			y = "SafeZoneY + 0.06";
 			w = 0.5;
 			h = 0.05;
@@ -183,6 +218,7 @@ class RscDisplayMain : RscStandardDisplay
 		};
 	};
 };
+
 //Remove Diary
 class RscDisplayDiary {
 	idd = 129;
@@ -266,11 +302,118 @@ class RscDisplayGenderSelect
 	};
 };
 
+class RscDisplayMPInterrupt : RscStandardDisplay {
+	movingEnable = 0;
+	enableSimulation = 1;
+	//onLoad = "_dummy = ['Init', _this] execVM '\ca\ui\scripts\pauseLoadinit.sqf'; [(_this select 0)] execVM '\z\addons\dayz_code\compile\player_onPause.sqf';"; _respawn = (_this select 0) displayCtrl 1010); _respawn ctrlEnable false; _abort = (_this select 0) displayCtrl 104); _abort ctrlEnable false;						
+	onLoad = "[] execVM '\z\addons\dayz_code\compile\player_onPause.sqf'; _dummy = ['Init', _this] execVM '\ca\ui\scripts\pauseLoadinit.sqf';";
+	onUnload = "private ['_dummy']; _dummy = ['Unload', _this] execVM '\ca\ui\scripts\pauseOnUnload.sqf';";
+	
+	class controlsBackground {
+		class Mainback : RscPicture {
+			idc = 1104;
+			x = 0.045;
+			y = 0.17;
+			w = 0.627451;
+			h = 0.836601;
+			text = "\ca\ui\data\ui_background_mp_pause_ca.paa";
+		};
+	};
+	
+	class controls {
+	/*
+		class Title {};
+		class B_Players {};
+		class B_Options {};
+		class B_Abort {};
+		class B_Retry {};
+		class B_Load {};
+		class B_Save {};
+		class B_Continue {};
+		class B_Diary {};
+	*/	
+		
+		class MissionTitle : RscText {
+			idc = 120;
+			x = 0.05;
+			y = 0.818;
+			text = "";
+		};
+		
+		class DifficultyTitle : RscText {
+			idc = 121;
+			x = 0.05;
+			y = 0.772;
+			text = "";
+		};
+		
+		class Paused_Title : CA_Title {
+			idc = 523;
+			x = 0.087;
+			y = 0.192;
+			text = $STR_DISP_MAIN_MULTI;
+		};
+		
+		class CA_B_SAVE : RscShortcutButtonMain {
+			idc = 103;
+			y = 0.2537 + 0.101903 * 0;
+			x = 0.051;
+			text = $STR_DISP_INT_SAVE;
+			default = 0;
+		};
+		
+		class CA_B_Skip : CA_B_SAVE {
+			idc = 1002;
+			text = $STR_DISP_INT_SKIP;
+		};
+		
+		class CA_B_REVERT : CA_B_SAVE {
+			idc = 119;
+			y = 0.2537 + 0.101903 * 1;
+			text = "$str_disp_revert";
+			default = 0;
+		};
+		
+		class CA_B_Respawn : CA_B_SAVE {
+			idc = 1010;
+			//onButtonClick = "hint str (_this select 0);";
+			//onButtonClick = "if ((alive player) && (r_fracture_legs)) then { player SetDamage 1;};";
+			y = 0.2537 + 0.101903 * 2;
+			text = $STR_DISP_INT_RESPAWN;
+			default = 0;
+		};
+		
+		class CA_B_Options : CA_B_SAVE {
+			idc = 101;
+			y = 0.2537 + 0.101903 * 3;
+			text = $STR_DISP_INT_OPTIONS;
+			default = 0;
+		};
+		
+		class CA_B_Abort : CA_B_SAVE {
+			idc = 104;
+			y = 0.2537 + 0.101903 * 4;
+			onButtonClick = "[] execVM '\z\addons\dayz_code\compile\player_onPause.sqf'; call dayz_forceSave;";
+			text = $STR_DISP_INT_ABORT;
+			default = 0;
+		};
+		
+		class ButtonCancel : RscShortcutButton {
+			idc = 2;
+			shortcuts[] = {0x00050000 + 1, 0x00050000 + 8};
+			default = 1;
+			x = 0.1605;
+			y = 0.8617;
+			text = $STR_DISP_INT_CONTINUE;
+		};
+	};
+};
+
 class RscDisplayGear
 {
 	idd = 106;
 	enableDisplay = 1;
-	onUnload = "call player_gearSync; call dayz_forceSave;";
+	onUnload = "{player removeMagazines _x} forEach MeleeMagazines; call player_gearSync; call dayz_forceSave; call dayz_meleeMagazineCheck;";
 	class controls
 	{
 		class CA_Filter_Icon: RscPicture
@@ -356,7 +499,7 @@ class RscDisplayGear
 			idc = 1001;
 			x = 0.047634;
 			y = -0.00102941;
-			text = "Gear";
+			text = "$STR_UI_GEAR";
 		};
 		class Unit_Title: RscText
 		{
@@ -427,7 +570,7 @@ class RscDisplayGear
 					x = -2;
 					style = 2048;
 					onSetFocus = "private [""_dummy""]; _dummy = [_this,""onFocus""] execVM	""\ca\ui\scripts\handleGear.sqf""; _dummy;";
-					onButtonClick = "private [""_dummy""]; _dummy = [_this,""onLBListSelChanged""] execVM ""\ca\ui\scripts\handleGear.sqf""; _dummy;";
+					onButtonClick = "private [""_dummy""]; {player removeMagazines _x} forEach MeleeMagazines; _dummy = [_this,""onLBListSelChanged""] execVM ""\ca\ui\scripts\handleGear.sqf""; _dummy;";
 					text = "&lt;";
 				};
 				class Available_items: RscIGUIListNBox
@@ -453,7 +596,7 @@ class RscDisplayGear
 					idc = 147;
 					x = -2;
 					onSetFocus = "private [""_dummy""]; _dummy = [_this,""onFocus""] execVM ""\ca\ui\scripts\handleGear.sqf""; _dummy;";
-					onButtonClick = "private [""_dummy""]; _dummy = [_this,""onLBListSelChanged""] execVM ""\ca\ui\scripts\handleGear.sqf""; _dummy;";
+					onButtonClick = "private [""_dummy""]; {player removeMagazines _x} forEach MeleeMagazines; _dummy = [_this,""onLBListSelChanged""] execVM ""\ca\ui\scripts\handleGear.sqf""; _dummy;";
 					text = ">";
 				};
 			};
@@ -908,7 +1051,7 @@ class RscDisplayGear
 			shortcuts[] = {"0x00050000 + 3"};
 			x = 0.333336;
 			y = 0.897067;
-			text = "Filter";
+			text = "$STR_UI_FILTER";
 		};
 		class ButtonRearm: RscIGUIShortcutButton
 		{
@@ -916,7 +1059,7 @@ class RscDisplayGear
 			shortcuts[] = {"0x00050000 + 2"};
 			x = 0.554743;
 			y = 0.897067;
-			text = "Rearm";
+			text = "$STR_UI_REARM";
 		};
 		class ButtonOpenBag: RscIGUIShortcutButton
 		{
@@ -924,7 +1067,7 @@ class RscDisplayGear
 			shortcuts[] = {"0x00050000 + 2"};
 			x = 0.554743;
 			y = 0.897067;
-			text = "Open bag";
+			text = "$STR_UI_OBAG";
 		};
 		class ButtonCloseBag: RscIGUIShortcutButton
 		{
@@ -932,7 +1075,7 @@ class RscDisplayGear
 			shortcuts[] = {"0x00050000 + 2"};
 			x = 0.554743;
 			y = 0.897067;
-			text = "Close bag";
+			text = "$STR_UI_CBAG";
 		};
 		class ButtonContinue: RscIGUIShortcutButton
 		{
@@ -948,38 +1091,38 @@ class RscDisplayGear
 			shortcuts[] = {"0x00050000 + 1"};
 			x = 0.0392216;
 			y = 0.897066;
-			text = "Close";
+			text = "$STR_UI_CLOSE";
 		};
 	};
 	class Filters
 	{
 		class All
 		{
-			name = "All";
+			name = "$STR_UI_ALL";
 			mask = -1;
 			image = "\ca\ui\data\igui_gear_filter_1_ca.paa";
 		};
 		class Primary
 		{
-			name = "Primary";
+			name = "$STR_UI_PRIMARY";
 			mask = 769;
 			image = "\ca\ui\data\igui_gear_filter_2_ca.paa";
 		};
 		class Secondary
 		{
-			name = "Secondary";
+			name = "$STR_UI_SECONDARY";
 			mask = 516;
 			image = "\ca\ui\data\igui_gear_filter_3_ca.paa";
 		};
 		class HandGun
 		{
-			name = "HandGun";
+			name = "$STR_UI_HANDGUN";
 			mask = 18;
 			image = "\ca\ui\data\igui_gear_filter_4_ca.paa";
 		};
 		class Items
 		{
-			name = "Items";
+			name = "$STR_UI_ITEMS";
 			mask = 135168;
 			image = "\ca\ui\data\igui_gear_filter_5_ca.paa";
 		};
@@ -992,7 +1135,7 @@ class RscDisplayGear
 	emptyMag2 = "\ca\ui\data\ui_gear_mag2_gs.paa";
 	emptyHGun = "\ca\ui\data\ui_gear_hgun_gs.paa";
 	emptyHGunMag = "\ca\ui\data\ui_gear_hgunmag_gs.paa";
-	onLoad = "call gear_ui_init;if (isNil('IGUI_GEAR_activeFilter')) then { IGUI_GEAR_activeFilter = 0;}; private ['_dummy']; _dummy = [_this,'initDialog'] call compile preprocessFile	'\ca\ui\scripts\handleGear.sqf'; _dummy = [_this,'onLoad'] execVM	'\ca\ui\scripts\handleGear.sqf'; _dummy;";
+	onLoad = "[] spawn object_monitorGear; {player removeMagazines _x} forEach MeleeMagazines; call gear_ui_init; if (isNil('IGUI_GEAR_activeFilter')) then { IGUI_GEAR_activeFilter = 0;}; private ['_dummy']; _dummy = [_this,'initDialog'] call compile preprocessFile	'\ca\ui\scripts\handleGear.sqf'; _dummy = [_this,'onLoad'] execVM	'\ca\ui\scripts\handleGear.sqf'; _dummy;";
 	class ControlsBackground
 	{
 		class Mainback: RscPicture
