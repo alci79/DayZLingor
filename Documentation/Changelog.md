@@ -1,47 +1,15 @@
 Rolling Changelog for DayZ Lingor 2.2
 ==========
+		* [NEW] Lingor 1.5
 		* [NEW] Finally Lingor Units:
-		* 	[NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
-		* 	[NEW] Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
-		* 	[NEW] Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* 	[NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* 	[NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-		* 	[NEW] Vehicle - SUV Special Edition (Camo Skin)
+			* [NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
+			* [NEW] Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
+			* [NEW] Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			* [NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			* [NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
 		* [NEW] Huey (UH1H_DZ) Sound and Skin
-		* [NEW] Weapon (RPG) - Panzerfaust 60
-		* [NEW] Weapon (Pistol) - P1
-		* [NEW] Weapon (Pistol) - P5
-		* [NEW] Weapon (Pistol) - P6
-		* [NEW] Weapon (Pistol) - P38
-		* [NEW] Weapon (Pistol) - P38K
-		* [NEW] Weapon (Pistol) - P52 (M1911A1)
-		* [NEW] Weapon (Pistol) - Tokarew TT33
-		* [NEW] Weapon (Pistol) - P88
-		* [NEW] Weapon (Pistol) - P99
-		* [NEW] Weapon (Pistol) - HK 4
-		* [NEW] Weapon (Pistol) - HK P7
-		* [NEW] Weapon (Pistol) - HK P8
-		* [NEW] Weapon (Pistol) - HK P12 (SD)
-		* [NEW] Weapon (Pistol) - HK P2000
-		* [NEW] Weapon (Pistol) - HK P30
-		* [NEW] Weapon (Pistol) - P220
-		* [NEW] Weapon (Pistol) - P226
-		* [NEW] Weapon (Pistol) - Glock 17
-		* [NEW] Weapon (Pistol) - Makarow M
-		* [NEW] Weapon (MP) - MP2
-		* [NEW] Weapon (MP) - MP2A1
-		* [NEW] Weapon (MP) - MPSA3
-		* [NEW] Weapon (MP) - PM 63
-		* [NEW] Weapon - HK 416
-		* [NEW] Weapon - MPi KM
-		* [NEW] Weapon - MPi KMS
-		* [NEW] Weapon - MPi AK74
-		* [NEW] Weapon - MPi AKS 74
-		* [NEW] Weapon - MPi AKS 74k
-		* [NEW] Weapon - MPi KM-K
-		* [NEW] Weapon - G1 (FN FAL)
-		* [NEW] Weapon - SWT 40
-		* [NEW] Weapon - RPD
+		* [NEW] Weapon - MP7 (in 24 Versions)
 		* [NEW] Mainmenu Intro
 		
 		* [Fixed] Saving of the player position (Update Mission File)
