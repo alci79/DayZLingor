@@ -9,7 +9,7 @@ Rolling Changelog for DayZ Lingor 2.2
 			Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
 		* [NEW] Huey (UH1H_DZ) Sound and Skin
-		* [NEW] Weapon - MP7 (in 24 Versions)
+		* [NEW] Weapon - MP7 (in 24 Versions) (Military, MilitaryS, Hunting Loottable)
 		* [NEW] Mainmenu Intro
 		
 		* [Fixed] Saving of the player position (Update Mission File)
