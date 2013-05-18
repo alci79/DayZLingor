@@ -2,11 +2,11 @@ Rolling Changelog for DayZ Lingor 2.2
 ==========
 		* [NEW] Lingor 1.5
 		* [NEW] Finally Lingor Units:
-			* [NEW] Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
-			* [NEW] Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
-			* [NEW] Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-			* [NEW] Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
-			* [NEW] Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			Vehicle - Jetski in 4 Colors (maxSpeed = 140 transportMaxMagazines = 10 transportMaxWeapons = 1)
+			Vehicle - Jetski Case in 4 Colors (maxSpeed = 140 transportMaxMagazines = 20 transportMaxWeapons = 2)
+			Vehicle - AS350 Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			Vehicle - AS350 PMC (Army Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
+			Vehicle - AS350 POL (Police Skin) Helicopter (transportMaxMagazines = 20 transportMaxWeapons = 2 transportmaxbackpacks = 1)
 		* [NEW] Vehicle - SUV Special Edition (Camo Skin)
 		* [NEW] Huey (UH1H_DZ) Sound and Skin
 		* [NEW] Weapon - MP7 (in 24 Versions)
