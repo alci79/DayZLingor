@@ -5,11 +5,10 @@ class CfgMusic
 		name = "PitchWhine";
 		sound[] = {"\dayz_sfx\effects\pitchWine.ogg", db+20, 1.0};
 	};
-	class dayz_track_intro_1
+	class dayz_track_death_1
 	{
-		name = "DayZTrackIntro";
-		sound[] = {"\dayz_sfx\tracks\track_intro_1.ogg", db+0, 1.0};
-		duration = ;
+		name = "DayZTrackDeath";
+		sound[] = {"\dayz_sfx\tracks\track_death_1.ogg", db+0, 1.0};
 	};
 	class z_suspense_0
 	{
