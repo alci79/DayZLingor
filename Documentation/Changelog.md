@@ -14,6 +14,7 @@ Rolling Changelog for DayZ Lingor 2.2
 		
 		* [Fixed] Saving of the player position (Update Mission File)
 		* [Fixed] Repair Issue
+		* [Fixed] Some Soundbugs
 		
 		* [UPDATED] Refuel Speed on Gas Station
 		* [UPDATED] Loadingscreen
