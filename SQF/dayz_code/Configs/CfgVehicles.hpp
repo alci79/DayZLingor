@@ -66,7 +66,7 @@ class CfgVehicles {
 	#include "CfgVehicles\Car\UAZ_CDF.hpp"
 	#include "CfgVehicles\Car\CAR_SEDAN.hpp"
 	#include "CfgVehicles\Car\V3S_Civ.hpp"
-	#include "CfgVehicles\Car\SUV_Special.hpp"
+	#include "CfgVehicles\Car\SUV_SpecialSkaro.hpp"
 	//Helicopter's
 	#include "CfgVehicles\Helicopter\MI17.hpp"
 	#include "CfgVehicles\Helicopter\UH1H.hpp"
