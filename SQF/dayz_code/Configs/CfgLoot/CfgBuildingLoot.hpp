@@ -474,7 +474,7 @@ class CfgBuildingLoot {
 			{"MakarovSD","weapon"}
 		};
 		itemChance[] =	{
-			0.05
+			0.05,
 			0.10,
 			0.05,
 			0.01,
