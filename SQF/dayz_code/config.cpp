@@ -51,7 +51,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.Skaronator.com";
-		version = "2.1";
+		version = "2.2";
 		hiveVersion = 0.96;
 	};
 class DZ_InitWorld
@@ -70,7 +70,7 @@ class CfgMissions
 	 {
 	  class LingorIntro1
 		  {
-			directory = "z\addons\dayz_code\cfgworlds\intro.lingor";
+			directory = "z\addons\dayz_code\Configs\CfgWorlds\intro.lingor";
 		  };
 	 };
 };
