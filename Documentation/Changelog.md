@@ -22,6 +22,7 @@ Changelog for DayZ Lingor 2.2
 		* [UPDATED] Lingor Hangars (Open-Close Option)
 		* [UPDATED] Lingor Weather (More Sun)
 		* [UPDATED] Change to Default Tentmodel + Tentspace
+		* [UPDATED] Distance to spawn loot
 		
 		* [REMOVED] Real Vehicles near Maruko-Bridge
 		* [REMOVED] AS50 & M107
