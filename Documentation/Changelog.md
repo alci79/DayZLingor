@@ -1,4 +1,4 @@
-Rolling Changelog for DayZ Lingor 2.2
+Changelog for DayZ Lingor 2.2
 ==========
 		* [NEW] Lingor 1.5
 		* [NEW] Finally Lingor Units:
@@ -27,7 +27,7 @@ Rolling Changelog for DayZ Lingor 2.2
 		* [REMOVED] AS50 & M107
 
 
-DayZ Lingor 2.1
+Changelog for DayZ Lingor 2.1
 ==========
 			
 		* [New] Vehicle - Ka137_DZ ( transportMaxWeapons = 1;, transportMaxMagazines = 10;, transportmaxbackpacks = 1; )
@@ -41,7 +41,7 @@ DayZ Lingor 2.1
 		* [UPDATED] Refuel Speed on Gas Station
 
 
-DayZ Lingor 2.0
+Changelog for DayZ Lingor 2.0
 ==========
 
 		* [NEW] You see now the damage of vehicles in percent - https://dl.dropbox.com/u/23896685/DayZLingor/Status.jpg
