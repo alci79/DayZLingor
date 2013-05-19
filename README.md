@@ -10,7 +10,7 @@ Released Versions
     <td>Version</td><td>Mod Folders</td><td>Download</td><td>Release</td>
   </tr>
   <tr>
-    <td>2.2</td><td>@DayZLingorSkaro</td><td>SOON</td><td>SOON</td>
+    <td>2.2</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.2.rar</td><td>19/MAY/2013</td>
   </tr>
   <tr>
     <td>2.1</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.1.rar</td><td>25/FEB/2013</td>
@@ -21,28 +21,6 @@ Released Versions
 </table>
 
 Serverfiles for Reality can you found [here] (https://github.com/thevisad/DayZ-Private-master) 
-
-Files updated
-------------
-DayZ Files:
- - Dayz
- - Dayz_anim
- - Dayz_code
- - Dayz_communityassets
- - Dayz_sfx
- - Dayz_equip
- - Dayz_vehicles
- - Dayz_weapons
- - lingor_skaronator
- - Dayz_server (server admins only)
- - Mission (server admins only) (Prerequisites)
- - SQL Files (server admins only)
- 
-Lingor Files:
- - jetskiyanahui
- - ibr_as350lingor
- - ibr_hangars
- - lingor_fuel
 
 Requirements
 ------------
@@ -56,6 +34,7 @@ Branches
 --------
 
 - **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor/tree/Development)
+- **Release_2.2** Released: 19/MAY/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.2)
 - **Release_2.1** Released: 25/FEB/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.1)
 - **Release_2.0** Released: 05/FEB/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)
 
