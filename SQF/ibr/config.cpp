@@ -1,7 +1,5 @@
 #define _ARMA_
 
-
-//Class config.bin{
 class CfgPatches
 {
  class ibr_plants
@@ -33,7 +31,7 @@ class CfgVehicles
  class Land_benzina_schnell: Strategic
  {
   model = "\ibr\ibr_plants\benzina_schnell";
-  transportFuel = 50000;
+  transportFuel = 100;
   nameSound = "fuelstation";
   class DestructionEffects
   {
