@@ -562,5 +562,6 @@ class CfgBuildingLoot {
 			3.00
 		};
 	};
-	#include "CfgBuildingPos.hpp"
+#include "CfgBuildingPos.hpp"
+#include "CfgBuildingPosLingor.hpp"
 };
