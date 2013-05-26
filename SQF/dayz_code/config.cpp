@@ -57,7 +57,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.Skaronator.com";
-		version = "2.2";
+		version = "2.3";
 		hiveVersion = 0.96;
 	};
 class DZ_InitWorld
