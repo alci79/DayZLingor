@@ -20,7 +20,7 @@ class CfgVehicles
 	class Land_ibr_FuelStation_Feed: Strategic
 	{
 		model="\ibr\lingor_fuel\ibr_FuelStation_Feed.p3d";
-		transportFuel=100;
+		transportFuel=5;
 		nameSound="fuelstation";
 		class DestructionEffects
 		{
