@@ -55,7 +55,7 @@ class CfgVehicles {
 		model = "\ibr\ibr_hangars\ibr_hangar";
 		scope = 2;
 		vehicleClass = "ibr_hangars";
-		transportFuel = 5;
+		transportFuel = 50;
 		transportRepair = 0;
 		icon = "\ibr\ibr_hangars\icons\icon5.paa";
 		mapSize = 40;

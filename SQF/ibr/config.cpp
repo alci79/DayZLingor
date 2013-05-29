@@ -31,7 +31,7 @@ class CfgVehicles
  class Land_benzina_schnell: Strategic
  {
   model = "\ibr\ibr_plants\benzina_schnell";
-  transportFuel = 5;
+  transportFuel = 50;
   nameSound = "fuelstation";
   class DestructionEffects
   {
@@ -113,7 +113,7 @@ class CfgVehicles
  class Land_fuelstation: Strategic
  {
   model = "\ibr\ibr_plants\fuelstation";
-  transportFuel = 5;
+  transportFuel = 50;
   nameSound = "fuelstation";
   class DestructionEffects
   {
@@ -195,7 +195,7 @@ class CfgVehicles
  class Land_fuelstation_army: Strategic
  {
   model = "\ibr\ibr_plants\fuelstation_army";
-  transportFuel = 5;
+  transportFuel = 50;
   nameSound = "fuelstation";
   class DestructionEffects
   {
