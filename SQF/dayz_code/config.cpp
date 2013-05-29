@@ -95,7 +95,7 @@ class CfgAddons
 	{
 		class dayz
 		{
-			list[] = {"dayz_code","dayz","dayz_equip","dayz_weapons","lingor_skaronator","ibr_as350lingor","jetskiyanahui"};
+			list[] = {"dayz_code","dayz","dayz_equip","dayz_weapons","ibr_as350lingor","JetSkiYanahuiAddon"};
 		};
 	};
 };
