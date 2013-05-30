@@ -315,7 +315,6 @@ class CfgBuildingLoot {
 		lootChance = 0.4;
 		lootPos[] = {};
 		itemType[] =	{
-			{"","mp7"},
 			{"M9","weapon"},
 			{"M16A2","weapon"},
 			{"M16A2GL","weapon"},
@@ -362,7 +361,6 @@ class CfgBuildingLoot {
 			{"BAF_L85A2_RIS_Holo","weapon"}
 		};
 		itemChance[] =	{
-			0.2,
 			0.05,
 			0.05,
 			0.01,
@@ -415,7 +413,6 @@ class CfgBuildingLoot {
 		lootChance = 0.4;
 		lootPos[] = {};
 		itemType[] =	{
-			{"","mp7"},
 			{"M16A2","weapon"},
 			{"M16A2GL","weapon"},
 			{"M249_DZ","weapon"},
@@ -474,7 +471,6 @@ class CfgBuildingLoot {
 			{"MakarovSD","weapon"}
 		};
 		itemChance[] =	{
-			0.05,
 			0.10,
 			0.05,
 			0.01,
@@ -544,7 +540,6 @@ class CfgBuildingLoot {
 			{"ItemMatchbox","generic"},
 			{"Crossbow_DZ","weapon"},
 			{"","military"},
-			{"","mp7"},
 			{"WeaponHolder_ItemMachete", "object"},
 			{"huntingrifle","weapon"},
 			{"","hunter"}
@@ -556,7 +551,6 @@ class CfgBuildingLoot {
 			0.06,
 			0.03,
 			2.00,
-			0.05,
 			0.03,
 			0.04,
 			3.00
