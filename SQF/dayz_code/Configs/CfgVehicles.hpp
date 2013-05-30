@@ -217,6 +217,11 @@ class CfgVehicles {
 		};
 		hiddenSelectionsTextures[] = {"lingor_skaronator\vehicle\uh1\uh1_co.paa", "lingor_skaronator\vehicle\uh1\uh1_in_co.paa", "lingor_skaronator\vehicle\uh1\default_co.paa"};
 	};
+	class UH1H_DZ2: UH1H_DZ
+	{
+		hiddenSelections[] = {"Camo1", "Camo2", "Camo_mlod"};
+		hiddenSelectionsTextures[] = {"ca\air_E\UH1H\data\UH1D_TKA_CO.paa", "ca\air_E\UH1H\data\UH1D_in_TKA_CO.paa", "ca\air_E\UH1H\data\default_TKA_co.paa"};
+	};
 	class SUV_TK_CIV_EP1;
 	class SUV_SpecialSkaro : SUV_TK_CIV_EP1 {
 		displayName = "SUV Special";
@@ -268,7 +273,6 @@ class CfgVehicles {
 		transportmaxbackpacks = 1;
 	};
 	class AH6_Base_EP1;
-	//class AH6X_EP1: AH6_Base_EP1 {};
 	class AH6X_DZ: AH6_Base_EP1
 	{
 		displayname = "AH6X Little Bird";
@@ -324,23 +328,23 @@ class CfgVehicles {
 	};
 	class RubberBoat;
 	class PBX: RubberBoat {
-	cargoaction[] = {"PBX_Cargo01", "PBX_Cargo02", "PBX_Cargo03"};
-	crew = "";
-	displayname = "PBX";
-	driveraction = "PBX_Driver";
-	extcameraposition[] = {0, 4, -14};
-	faction = "RU";
-	icon = "\Ca\water\Data\map_ico\icomap_rubber_CA.paa";
-	mapsize = 6;
-	maxspeed = 125;
-	model = "\ca\water\PBX";
-	picture = "\ca\water\data\ico\pbx_CA.paa";
-	scope = 2;
-	side = 0;
-	transportsoldier = 3;
-	typicalcargo[] = {};
-	class TransportMagazines {};
-	class Library {
+		cargoaction[] = {"PBX_Cargo01", "PBX_Cargo02", "PBX_Cargo03"};
+		crew = "";
+		displayname = "PBX";
+		driveraction = "PBX_Driver";
+		extcameraposition[] = {0, 4, -14};
+		faction = "RU";
+		icon = "\Ca\water\Data\map_ico\icomap_rubber_CA.paa";
+		mapsize = 6;
+		maxspeed = 125;
+		model = "\ca\water\PBX";
+		picture = "\ca\water\data\ico\pbx_CA.paa";
+		scope = 2;
+		side = 0;
+		transportsoldier = 3;
+		typicalcargo[] = {};
+		class TransportMagazines {};
+		class Library {
 		libtextdesc = "The PBX is a Combat Rubber Craft very similar to the CRRC in design. It is intended to be used for maritime raids and infiltration, as well as riverine operations.";
 	};
 	class Damage {
