@@ -3,9 +3,13 @@ Changelog for DayZ Lingor 2.2.1
 		* [NEW] Vehicle - UH1H with Military Skin
 		
 		* [Fixed] Some Errors (You can not play this Mission etc.)
-		* [Fixed] Lootspawn (Loot in air)
+		* [Fixed] Lootspawn (Loot in air but still got one Problem with the Lingor Baracks)
 		
 		* [UPDATED] Refuel Speed on ALL Gas Stations
+		* [UPDATED] Loadingscreen
+		* [UPDATED] Jetski Speed
+		
+		* [Removed] MP7 (For Now)
 
 Changelog for DayZ Lingor 2.2
 ==========
