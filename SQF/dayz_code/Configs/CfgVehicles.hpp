@@ -228,8 +228,7 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"\lingor_skaronator\vehicle\suv_body_special_co.paa"};
 	};
 	class MV22;
-	class MV22_DZ: MV22
-	{
+	class MV22_DZ: MV22	{
 		displayname = "MV-22 Speed Plane";
 		displaynameshort = "MV-22";
 		scope = 2;
@@ -250,8 +249,7 @@ class CfgVehicles {
 		transportmaxbackpacks = 15;
 	};
 	class Ka137_PMC;
-	class Ka137_DZ: Ka137_PMC
-	{
+	class Ka137_DZ: Ka137_PMC	{
 		displayname = "Ka137 Mini-Heli";
 		displaynameshort = "Ka137";
 		scope = 2;

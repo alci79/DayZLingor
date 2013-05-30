@@ -45,7 +45,7 @@ class CfgVehicles {
 		class Turrets {};
 		hideWeaponsDriver = 1;
 		hideWeaponsCargo = 1;
-		maxSpeed = 140;
+		maxSpeed = 180;
 		getInRadius = 2;
 		supplyRadius = 0.5;
 		transportMaxMagazines = 10;
