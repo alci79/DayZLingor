@@ -362,14 +362,14 @@ food[] = {
 			"C1987_MP7_su",
 			"C1987_MP7_su_sd",
 			"C1987_MP7_zp",
-			"C1987_MP7_zp_sd",
+			"C1987_MP7_zp_sd", //here
 			"C1987_MP7_eot",
 			"C1987_MP7_eot_sd",
 			"C1987_MP7_aim",
 			"C1987_MP7_aim_sd",
 			"C1987_MP7_acog",
 			"C1987_MP7_acog_sd",
-			"C1987_MP7_t",
+			"C1987_MP7_t", //here
 			"C1987_MP7_sd_t",
 			"C1987_MP7_su_t",
 			"C1987_MP7_su_sd_t",
