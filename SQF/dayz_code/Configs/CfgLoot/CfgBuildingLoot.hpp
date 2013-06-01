@@ -153,7 +153,8 @@ class CfgBuildingLoot {
 			{"PartWoodPile","magazine"},
 			{"WeaponHolder_ItemHatchet","object"},
 			{"MR43","weapon"},
-			{"WeaponHolder_ItemMachete","magazine"}
+			{"WeaponHolder_ItemMachete","magazine"},
+			{"KPFS_KarS","magazine"}
 		};
 		itemChance[] =	{
 			0.06,
@@ -166,7 +167,8 @@ class CfgBuildingLoot {
 			0.11,
 			0.17,
 			0.06,
-			0.03
+			0.03,
+			0.02
 		};
 	};
 	class Supermarket: Default {
@@ -359,6 +361,15 @@ class CfgBuildingLoot {
 			{"RPK_74","weapon"},
 			{"MakarovSD","weapon"},
 			{"BAF_L85A2_RIS_Holo","weapon"}
+			
+			{"KPFS_RPD","weapon"},
+			{"KPFS_MG1","weapon"},
+			{"KPFS_MG3","weapon"},
+			{"KPFS_MG3_eot","weapon"},
+			{"KPFS_MP44","weapon"},
+			{"KPFS_MP2","weapon"}
+			
+			
 		};
 		itemChance[] =	{
 			0.05,
@@ -402,7 +413,14 @@ class CfgBuildingLoot {
 			0.03,
 			0.04, //RPK_74
 			0.02, //MakarovSD
-			0.01
+			0.01,
+			
+			0.03, //KPFS_RPD
+			0.01, //KPFS_MG1
+			0.01, //KPFS_MG3
+			0.01, //KPFS_MG3 eot
+			0.02, //KPFS_MP44
+			0.03, //KPFS_MP2
 		};
 	};
 	class MilitarySpecial: Default {
@@ -468,7 +486,8 @@ class CfgBuildingLoot {
 			{"M40A3","weapon"},
 			{"100Rnd_762x54_PK","magazine"},
 			{"MG36","weapon"},
-			{"MakarovSD","weapon"}
+			{"MakarovSD","weapon"},
+			{"KPFS_PZF60","weapon"}
 		};
 		itemChance[] =	{
 			0.10,
@@ -523,7 +542,8 @@ class CfgBuildingLoot {
 			0.02, // M40A3
 			0.01,	//("100Rnd_762x54_PK","magazine"}
 			0.05, //MG36
-			0.02 //MakarovSD
+			0.02, //MakarovSD
+			0.01 //KPFS_PZF60
 		};
 	};
 	class Hunting: Default {
