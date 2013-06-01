@@ -360,7 +360,7 @@ class CfgBuildingLoot {
 			{"Sa58V_EP1","weapon"},
 			{"RPK_74","weapon"},
 			{"MakarovSD","weapon"},
-			{"BAF_L85A2_RIS_Holo","weapon"}
+			{"BAF_L85A2_RIS_Holo","weapon"},
 			
 			{"KPFS_RPD","weapon"},
 			{"KPFS_MG1","weapon"},
