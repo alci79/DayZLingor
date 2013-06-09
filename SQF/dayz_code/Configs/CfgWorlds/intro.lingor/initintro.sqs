@@ -1,5 +1,7 @@
-;init Lingor create by Skaronator and BIS
-
+;
+;        Created exclusively for ArmA2:OA - DayZLingor.
+;        Please request permission to use/alter/distribute from project leader Skaronator (DayZDev@Skaronator.com)
+;
 titleCut ["", "BLACK FADED", 0];
 showCinemaBorder false
 
