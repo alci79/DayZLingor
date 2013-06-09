@@ -23,7 +23,7 @@
 #include "Configs\CfgMarkers.hpp"
 #include "Configs\CfgAmmo.hpp"
 #include "Configs\CfgLoot\CfgBuildingLoot.hpp"
-#include "Configs\CfgTownGeneratorLingor.hpp"
+#include "Configs\CfgTownGenerator\CfgTownGeneratorLingor.hpp"
 
 class CfgPatches {
 	class dayz_code {
@@ -39,12 +39,6 @@ class CfgPatches {
 		requiredVersion = 0.1;
 		requiredAddons[] = {"CAUI"};
 	};
-	class compass {
-		units[] = {};
-		weapons[] = {};
-		requiredVersion = 1.0;
-		requiredAddons[] = {"CAData", "CAUI"};
-	};
 };
 
 class CfgMods
@@ -57,7 +51,7 @@ class CfgMods
 		hidePicture = 0;
 		hideName = 0;
 		action = "http://www.Skaronator.com";
-		version = "2.2.1";
+		version = "2.3";
 		hiveVersion = 0.96;
 	};
 class DZ_InitWorld
@@ -120,19 +114,6 @@ class CfgInGameUI
     {
         cueColor[] = {0,0,0,0};
     };
-};
-
-class RscObject;
-class RscCompass : RscObject {
-	scale = 0.64;
-};
-
-class RscDisplayMainMap {
-	class objects {
-		class Compass : RscObject {
-			scale = 0.5;
-		};
-	};
 };
 
 class CfgSurvival {
