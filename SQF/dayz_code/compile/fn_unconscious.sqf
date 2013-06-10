@@ -1,7 +1,10 @@
+private["_totalTimeout","_display","_ctrl1","_ctrl1Pos","_timeout","_isOnDeck","_isInLocation","_inVehicle","_bloodLow","_animType","_anim","_isHospital"];
+
 disableSerialization;
 if ((!r_player_handler1) and (r_handlerCount == 0)) then {
 	//Unconscious Meter
 	_totalTimeout = r_player_timeout;
+	if (_totalTimeout == 0) then { _totalTimeout = r_player_timeout +1; }; //Fix for zero divisor
 	4 cutRsc ["playerStatusWaiting", "PLAIN",0];
 	_display = uiNamespace getVariable 'DAYZ_GUI_waiting';
 	_ctrl1 = 	_display displayCtrl 1400;
@@ -25,7 +28,7 @@ if ((!r_player_handler1) and (r_handlerCount == 0)) then {
 		sleep 1;
 		_isOnDeck = false; //getPos player in LHA_Deck;
 		_isInLocation = false; //getPos player in LHA_Location;
-		_inVehicle = (vehicle _unit != _unit);
+		_inVehicle = (vehicle player != player);
 		_bloodLow = ((r_player_blood/r_player_bloodTotal) < 0.5);
 		if ((surfaceIsWater (getPosASL player)) and !_isOnDeck and !_inVehicle) then {
 			player setpos [(getPosASL player select 0),(getPosASL player select 1),0.3];
@@ -45,6 +48,7 @@ if ((!r_player_handler1) and (r_handlerCount == 0)) then {
 			r_player_timeout = r_player_timeout - 1;
 		} else {
 			if ((!r_player_dead) and (!r_player_cardiac)) then {
+				r_player_unconscious = false;
 				nul = [] spawn fnc_usec_recoverUncons;
 			};
 		};
@@ -65,23 +69,22 @@ if ((!r_player_handler1) and (r_handlerCount == 0)) then {
 			//Give Blood
 			r_player_blood = r_player_bloodTotal;
 			player setVariable["USEC_lowBlood",false,true];
-			usecMorphine = [player,player];
-			publicVariable "usecMorphine";
+			PVDZ_hlt_Morphine = [player,player];
+			publicVariable "PVDZ_hlt_Morphine";
 			player setVariable ["USEC_inPain", false, true];
-			usecBandage = [player,player];
-			publicVariable "usecBandage";
+			PVDZ_hlt_Bandage = [player,player];
+			publicVariable "PVDZ_hlt_Bandage";
 			player setdamage 0;
-			{player setVariable[_x,false,true];} forEach USEC_woundHit;
-			player setVariable ["USEC_injured",false,true];
+			call fnc_usec_resetWoundPoints;
 			
 			sleep 1;
 			r_player_handler = false;
 			nul = [] spawn fnc_usec_recoverUncons;
 		};
-		if (!(player getVariable ["NORRN_unconscious", true])) then {
+		if (r_player_timeout > 0 && !(player getVariable ["NORRN_unconscious", true])) then {
 			nul = [] spawn fnc_usec_recoverUncons;
 		};
-		if(animationState player == "AmovPpneMstpSnonWnonDnon_healed") then {
+		if (r_player_timeout > 0 && (animationState player == "AmovPpneMstpSnonWnonDnon_healed")) then {
 			nul = [] spawn fnc_usec_recoverUncons;
 		};
 	};

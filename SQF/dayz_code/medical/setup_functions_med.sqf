@@ -28,15 +28,14 @@ fnc_usec_pitchWhine = {
 	};
 };
 
+//Modifyed by Alby
 fnc_usec_damageUnconscious = {
 	private["_unit","_damage"];
 	_unit = _this select 0;
 	_damage = _this select 1;
 	_inVehicle = (vehicle _unit != _unit);
 	if (_unit == player) then {
-		r_player_timeout = round(((random 2) * _damage) * 40);
-		if (_type == 1) then {r_player_timeout = r_player_timeout + 90};
-		if (_type == 2) then {r_player_timeout = r_player_timeout + 60};
+		r_player_timeout = round((((random 2) max 0.1) * _damage) * 20);
 		r_player_unconscious = true;
 		player setVariable["medForceUpdate",true,true];
 		player setVariable ["unconsciousTime", r_player_timeout, true];
@@ -118,52 +117,114 @@ fnc_usec_self_removeActions = {
 	r_self_actions = [];
 };
 
-fnc_med_publicBlood = {
-	while {(r_player_injured or r_player_infected) and r_player_blood > 0} do {
-		player setVariable["USEC_BloodQty",r_player_blood,true];
-		player setVariable["medForceUpdate",true];
-		sleep 5;
+fnc_usec_calculateBloodPerSec = {
+	private["_bloodLossPerSec","_bloodGainPerSec","_bloodPerSec","_wounded"];
+	_bloodLossPerSec = 0;
+	_bloodGainPerSec = 0;
+
+	if (r_player_injured) then {
+		_bloodLossPerSec = 10;
+
+		{
+			_wounded = player getVariable["hit_"+_x,false];
+
+			if (_wounded) then {
+				_bloodLossPerSec = _bloodLossPerSec + 10;
+			};
+		} forEach USEC_typeOfWounds;
+	};
+
+	if (r_player_infected) then { _bloodLossPerSec = _bloodLossPerSec + 3 };
+
+	if (r_player_bloodregen > 0) then {
+		_bloodGainPerSec = r_player_bloodregen / 12;
+
+		if ((r_player_bloodregen / 4) < 25) then {
+			_bloodGainPerSec = r_player_bloodregen / 4;
+		} else {
+			if ((r_player_bloodregen / 8) < 25) then {
+				_bloodGainPerSec = r_player_bloodregen / 8;
+			};
+		};
+
+		r_player_bloodregen = r_player_bloodregen - _bloodGainPerSec;
+	};
+
+	r_player_bloodlosspersec = _bloodLossPerSec;
+	r_player_bloodgainpersec = _bloodGainPerSec;
+
+	_bloodPerSec = _bloodGainPerSec - _bloodLossPerSec;
+	r_player_bloodpersec = _bloodPerSec;
+	_bloodPerSec;
+};
+
+fnc_usec_playerHandleBlood = {
+	private["_bloodPerSec","_bleedTime","_elapsedTime"];
+	if (r_player_injured) then { // bleeding
+		_bleedTime = (random 500) + 100;
+		_elapsedTime = 0;
+
+		while {(r_player_injured) and (r_player_blood > 0)} do {
+			_bloodPerSec = [] call fnc_usec_calculateBloodPerSec;
+			r_player_blood = r_player_blood + _bloodPerSec;
+			_elapsedTime = _elapsedTime + 1;
+
+			if (_elapsedTime > _bleedTime) then {
+				r_player_injured = false;
+				_id = [player,player] execVM "\z\addons\dayz_code\medical\publicEH\medBandaged.sqf";
+				dayz_sourceBleeding = objNull;
+				call fnc_usec_resetWoundPoints;
+			};
+
+			_bloodDiff = r_player_blood - (player getVariable["USEC_BloodQty", 12000]);
+
+			if ((_bloodDiff >= 500) or (_bloodDiff <= -500)) then {
+				player setVariable["USEC_BloodQty",r_player_blood,true];
+				player setVariable["medForceUpdate",true];
+			};
+
+			sleep 1;
+		};
+	} else { // not bleeding
+		_bloodPerSec = [] call fnc_usec_calculateBloodPerSec;
+
+		if (_bloodPerSec != 0) then {
+			r_player_blood = r_player_blood + _bloodPerSec;
+		};
+
+		_bloodDiff = r_player_blood - (player getVariable["USEC_BloodQty", 12000]);
+
+		if ((_bloodDiff >= 500) or (_bloodDiff <= -500)) then {
+			player setVariable["USEC_BloodQty",r_player_blood,true];
+			player setVariable["medForceUpdate",true];
+		};
 	};
 };
 
-fnc_usec_playerBleed = {
-	private["_bleedTime","_bleedPerSec","_total","_bTime","_myBleedTime"];
-	_bleedTime = 400;		//seconds
-	_bleedPerSec = (r_player_bloodTotal / _bleedTime);
-	_total = r_player_bloodTotal;
-	r_player_injured = true;
-	_myBleedTime = (random 500) + 100;
-	_bTime = 0;
-	while {r_player_injured} do {
-		//bleed out
-		if (r_player_blood > 0) then {
-			r_player_blood = r_player_blood - _bleedPerSec;
-		};
-		_bTime = _bTime + 1;
-		if (_bTime > _myBleedTime) then {
-			r_player_injured = false;
-			_id = [player,player] execVM "\z\addons\dayz_code\medical\publicEH\medBandaged.sqf";
-			dayz_sourceBleeding =	objNull;
-			{player setVariable[_x,false,true];} forEach USEC_woundHit;
-			player setVariable ["USEC_injured",false,true];
-		};
-		sleep 1;
-	};
+fnc_usec_resetWoundPoints = {
+	{
+		player setVariable["hit_"+_x,false,true];
+	} forEach USEC_typeOfWounds;
+	player setVariable ["USEC_injured",false,true];
 };
 
 fnc_usec_damageBleed = {
 	/***********************************************************
 	PROCESS DAMAGE TO A UNIT
-	- Function
+	- Function fnc_usec_damageBleed: Draw a creepy blood stream from a player limb
 	- [_unit, _wound, _injury] call fnc_usec_damageBleed;
 	************************************************************/
 		private["_unit","_wound","_injury","_modelPos","_point","_source"];
 		_unit = _this select 0;
 		_wound = _this select 1;
-		_injury = _this select 2;
-		
+		_injury = _this select 2; // not used. damage% ???
+
+		diag_log format ["%1::fnc_usec_damageBleed %2", __FILE__, _this];
+
+		if (isServer) exitWith{}; // no graphical effects on server!
+
 		_modelPos = [0,0,0];
-		
+
 		switch (_wound) do {
 			case "Pelvis": {
 				_modelPos = [0,0,0.2];
@@ -182,9 +243,9 @@ fnc_usec_damageBleed = {
 
 		while {true} do {
 			scopeName "main";
-			
+
 			waitUntil {(vehicle _unit == _unit)};
-			
+
 			_point = "Logic" createVehicleLocal getPosATL _unit;
 			_source = "#particlesource" createVehicleLocal getPosATL _unit;
 			_source setParticleParams
@@ -206,9 +267,9 @@ fnc_usec_damageBleed = {
 			_source setParticleRandom [2, [0, 0, 0], [0.0, 0.0, 0.0], 0, 0.5, [0, 0, 0, 0.1], 0, 0, 10];
 			_source setDropInterval 0.02;
 			_point attachTo [_unit,_modelPos,_wound];
-			
+
 			sleep 5;
-			
+
 			while {((_unit getVariable["USEC_injured",true]) and (alive _unit))} do {
 				scopeName "loop";
 				if (vehicle _unit != _unit) then {
@@ -218,12 +279,12 @@ fnc_usec_damageBleed = {
 			};
 			deleteVehicle _source;
 			deleteVehicle _point;
-			
+
 			if (!(_unit getVariable["USEC_injured",false])) then {
 				BreakOut "main";
 			};
 		};
-		
+
 		deleteVehicle _source;
 		deleteVehicle _point;
 };
@@ -235,8 +296,8 @@ fnc_usec_recoverUncons = {
 	player setVariable ["USEC_isCardiac",false,true];
 	player setVariable["medForceUpdate",true,true];
 	sleep 1;
-	usecEpi = [player,player];
-	publicVariable "usecEpi";
+	PVDZ_hlt_Epi = [player,player];
+	publicVariable "PVDZ_hlt_Epi";
 	r_player_unconscious = false;
 	sleep 1;
 	r_player_cardiac = false;

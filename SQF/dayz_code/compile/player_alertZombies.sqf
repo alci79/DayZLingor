@@ -1,14 +1,15 @@
-private["_unit","_distance","_i","_listTalk","_zombie","_targets","_pos"];
-//Alert Zed's to noise of shot
-_unit = 	_this select 0;
+
+private["_unit","_distance","_doRun","_pos","_listTalk","_target","_targets"];
+
+_unit = _this select 0; 
 _distance = _this select 1;
-_doRun = 	_this select 2;
-_pos = 		_this select 3;
-_listTalk = _pos nearEntities ["zZombie_Base",_distance/2];
+_doRun = _this select 2;
+_pos = _this select 3;
+_listTalk = _pos nearEntities ["zZombie_Base",_distance];
 
 if ("ItemMap_Debug" in items player) then {
 	diag_log ("alertzeds Unit: " +str(_unit));
-	diag_log ("alertzeds Distance: " +str(_distance/2));
+	diag_log ("alertzeds Distance: " +str(_distance));
 	diag_log ("alertzeds DoRun: " +str(_doRun));
 	diag_log ("alertzeds Pos: " +str(_pos));
 	diag_log ("alertzeds ListTalk: " +str(_listTalk));
@@ -21,10 +22,10 @@ if ("ItemMap_Debug" in items player) then {
 	if (_doRun) then {
 		_targets = _zombie getVariable ["targets",[]];
 		if (!(_unit in _targets)) then {
-			_targets set [count _targets,_unit];
-			_zombie setVariable ["targets",_targets,true];
+			_targets set [count _targets, _unit];
+			_zombie setVariable ["targets",_targets, true];
 		};
 	} else {
-		_zombie setVariable ["myDest",_pos,true];
+		_zombie setVariable ["myDest",_pos];
 	};
 } forEach _listTalk;

@@ -3,9 +3,9 @@
 
 private ["_wounded","_vcl","_group"];
 
-_wounded 	= _this select 0;
+  _wounded 	= _this select 0;
 
-//if (!local _wounded) exitWith {};
+if (!local _wounded) exitWith {};
 
 r_action = false;
 
@@ -16,9 +16,9 @@ _wounded setVariable ["NORRN_unit_dragged", true, true];
 _wounded assignAsCargo _vcl; 
 _wounded moveInCargo _vcl;
 sleep 1;
-//["norrnRALW",_wounded] call broadcastRpcCallAll;
-	norrnRALW = [_wounded];
-	publicVariable "norrnRALW";
+//["PVDZ_drg_RaLW",_wounded] call broadcastRpcCallAll;
+	PVDZ_drg_RaLW = _wounded;
+	publicVariable "PVDZ_drg_RaLW";
 
 if (local _wounded) then 
 {	
@@ -35,8 +35,8 @@ if (local _wounded) then
 				_wounded action ["EJECT", _vcl];
 				sleep 1;
 			};
-			norrinRAlie = _wounded;
-			publicVariable "norrinRAlie";
+//			PVDZ_drg_RAlie = _wounded; // not used
+//			publicVariable "PVDZ_drg_RAlie"; // not used
 			_wounded switchMove "ainjppnemstpsnonwrfldnon";
 			_wounded setVariable ["NORRN_unit_dragged", false, true];
 			sleep 1;
@@ -50,4 +50,3 @@ if (local _wounded) then
 };
 sleep 0.01;
 if (true) exitWith {};
-

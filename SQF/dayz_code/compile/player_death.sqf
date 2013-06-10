@@ -1,4 +1,5 @@
-private["_array","_source","_kills","_killsV","_humanity","_wait","_myKills"];
+private ["_array","_source","_kills","_killsV","_humanity","_wait","_myKills","_method","_body","_id","_canHitFree","_isBandit","_myGroup"];
+
 if (deathHandled) exitWith {};
 
 deathHandled = true;
@@ -8,9 +9,9 @@ _body =		player;
 _playerID =	getPlayerUID player;
 
 //Send Death Notice
-//["dayzDeath",[dayz_characterID,0,_body,_playerID,dayz_playerName]] call callRpcProcedure;
-		dayzDeath = [dayz_characterID,0,_body,_playerID,dayz_playerName];
-		publicVariable "dayzDeath";
+//["PVDZ_plr_Death",[dayz_characterID,0,_body,_playerID,dayz_playerName]] call callRpcProcedure;
+		PVDZ_plr_Death = [dayz_characterID,0,_body,_playerID];
+		publicVariableServer "PVDZ_plr_Death";
 
 _id = [player,20,true,getPosATL player] spawn player_alertZombies;
 
@@ -24,14 +25,11 @@ player setVariable ["unconsciousTime", 0, true];
 player setVariable ["USEC_isCardiac",false,true];
 player setVariable ["medForceUpdate",true,true];
 //remove combat timer on death
-player setVariable ["startcombattimer", 0, true];
+player setVariable ["startcombattimer", 0];
 r_player_unconscious = false;
 r_player_cardiac = false;
 
 _id = player spawn spawn_flies;
-
-_humanity =		0;
-_wait = 		0;
 
 _array = _this;
 if (count _array > 0) then {
@@ -41,27 +39,24 @@ if (count _array > 0) then {
 		if (_source != player) then {
 			_canHitFree = 	player getVariable ["freeTarget",false];
 			_isBandit = (["Bandit",typeOf player,false] call fnc_inString);
-			_myKills = 		((player getVariable ["humanKills",0]) / 30) * 1000;
+			_wait = 0;
+			_humanity = 0;
 			if (!_canHitFree and !_isBandit) then {
-				//Process Morality Hit
-				_humanity = -(2000 - _myKills);
+				// "humanKills" from local character is used to compute _source player "PVDZ_plr_Humanity" change
+				_myKills = -1 max (1 - (player getVariable ["humanKills",0]) / 7);  // -1 (good action) to 1 (bad action)
+				_humanity = -2000 * _myKills;
+				if (_humanity > 0) then { _wait = 300; };
 				_kills = 		_source getVariable ["humanKills",0];
 				_source setVariable ["humanKills",(_kills + 1),true];
-				_wait = 300;
 			} else {
-				//Process Morality Hit
-				//_humanity = _myKills * 100;
 				_killsV = 		_source getVariable ["banditKills",0];
 				_source setVariable ["banditKills",(_killsV + 1),true];
 				_wait = 0;
 			};
-			if (_humanity < 0) then {
-				_wait = 0;
-			};
-			if (!_canHitFree and !_isBandit) then {
-				//["dayzHumanity",[_source,_humanity,_wait]] call broadcastRpcCallAll;
-				dayzHumanity = [_source,_humanity,_wait];
-				publicVariable "dayzHumanity";
+			if (!_canHitFree and !_isBandit and (_humanity != 0)) then {
+				//["PVDZ_plr_Humanity",[_source,_humanity,_wait]] call broadcastRpcCallAll;
+				PVDZ_plr_Humanity = [_source,_humanity,_wait];
+				publicVariable "PVDZ_plr_Humanity";
 			};
 		};
 	};
@@ -69,15 +64,15 @@ if (count _array > 0) then {
 };
 
 terminate dayz_musicH;
-terminate dayz_lootCheck;
+//terminate dayz_lootCheck;
 terminate dayz_slowCheck;
 terminate dayz_animalCheck;
 terminate dayz_monitor1;
 terminate dayz_medicalH;
 terminate dayz_gui;
-terminate dayz_zedCheck;
+//terminate dayz_zedCheck;
 terminate dayz_locationCheck;
-terminate dayz_combatCheck;
+//terminate dayz_combatCheck;
 terminate dayz_spawnCheck;
 
 //Reset (just in case)
@@ -112,17 +107,12 @@ deleteGroup _myGroup;
 3 cutRsc ["default", "PLAIN",3];
 4 cutRsc ["default", "PLAIN",3];
 
-if (count _array > 0) then {
-	_body setVariable ["deathType",_method,true];
-};
-
 _body setVariable["combattimeout", 0, true];
 
 //["dayzFlies",player] call broadcastRpcCallAll;
 sleep 2;
 
 1 cutRsc ["DeathScreen","BLACK OUT",3];
-
 
 playMusic "dayz_track_death_1";
 

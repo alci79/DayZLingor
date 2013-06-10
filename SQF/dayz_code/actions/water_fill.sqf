@@ -1,7 +1,7 @@
-private["_hasFood","_item","_text","_qty"];
+private["_playerPos","_canFill","_isPond","_isWell","_pondPos","_objectsWell","_onLadder","_hasbottleitem","_config","_item","_text","_objectsPond","_qty","_dis","_sfx"];
 
 call gear_ui_init;
-
+_item = 		_this;
 _playerPos = 	getPosATL player;
 _canFill = 		count nearestObjects [_playerPos, ["Land_pumpa","Land_water_tank"], 4] > 0;
 _isPond = 		false;
@@ -17,7 +17,7 @@ _hasbottleitem = _this in magazines player;
 _config = configFile >> "CfgMagazines" >> _item;
 _text = getText (_config >> "displayName");
 
-if (!_hasbottleitem) exitWith {cutText [format[(localize "str_player_31"),_text,"fill"] , "PLAIN DOWN"]};
+if (!_hasbottleitem) exitWith {cutText [format[(localize "str_player_31"),_text,(localize "str_player_31_fill")] , "PLAIN DOWN"]};
 
 if (!dayz_isSwimming) then {
 	player playActionNow "PutDown";
@@ -49,17 +49,22 @@ if (!_canFill) then {
 if (_canFill) then {
 	_qty = {_x == "ItemWaterbottleUnfilled"} count magazines player;
 
+	player playActionNow "PutDown";
+
+
 	if ("ItemWaterbottleUnfilled" in magazines player) then {
+		player removeMagazines "ItemWaterbottleUnfilled";
 		for "_x" from 1 to _qty do {
-			player removeMagazine "ItemWaterbottleUnfilled";
-			player addMagazine "ItemWaterbottle";
-		};
+			sleep 1;
 
 		_dis=5;
 		_sfx = "fillwater";
 		[player,_sfx,0,false,_dis] call dayz_zombieSpeak;  
 		[player,_dis,true,(getPosATL player)] spawn player_alertZombies;
 		
+		player addMagazine "ItemWaterbottle";
+		};
+
 		cutText [format[(localize  "str_player_01"),_qty], "PLAIN DOWN"];
 	} else {
 		cutText [(localize "str_player_02") , "PLAIN DOWN"];

@@ -14,15 +14,17 @@
 #define EAST 0 // (Russian)
 
 #include "Configs\basicDefines.hpp"
+
 //#include "Configs\CfgWorlds.hpp"
-#include "Configs\CfgMoves.hpp"
 #include "Configs\rscTitles.hpp"
+#include "Configs\CfgMoves.hpp"
 #include "Configs\CfgVehicles.hpp"
 #include "Configs\CfgWeapons.hpp"
 #include "Configs\CfgMagazines.hpp"
+#include "Configs\CfgLoot\CfgBuildingLoot.hpp"
 #include "Configs\CfgMarkers.hpp"
 #include "Configs\CfgAmmo.hpp"
-#include "Configs\CfgLoot\CfgBuildingLoot.hpp"
+
 #include "Configs\CfgTownGenerator\CfgTownGeneratorLingor.hpp"
 
 class CfgPatches {
@@ -99,7 +101,7 @@ class CfgAISkill {
 	aimingshake[] = {0, 0, 1, 1};
 	aimingspeed[] = {0, 0, 1, 1};
 	commanding[] = {0, 0, 1, 1};
-	courage[] = {0, 0, 1, 0.6};
+	courage[] = {0, 1, 1, 1};
 	endurance[] = {0, 0, 1, 1};
 	general[] = {0, 0, 1, 1};
 	reloadspeed[] = {0, 0, 1, 1};
@@ -109,21 +111,88 @@ class CfgAISkill {
 
 class CfgInGameUI
 {
-
     class PeripheralVision
     {
         cueColor[] = {0,0,0,0};
+        cueFriendlyColor[] = {0,0,0,0};
+        cueEnemyColor[] = {0,0,0,0};
     };
+};
+
+class CfgVoice {
+	class NoVoice {
+		protocol = "RadioProtocolBase";
+		variants[] = {1};
+		directories[] = {"", ""};
+		identityTypes[] = {"Default", "Zombie1", "Zombie2", "Zombie3"};
+	};
+};
+
+class CfgIdentities {
+	class Zombie1 {
+		name = "Zombie";
+		face = "Zombie1";
+		glasses = "None";
+		speaker = "NoVoice";
+		pitch = 1;
+	};
+	
+	class Zombie2 {
+		name = "Zombie";
+		face = "Zombie2";
+		glasses = "None";
+		speaker = "NoVoice";
+		pitch = 1;
+	};
+	
+	class Zombie3 {
+		name = "Zombie";
+		face = "Zombie3";
+		glasses = "None";
+		speaker = "NoVoice";
+		pitch = 1;
+	};
+};
+
+class CfgFaces {
+	class Default;	// External class reference
+	
+	class Man : Default {
+		class Default;	// External class reference
+		class Zombie1 : Default {
+			name = "Zombie 1";
+			texture = "\dayz\textures\faces\zombie_03_co.paa";
+			identityTypes[] = {"Zombie1"};
+			disabled = 0;
+		};
+		
+		class Zombie2 : Default {
+			name = "Zombie 2";
+			texture = "\dayz\textures\faces\zombie_03_co.paa";
+			identityTypes[] = {"Zombie2"};
+			disabled = 0;
+		};
+		
+		class Zombie3 : Default {
+			name = "Zombie 3";
+			texture = "z\addons\dayz_communityassets\faces\zombie_03_co.paa";
+			material = "z\addons\dayz_communityassets\faces\zombie_03.rvmat";
+			identityTypes[] = {"Zombie3"};
+			disabled = 0;
+		};
+	};
 };
 
 class CfgSurvival {
 	class Inventory {
 		class Default {
-			//weapons[] = {"Makarov"};
-			magazines[] = {"ItemBandage","ItemPainkiller"};
-			weapons[] = {"ItemFlashlight"};
+			RandomMagazines = 3;
+			//weapons[] = {"Makarov"}; //8Rnd_9x18_Makarov
+			GuaranteedMagazines[] = {"ItemBandage","HandRoadFlare"};
+			RandomPossibilitieMagazines[] = {"ItemBandage","ItemPainkiller"};
+			//weapons[] = {"HandRoadFlare"};
 			backpackWeapon = "";
-			backpack = "DZ_Patrol_Pack_EP1";
+			//backpack = "DZ_Patrol_Pack_EP1";
 		};
 	};
 	class Meat {
@@ -141,7 +210,7 @@ class CfgSurvival {
 		class Cow04: Cow {};
 		class Goat: Default {
 			yield = 4;
-			rawfoodtype = "FoodmuttonRaw";
+			rawfoodtype = "FoodgoatRaw";
 		};
 		class Sheep: Default {
 			yield = 4;
@@ -156,8 +225,9 @@ class CfgSurvival {
 			rawfoodtype = "FoodchickenRaw";
 		};
 		class Rabbit: Default {
-			yield = 1;
+			yield = 2;
 			rawfoodtype = "FoodrabbitRaw";
 		};
 	};
 };
+

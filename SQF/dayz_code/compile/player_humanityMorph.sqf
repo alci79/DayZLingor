@@ -43,10 +43,10 @@ if (count _medical > 0) then {
 	
 	//Add Wounds
 	{
-		player setVariable[_x,true,true];
-		//["usecBleed",[player,_x,_hit]] call broadcastRpcCallAll;
-		usecBleed = [player,_x,0];
-		publicVariable "usecBleed";
+		diag_log format ["loop  _x:1  wound:%2",_x, (USEC_typeOfWounds select _forEachIndex)];
+		player setVariable["hit_"+_x,true,true];
+		PVDZ_hlt_Bleed = [player, _x, 1];
+		publicVariable "PVDZ_hlt_Bleed";
 	} forEach (_medical select 8);
 	
 	//Add fractures
@@ -71,7 +71,7 @@ player setVariable["headShots",_headShots,true];
 player setVariable["humanKills",_humanKills,true];
 player setVariable["banditKills",_banditKills,true];
 player setVariable["characterID",_charID,true];
-player setVariable["worldspace",_worldspace,true];
+player setVariable["worldspace",_worldspace];
 
 //code for this on the server is missing
 //["dayzPlayerMorph",[_charID,player,_playerUID,[_zombieKills,_headShots,_humanKills,_banditKills],_humanity]] call callRpcProcedure;
@@ -87,4 +87,13 @@ player addWeapon "Loot";
 player addWeapon "Flare";
 
 sleep 0.1;
+//melee check
+_wpnType = primaryWeapon player;
+_ismelee =  (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
+if (_ismelee == "true") then {
+	call dayz_meleeMagazineCheck;
+};
+
+sleep 0.1;
 deleteVehicle _old;
+

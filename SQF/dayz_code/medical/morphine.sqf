@@ -1,6 +1,8 @@
 // bleed.sqf
 _unit = (_this select 3) select 0;
 
+player removeMagazine "ItemMorphine";
+
 _unit setVariable ["hit_legs",0];
 _unit setVariable ["hit_hands",0];
 
@@ -38,16 +40,15 @@ if (_finished) then {
 		//Self Healing
 		_id = [player,player] execVM "\z\addons\dayz_code\medical\publicEH\medMorphine.sqf";
 	} else {
-		//dayzHumanity = [player,50];
+		//PVDZ_plr_Humanity = [player,50];
 		[player,50] call player_humanityChange;
 	};
 
-	player removeMagazine "ItemMorphine";
-
-	//["usecMorphine",[_unit,player]] call broadcastRpcCallAll;
-	usecMorphine = [_unit,player];
-	publicVariable "usecMorphine";
+	//["PVDZ_hlt_Morphine",[_unit,player]] call broadcastRpcCallAll;
+	PVDZ_hlt_Morphine = [_unit,player];
+	publicVariable "PVDZ_hlt_Morphine";
 } else {
+	player addMagazine "ItemMorphine";
 	r_interrupt = false;
 	[objNull, player, rSwitchMove,""] call RE;
 	player playActionNow "stop";

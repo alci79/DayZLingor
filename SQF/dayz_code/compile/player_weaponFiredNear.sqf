@@ -21,9 +21,9 @@ private["_unit","_magazine","_used","_quantity","_magsNet","_magsWhole","_key","
 	
 	// Both the firer and those nearby (<=8m) go into "combat" to prevent ALT-F4
 	//diag_log ("DEBUG: AMMO TYPE: " +str(_ammo));
-	_firer setVariable["startcombattimer", 1, false];
+	_firer setVariable["startcombattimer", 1];
 	if (_distance <= 8) then {
-		_unit setVariable["startcombattimer", 1, false];
+		_unit setVariable["startcombattimer", 1];
 	};
 	
 	
@@ -56,7 +56,7 @@ private["_unit","_magazine","_used","_quantity","_magsNet","_magsWhole","_key","
 					};
 
 					[_unit,4] call fnc_usec_damageUnconscious;
-			} else {;
+			} else {
 				//Just Knocked out
 				[_unit,0.5] call fnc_usec_damageUnconscious;
 			};

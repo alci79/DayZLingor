@@ -70,7 +70,7 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 	diag_log (str(_backpackMag));
 
 //Secure Player for Transformation
-	player setPosATL dayz_spawnPos;
+	//player setPosATL dayz_spawnPos;
 
 //BackUp Player Object
 	_oldUnit = player;
@@ -82,9 +82,8 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 //Create New Character
 	//[player] joinSilent grpNull;
 	_group 		= createGroup west;
-	_newUnit 	= _group createUnit [_class,dayz_spawnPos,[],0,"NONE"];
+	_newUnit 	= _group createUnit [_class,getMarkerPos "respawn_west",[],0,"NONE"];
 
-	_newUnit 	setPosATL _position;
 	_newUnit 	setDir _dir;
 
 //Clear New Character
@@ -167,17 +166,20 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 	diag_log str(getMagazineCargo unitBackpack _newUnit);
 
 //Make New Unit Playable
+	//_oldUnit setPosATL [_position select 0 + cos(_dir) * 2, _position select 1 + sin(_dir) * 2, _position select 2];
 	addSwitchableUnit _newUnit;
 	setPlayable _newUnit;
 	selectPlayer _newUnit;
+	
+//Switch the units
+	_createSafePos = [(getMarkerPos "respawn_west"), 2, 100, 0, 1, 20, 0] call BIS_fnc_findSafePos;
+	_oldUnit setPosATL [_createSafePos select 0, _createSafePos select 1, 0];
+	_newUnit setPosATL _position;
 
 //Clear and delete old Unit
 	removeAllWeapons _oldUnit;
 	{_oldUnit removeMagazine _x;} forEach  magazines _oldUnit;
-		
 	deleteVehicle _oldUnit;
-
-//Move player inside
 
 //	player switchCamera = _currentCamera;
 	if(_currentWpn != "") then {_newUnit selectWeapon _currentWpn;};
@@ -185,9 +187,18 @@ private ["_newBackpackType","_backpackWpn","_backpackMag"];
 	//dayz_originalPlayer attachTo [_newUnit];
 	player disableConversation true;
 	
-	player setVariable ["bodyName",dayz_playerName,true];
-
-	_playerUID=getPlayerUID player;
-	_playerObjName = format["player%1",_playerUID];
-	call compile format["%1 = player;",_playerObjName];
-	publicVariable _playerObjName;
+//	_playerUID=getPlayerUID player;
+//	_playerObjName = format["player%1",_playerUID];
+//	call compile format["%1 = player;",_playerObjName];
+//	publicVariable _playerObjName;
+	
+	//melee check
+	_wpnType = primaryWeapon player;
+	_ismelee =  (gettext (configFile >> "CfgWeapons" >> _wpnType >> "melee"));
+	if (_ismelee == "true") then {
+		call dayz_meleeMagazineCheck;
+	};
+	
+	//reveal all near objects.
+	{player reveal _x} forEach (nearestObjects [getPosATL player, ["AllVehicles","WeaponHolder","StashSmall","StashMedium","TentStorage","BuiltItems"], 75]);
+	//All is arbitrary and will need to be changed to ["AllVehicles","WeaponHolder","tentStorage"] ++ others (stashes etc.)

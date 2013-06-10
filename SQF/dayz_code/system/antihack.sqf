@@ -4,8 +4,9 @@
 	Refactored By Alby
 */
 
-private["_debug","_curpos","_lastpos","_curheight","_lastheight","_terrainHeight","_curtime","_lasttime","_distance","_difftime","_speed","_topSpeed","_lastVehicle","_safetyVehicle"];
+private["_debug","_curpos","_lastpos","_curheight","_lastheight","_terrainHeight","_curtime","_lasttime","_distance","_difftime","_speed","_topSpeed","_lastVehicle","_safetyVehicle", "_topv","_toph", "_v", "_h"];
 
+diag_log(format["%1: init", __FILE__]);
 waitUntil {vehicle player == player};
 
 [] spawn {
@@ -14,8 +15,8 @@ waitUntil {vehicle player == player};
 	_playerUID = getPlayerUID player;
 	while {true} do {
 		if (typeName player != "OBJECT") then {
-			atp = format["WARNING! TYPENAME ERROR ON %1 (%2)", _playerName, _playerUID];
-			publicVariableServer "atp";
+			PVDZ_sec_atp = format["WARNING! TYPENAME ERROR ON %1 (%2)", _playerName, _playerUID];
+			publicVariableServer "PVDZ_sec_atp";
 			//forceEnd;
 			endMission "CONTINUE";
 			sleep 10; //Bypass spam
@@ -28,6 +29,12 @@ _lastpos = getPosATL (vehicle player);
 _lastheight = (ATLtoASL _lastpos) select 2;
 _lasttime = time;
 _lastVehicle = vehicle player;
+
+// freefall detection:
+_v = 0;
+_h = 0;
+_topv = 0;
+_toph = 0;
 
 while {alive player} do
 {
@@ -66,8 +73,8 @@ while {alive player} do
 	if (_lastVehicle == vehicle player) then {
 		if ((_speed > _topSpeed) && (alive player) && ((driver (vehicle player) == player) or (isNull (driver (vehicle player)))) && (_debug distance _lastpos > 3000) && !((vehicle player == player) && (_curheight < _lastheight) && ((_curheight - _terrainHeight) > 1))) then {
 			(vehicle player) setpos _lastpos;
-			atp = format["TELEPORT REVERT: %1 (%2) from %3 to %4 (%5 meters) now at %6", name player, dayz_characterID, _lastpos, _curPos, _lastpos distance _curpos, getPosATL player];
-			publicVariableServer "atp";
+			PVDZ_sec_atp = format["TELEPORT REVERT: %1 (%2) from %3 to %4 (%5 meters) now at %6", name player, dayz_characterID, _lastpos, _curPos, _lastpos distance _curpos, getPosATL player];
+			publicVariableServer "PVDZ_sec_atp";
 		} else {
 			_lastpos = _curpos;
 			_lastheight = _curheight;	
@@ -79,6 +86,19 @@ while {alive player} do
 	if (_safetyVehicle == vehicle player) then {
 		_lastVehicle = vehicle player;
 	};
+
+	// freefall detection:
+	_v = -((velocity player) select 2);
+	_h = (getPosATL player) select 2;
+	if (_v > 4 AND _h > 3) then { 
+		_topv = _topv max _v;
+		_toph = _toph max _h;
+		Dayz_freefall = [ time, _toph, _topv ];
+	}
+	else {
+		_topv = 0;
+		_toph = 0;
+	};
 	
-	sleep 0.5;
+	sleep 0.25;
 };

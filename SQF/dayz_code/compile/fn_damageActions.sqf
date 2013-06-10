@@ -4,7 +4,7 @@ scriptName "Functions\misc\fn_damageActions.sqf";
 	- Function
 	- [] call fnc_usec_damageActions;
 ************************************************************/
-private["_menClose","_unit","_unconscious","_lowBlood","_injured","_inPain","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_action1","_action2","_action","_vehClose","_hasVehicle","_vehicle","_inVehicle","_crew","_unconscious_crew","_patients"];
+private["_menClose","_hasPatient","_vehicle","_inVehicle","_isClose","_bag","_classbag","_assignedRole","_turret","_weapons","_weaponName","_action","_unit","_vehClose","_hasVehicle","_unconscious","_lowBlood","_injured","_inPain","_legsBroke","_armsBroke","_hasBandage","_hasEpi","_hasMorphine","_hasBlood","_hasToolbox","_hasJerry","_hasEtool","_hasWire","_hasPainkillers","_action1","_action2","_vehType","_type","_typeVeh","_weapon","_magTypes","_ammoSerial","_ammoQty","_displayName","_isEngineer","_index","_inventory","_unitTo","_crew","_unconscious_crew","_patients","_y"];
 
 _menClose = cursorTarget;
 _hasPatient = alive _menClose;
@@ -55,7 +55,11 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 	_hasMorphine = 	"ItemMorphine" in magazines player;
 	_hasBlood = 	"ItemBloodbag" in magazines player;	
 	_hasToolbox = 	"ItemToolbox" in items player;
+	/*
+	//Moved to has actions
 	_hasJerry = 	"ItemJerrycan" in magazines player;
+	_hasFuel5 = 	"ItemFuelcan" in magazines player;
+	*/
 	_hasEtool = 	"ItemEtool" in weapons player;
 	_hasWire = 		"ItemWire" in magazines player;
 	_hasPainkillers = 	"ItemPainkiller" in magazines player;
@@ -69,15 +73,17 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 	};
 	//Load Vehicle
 	if (_hasVehicle and _unconscious) then {
-		_x = 0;
+		_y = 0;
 		r_action = true;
 		_unit = _unit;
-		_vehicle = (_vehClose select _x);
-		while{((!alive _vehicle) and (_x < (count _vehClose)))} do {
-			_x = _x + 1;
-			_vehicle = (_vehClose select _x);
+		_vehicle = (_vehClose select _y);
+		while{((!alive _vehicle) and (_y < (count _vehClose)))} do {
+			_y = _y + 1;
+    _vehicle = (_vehClose select _y);
+		_vehType = getText (configFile >> "CfgVehicles" >> typeOf cursorTarget >> "displayName");
+		//_vehType = typeOf _vehicle;
 		};
-		_vehType = typeOf _vehicle;
+		//_vehType = typeOf _vehicle;
 		_action = _unit addAction [format[localize "str_actions_medical_03",_vehType], "\z\addons\dayz_code\medical\load\load_act.sqf",[player,_vehicle,_unit], 0, true, true];
 		r_player_actions set [count r_player_actions,_action];
 	};
@@ -117,13 +123,28 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 	if ((_unit isKindOf "AllVehicles") and !(_unit isKindOf "Man")) then {
 		_type = TypeOf(_unit);
 		_typeVeh = getText(configFile >> "cfgVehicles" >> _type >> "displayName");
-
+		_isVehicle = cursorTarget isKindOf "AllVehicles";
+		
 		//CAN WE REFUEL THE OBJECT?
-		if ((fuel _unit < 1) and _hasJerry) then {
-			r_action = true;
-			_action = _unit addAction [format[localize "str_actions_medical_10",_typeVeh], "\z\addons\dayz_code\actions\refuel.sqf",[_unit], 0, true, true, "", "'ItemJerrycan' in magazines player"];
-			r_player_actions set [count r_player_actions,_action];
+	/*
+		//Moved to has actions
+		if ((_hasJerry or _hasFuel5) and _isVehicle) then {
+			if (fuel _unit < 1) then {
+				r_action = true;
+				if (_hasJerry) then {
+					s_player_fillfuel20 = _unit addAction [format[localize "str_actions_medical_10"+" with 20L",_typeVeh], "\z\addons\dayz_code\actions\refuel.sqf",["ItemJerrycan"], 0, true, true, "", "'ItemJerrycan' in magazines player"];
+				};
+				if (_hasFuel5) then {
+					s_player_fillfuel5 = _unit addAction [format[localize "str_actions_medical_10"+" with 5L",_typeVeh], "\z\addons\dayz_code\actions\refuel.sqf",["ItemFuelcan"], 0, true, true, "", "'ItemFuelcan' in magazines player"];
+				};
+				//r_player_actions set [count r_player_actions,_actionFuel5];
+			} else {
+				player removeAction s_player_fillfuel20;
+				player removeAction s_player_fillfuel5;
+			};	
 		};
+		*/
+	
 		//CAN WE ISSUE ANOTHER KIND OF AMMUNITION?
 		if (count weapons _unit > 0) then {
 			//Get mag array
@@ -144,17 +165,20 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 				};
 			} forEach _magTypes;
 		};
+		/* USEC_PackableObjects is defined anywhere!
 		//CAN CARRY BACKPACK
 		if ((_type in USEC_PackableObjects) and (_classbag == "")) then {
 			r_action = true;
 			_action = _unit addAction [format[localize "str_actions_medical_12",_typeVeh], "\z\addons\dayz_code\actions\pack.sqf",[_unit], 0, true, true];
 			r_player_actions set [count r_player_actions,_action];
 		};
+		*/
 	};
 	if ((_unit isKindOf "Building")) then {
 		_type = TypeOf(_unit);
 		_typeVeh = getText(configFile >> "cfgVehicles" >> _type >> "displayName");
 		_isEngineer = _hasToolbox;//(_classbag isKindOf "BAF_AssaultPack_Engineer");
+		/* USEC_CanDisassemble is defined anywhere!
 		//CAN DISASSEMBLE
 		if (_isEngineer and (_type in USEC_CanDisassemble)) then {
 			r_action = true;
@@ -162,7 +186,7 @@ if (_hasPatient and !r_drag_sqf and !r_action and !_inVehicle and !r_player_unco
 			_inventory = USEC_DisassembleKits select _index;
 			_action = _unit addAction [format[localize "str_actions_medical_12",_typeVeh], "\z\addons\dayz_code\actions\disassemble.sqf",[_unit,_inventory], 0, true, true];
 			r_player_actions set [count r_player_actions,_action];
-		};
+		};*/
 		//Upgrade Wire
 		if (_isEngineer and (_type == "usec_wire_cat1") and _hasWire) then {
 			r_action = true;
