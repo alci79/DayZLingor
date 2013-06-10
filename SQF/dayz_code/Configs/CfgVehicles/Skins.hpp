@@ -1,10 +1,10 @@
-class Soldier_Crew_PMC;
-class Bandit1_DZ : Soldier_Crew_PMC {
+class GER_Soldier_EP1;
+class Bandit1_DZ : GER_Soldier_EP1 {
 	displayName = "$STR_CHAR_2";
 	side = 1;
 	weapons[] = {"Throw","Put"};
-	model = "\ca\characters_E\GER\GER_rifleman";
-    portrait = "\ca\characters_E\data\portraits\ger_soldier_CA";
+	//model = "\dayz\characters\man_bandit";
+	//portrait = "\Ca\characters_E\data\portraits\ger_soldier_CA";
 	magazines[] = {};
 	backpack = "";
 	respawnWeapons[] = {"Throw","Put"};
