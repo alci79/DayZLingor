@@ -24,7 +24,7 @@
 #include "Configs\CfgLoot\CfgBuildingLoot.hpp"
 #include "Configs\CfgMarkers.hpp"
 #include "Configs\CfgAmmo.hpp"
-
+#include "Configs\CfgObjectCompositions.hpp"
 #include "Configs\CfgTownGenerator\CfgTownGeneratorLingor.hpp"
 
 class CfgPatches {
@@ -34,8 +34,7 @@ class CfgPatches {
 		requiredVersion = 0.1;
 		requiredAddons[] = {"dayz_equip","dayz_weapons","CAMisc3","CABuildingParts","CABuildingParts_Signs","CAStructuresHouse","CAStructuresLand_Ind_Stack_Big","CAStructures_Misc_Powerlines","CAStructures","CABuildings","CABuildings2","Ind_MalyKomin","CAStructures_A_CraneCon","CAStructures_Mil","CAStructures_Nav","CAStructures_Rail","A_Crane_02","A_TVTower","CAStructures_Railway","CAStructuresHouse","CAStructuresHouse_HouseBT"};
 	};
-	class DZ_DebriefingRemoved
-	{
+	class DZ_DebriefingRemoved	{
 		units[] = {};
 		weapons[] = {};
 		requiredVersion = 0.1;
@@ -56,7 +55,7 @@ class CfgMods
 		version = "2.3";
 		hiveVersion = 0.96;
 	};
-class DZ_InitWorld
+	class DZ_InitWorld
 	{
 		units[] = {};
 		weapons[] = {};
@@ -64,7 +63,6 @@ class DZ_InitWorld
 		requiredAddons[] = {"Lingor"};
 	};
 };
-
 
 class CfgMissions
 {
@@ -76,11 +74,13 @@ class CfgMissions
 		  };
 	 };
 };
+
 class CfgWorlds
 {
         initWorld = "Lingor";
         demoWorld = "Lingor";
 };
+
 class CfgAddons
 {
 	access = 1;
@@ -91,9 +91,22 @@ class CfgAddons
 	{
 		class dayz
 		{
-			list[] = {"dayz_code","dayz","dayz_equip","dayz_weapons","ibr_as350lingor","JetSkiYanahuiAddon","KPFS_MG1","KPFS_Panzerfaust","KPFS_MP2","KPFS_RPD","KPFS_SKS","KPFS_STG"};
+			list[] = {"dayz_code","dayz","dayz_equip","dayz_weapons","dayz_sfx","ibr_as350lingor","JetSkiYanahuiAddon","KPFS_MG1","KPFS_Panzerfaust","KPFS_MP2","KPFS_RPD","KPFS_SKS","KPFS_STG"};
 		};
 	};
+};
+
+class CfgActions {
+	class None; // External class reference
+
+	class Rearm : None {
+		show = 0;
+	};
+	
+	class TakeBag : None {
+		show = 0;
+	};
+	
 };
 
 class CfgAISkill {
@@ -230,4 +243,3 @@ class CfgSurvival {
 		};
 	};
 };
-
