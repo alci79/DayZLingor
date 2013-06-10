@@ -17,4 +17,4 @@ class Mode_SemiAuto;	// External class reference
 class Mode_Burst;	// External class reference
 class Mode_FullAuto;	// External class reference
 
-#include "Ammobox.hpp"
+//#include "Ammobox.hpp"
