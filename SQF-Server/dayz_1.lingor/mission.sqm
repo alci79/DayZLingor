@@ -1,8 +1,8 @@
 /****************************************************************************
 mission.sqm for DayZ Lingor - Skaronator.com Version
 @Autor: DayZ Community & Skaronator
-@Version: For Clientversion +2.2
-@Last Edit: 08/05/2013
+@Version: For Clientversion +2.3
+@Last Edit: 09/05/2013
 *****************************************************************************/
 version=11;
 class Mission
