@@ -1,4 +1,3 @@
-
 #define VSoft		0
 #define VArmor		1
 #define VAir		2

@@ -1,4 +1,3 @@
-
 class CfgSounds {
 	class breath_1 {
 		name = "";
@@ -164,6 +163,21 @@ class CfgSounds {
 	class z_cook_2 {
 		name = "";
 		sound[] = {"\dayz_sfx\effects\action_cook_2.ogg",0.2,1,30};
+		titles[] = {};
+	};
+	class z_eat_chips_0 {
+		name = "";
+		sound[] = {"\dayz_sfx\effects\action_eat_chips_1.ogg",0.3,1,40};
+		titles[] = {};
+	};
+	class z_eat_chips_1 {
+		name = "";
+		sound[] = {"\dayz_sfx\effects\action_eat_chips_0.ogg",0.3,1,40};
+		titles[] = {};
+	};
+	class z_eat_chips_2 {
+		name = "";
+		sound[] = {"\dayz_sfx\effects\action_eat_chips_2.ogg",0.3,1,40};
 		titles[] = {};
 	};
 	class z_eat_0 {
@@ -465,19 +479,22 @@ class CfgSounds {
 		sound[] = {"\dayz_sfx\action\z_hit_6.ogg",0.1,1,30};
 	};
 	class z_hit_7 : z_hit_0 {
-		sound[] = {"\dayz_sfx\action\z_hit_7.ogg",0.1,1,30};
+		sound[] = {"\dayz_sfx\action\z_hit_1.ogg",0.1,1,30};
 	};
 	class z_hit_8 : z_hit_0 {
-		sound[] = {"\dayz_sfx\action\z_hit_8.ogg",0.1,1,30};
+		sound[] = {"\dayz_sfx\action\z_hit_2.ogg",0.1,1,30};
 	};
 	class z_hit_9 : z_hit_0 {
-		sound[] = {"\dayz_sfx\action\z_hit_9.ogg",0.1,1,30};
+		sound[] = {"\dayz_sfx\action\z_hit_3.ogg",0.1,1,30};
 	};
 	class z_hit_10 : z_hit_0 {
-		sound[] = {"\dayz_sfx\action\z_hit_10.ogg",0.1,1,30};
+		sound[] = {"\dayz_sfx\action\z_hit_4.ogg",0.1,1,30};
 	};
 	class z_hit_11 : z_hit_0 {
-		sound[] = {"\dayz_sfx\action\z_hit_11.ogg",0.1,1,30};
+		sound[] = {"\dayz_sfx\action\z_hit_5.ogg",0.1,1,30};
+	};
+	class z_hit_12 : z_hit_0 {
+		sound[] = {"\dayz_sfx\action\z_hit_6.ogg",0.1,1,30};
 	};
 
 	class z_fracture_0 : gore_1 {
