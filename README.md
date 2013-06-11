@@ -10,6 +10,9 @@ Released Versions
     <td>Version</td><td>Mod Folders</td><td>Download</td><td>Release</td>
   </tr>
   <tr>
+    <td>2.3</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.3.zip</td><td>11/JUNE/2013</td>
+  </tr>
+  <tr>
     <td>2.2.1</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.2.1.zip</td><td>30/MAY/2013</td>
   </tr>
   <tr>
@@ -37,6 +40,8 @@ Branches
 --------
 
 - **Devlopment** - May not be stable. (https://github.com/Skaronator/DayZLingor/tree/Development)
+- **Release_2.3** Released: 11/JUNE/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.3)
+- **Release_2.2.1** Released: 30/MAY/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.2.1)
 - **Release_2.2** Released: 19/MAY/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.2)
 - **Release_2.1** Released: 25/FEB/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.1)
 - **Release_2.0** Released: 05/FEB/13 (https://github.com/Skaronator/DayZLingor/tree/Release_2.0)

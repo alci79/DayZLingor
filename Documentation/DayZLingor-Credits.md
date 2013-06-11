@@ -10,7 +10,7 @@ DayZ Lingor Credits
 * dotjosh (DayZCommander)
 * playWithSix Team
 * Python.au (SUV Skin)
-* Christian.1987 (Heckler & Koch MP7)
+* Marseille77 (MG, MG3, MG3 eot, MP2, RPD, SKS, STG, Panzerfaust 60)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)

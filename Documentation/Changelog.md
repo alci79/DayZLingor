@@ -1,3 +1,22 @@
+Changelog for DayZ Lingor 2.3
+==========
+		
+		* [NEW] Weapon - MG1
+		* [NEW] Weapon - MG3, MG3 eot
+		* [NEW] Weapon - MP2
+		* [NEW] Weapon - RPD
+		* [NEW] Weapon - SKS
+		* [NEW] Weapon - STG
+		* [NEW] Weapon - Panzerfaust 60
+		
+		* [Fixed] Gas Stations
+		
+		* [UPDATED] DayZ Code to 1.7.7
+		* [UPDATED] Loadingscreen
+		
+		* [Removed] Bigger Compass Code
+		
+
 Changelog for DayZ Lingor 2.2.1
 ==========
 		* [NEW] Vehicle - UH1H with Military Skin
