@@ -2,7 +2,7 @@
 init.sqf for DayZ Lingor - Skaronator.com Version
 @Autor: DayZ Community & Skaronator
 @Version: For Clientversion +2.3
-@Last Edit: 09/05/2013
+@Last Edit: 09/06/2013
 *****************************************************************************/
 
 startLoadingScreen ["","RscDisplayLoadCustom"];
