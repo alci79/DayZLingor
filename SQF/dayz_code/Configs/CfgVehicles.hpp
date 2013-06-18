@@ -43,7 +43,7 @@ class CfgVehicles {
 	class Animal;
 	class Pastor;
 	class Fin;
-	class SUV_TK_CIV_EP1;
+	class SUV_Base_EP1;
 	class GNT_C185;
 	class Ship;
 
