@@ -45,6 +45,7 @@ class CfgVehicles {
 	class Fin;
 	class SUV_TK_CIV_EP1;
 	class GNT_C185;
+	class Ship;
 
 	#include "CfgVehicles\RepairParts.hpp" //names for all reapir parts. Needs moving to hitpoints
 	//ZEDS
@@ -66,6 +67,7 @@ class CfgVehicles {
 	#include "CfgVehicles\Car\UAZ_CDF.hpp"
 	#include "CfgVehicles\Car\CAR_SEDAN.hpp"
 	#include "CfgVehicles\Car\V3S_Civ.hpp"
+	#include "CfgVehicles\Car\SUV_DZ.hpp"
 	#include "CfgVehicles\Car\SUV_SpecialSkaro.hpp"
 	//Helicopter's
 	#include "CfgVehicles\Helicopter\MI17.hpp"
@@ -90,6 +92,7 @@ class CfgVehicles {
 	#include "CfgVehicles\Bikes\TT650_Ins.hpp"
 	//Boat
 	#include "CfgVehicles\Boat\PBX.hpp"
+	#include "CfgVehicles\Boat\Fishing_Boat.hpp"
 	
 	//Includes all Building Stuff
 	// This parent class is made to make referring to these objects easier later with allMissionObjects	
