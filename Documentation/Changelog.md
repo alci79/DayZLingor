@@ -1,3 +1,11 @@
+Changelog for DayZ Lingor 2.3.1
+==========
+
+		* [NEW] Vehicle - Plane C185, C185F, C185E
+
+		* [UPDATED] DayZ Code to 1.7.7.1
+		* [UPDATED] Loadingscreen
+
 Changelog for DayZ Lingor 2.3
 ==========
 		
