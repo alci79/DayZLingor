@@ -91,7 +91,12 @@ class CfgAddons
 	{
 		class dayz
 		{
-			list[] = {"GNT_C185","dayz_code","dayz","dayz_equip","dayz_weapons","dayz_sfx","ibr_as350lingor","JetSkiYanahuiAddon","KPFS_MG1","KPFS_Panzerfaust","KPFS_MP2","KPFS_RPD","KPFS_SKS","KPFS_STG"};
+			list[] = {
+					"GNT_C185","dayz_code","dayz","dayz_equip",
+					"dayz_weapons","dayz_sfx","ibr_as350lingor",
+					"JetSkiYanahuiAddon","KPFS_MG1","KPFS_Panzerfaust",
+					"KPFS_MP2","KPFS_RPD","KPFS_SKS","KPFS_STG"
+					};
 		};
 	};
 };

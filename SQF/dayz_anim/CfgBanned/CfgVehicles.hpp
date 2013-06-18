@@ -32,6 +32,12 @@ class CfgVehicles {
 	class ZU23_Ins: Banned {};
 	class ZU23_CDF: Banned {};
 	class ZU23_Gue: Banned {};
+	class GNT_C185T: Banned {};
+	class GNT_C185R: Banned {};
+	class GNT_C185C: Banned {};
+	class GNT_C185U: Banned {};
+	class GNT_C185F: Banned {};
+	class GNT_C185E: Banned {};
 	class RHIB: Banned {};
 	class RHIB2Turret: Banned {};
 	//Zodiac: Banned {};

@@ -44,6 +44,7 @@ class CfgVehicles {
 	class Pastor;
 	class Fin;
 	class SUV_TK_CIV_EP1;
+	class GNT_C185;
 
 	#include "CfgVehicles\RepairParts.hpp" //names for all reapir parts. Needs moving to hitpoints
 	//ZEDS
@@ -80,6 +81,9 @@ class CfgVehicles {
 	//Plane's
 	#include "CfgVehicles\Plane\AN2_DZ.hpp"
 	#include "CfgVehicles\Plane\MV22_DZ.hpp"
+	#include "CfgVehicles\Plane\C185_DZ.hpp"
+	#include "CfgVehicles\Plane\C185F_DZ.hpp"
+	#include "CfgVehicles\Plane\C185E_DZ.hpp"
 	//Bikes
 	#include "CfgVehicles\Bikes\ATV_US_EP1.hpp"
 	#include "CfgVehicles\Bikes\ATV_CZ_EP1.hpp"

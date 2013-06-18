@@ -11,6 +11,7 @@ DayZ Lingor Credits
 * playWithSix Team
 * Python.au (SUV Skin)
 * Marseille77 (MG, MG3, MG3 eot, MP2, RPD, SKS, STG, Panzerfaust 60)
+* [APS]Gnat (Cessna 185)
 
 Lingor Island Credits
 * IceBrakr (Icebrakr.info)
