@@ -8,10 +8,10 @@ class CfgPatches {
 
 	class vehMaint {
 		class CAWorld {};
-		class Chernarus:CAWorld { 
-			center[] = {7839,8414}; // x y
-			SWcorner[] = {0,1360};
-			NEcorner[] = {14400,13560};
+		class Lingor:CAWorld { 
+			center[] = {4400,4400}; // x y
+			SWcorner[] = {0,0};
+			NEcorner[] = {10100,10100};
 			spawnRadius = 6000;
 		};
 		
