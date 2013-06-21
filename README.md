@@ -10,6 +10,9 @@ Released Versions
     <td>Version</td><td>Mod Folders</td><td>Download</td><td>Release</td>
   </tr>
   <tr>
+    <td>2.3.1</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.3.1.zip</td><td>18/JUNE/2013</td>
+  </tr>
+  <tr>
     <td>2.3</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.3.zip</td><td>10/JUNE/2013</td>
   </tr>
   <tr>
@@ -17,12 +20,6 @@ Released Versions
   </tr>
   <tr>
     <td>2.2</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.2.rar</td><td>19/MAY/2013</td>
-  </tr>
-  <tr>
-    <td>2.1</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.1.rar</td><td>25/FEB/2013</td>
-  </tr>
-  <tr>
-    <td>2.0</td><td>@DayZLingorSkaro</td><td>http://dl.skaronator.com/DayZLingorSkaro-2.0.rar</td><td>05/FEB/2013</td>
   </tr>
 </table>
 
