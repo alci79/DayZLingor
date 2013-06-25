@@ -10,7 +10,7 @@ cutText ["","BLACK OUT"];
 enableSaving [false, false];
 
 /***********NOT USED AT THIS MOMENT********************************************
-//Lingor Island Spawnpoints by Skaronator.com Drassen, Chupinka, Random = 150 Spawnpoints!
+//Lingor Island Spawnpoints by Skaronator
 survivor_spawns = [
 //Calamar
 [[4305.8384,23.635477,1808.3099]],
